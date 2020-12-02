@@ -1,0 +1,95 @@
+Users
+id
+name
+email
+
+
+Products
+id
+name
+description
+
+
+Orders
+id
+secret_code
+user_id
+
+Products-Orders
+product_id
+order_id
+quantity
+
+
+npm run knex migrate:make users
+npm run knex migrate:make products
+npm run knex migrate:make orders
+npm run knex migrate:make products-orders
+
+npm run knex seed:make users
+npm run knex seed:make products
+npm run knex seed:make orders
+npm run knex seed:make products-orders
+
+Products API
+
+/api/products
+
+GET /
+
+Response
+[
+  {
+    "id": 1
+    "name": "Hammer"
+    "description": ""
+    "image_url": "sdafhasdkfjaksdjfkl"
+  }
+]
+
+/api/orders
+
+POST /
+
+Request
+{
+  "name": 'Ross',
+  "email": 'ross@ross.com',
+  "products": [
+    { "id": 1, "quantity": 3 }
+  ]
+}
+
+Response
+{
+  "id": 5, 
+  "secret_code": 'Red Badger'
+}
+
+
+Global State:
+
+{
+  products: [
+    {
+      id: 1
+      name: "Hammer"
+      description: ""
+      image_url: "sdafhasdkfjaksdjfkl"
+    }
+  ],
+  cart: [
+    { product_id: 1, quantity: 3 }
+  ],
+  orders: [
+    {
+      id: 1
+      name: 'Ross',
+      email: 'ross@ross.com',
+      products: [
+        { id: 1, quantity: 3 }
+      ],
+      secret_code: 'Red Badger'
+    }
+  ]
+}
