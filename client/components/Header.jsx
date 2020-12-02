@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div>
    
-    <span className = 'header'>Header</span>
+    <span className = 'header'>LEAF IT TO ME</span>
    
     </div>
   )

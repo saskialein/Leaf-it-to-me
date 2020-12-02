@@ -1,7 +1,7 @@
+# Leaf it to me
 # -----PLANNING PRIORTY ---
-
-## ADD WIREFRAMES HERE
-#### HOME OR PLANTS FEED
+# ADD WIREFRAMES HERE
+#### HOME OR PLANT LIST
 ![Home].(wireframes/Homepage.png)
 
 #### PLANT PROFILE
@@ -16,13 +16,43 @@
 #### CREATE?ADD NEW PLANT TO DATABASE
 ![AddNewPlantToDataBase].(wireframes/NewPlantProfile.png)
 
-### ADD NOTES - Major Components
+# Major Components
+| Route | Component | Notes |
+|---|---|---|
+| / | App | Root Component |
+| / | Header | Shows on all pages |
+| /Home | AllWalks |
+| /login | Login | NOT Authenticated |
+| /register | Register | NOT Authenticated |
+| /plants/saved | SavedPlants | Authenticated |
+| /plants/:name | IndividualWalk
+| /user | User
+|---|---|---|
 
-#### ADD NOTES -Components & Children
+
+## Components & Children
+App\
+\
+-- Header\
+-- -- Nav\
+\
+-- Home\
+-- -- PlantList\
+-- -- -- Plant
+\
+-- IndividualPlant\
+\
+-- SavedPlants\
+-- -- PlantList\
+-- -- -- Plant
+\
+-- Login\
+-- Register\
+-- User\
 
 # -----then do: ---
 
-## ADD NOTES - API
+# API
 
 | Method | Path | Description | NOTES |
 |---|---|---|---|
@@ -36,7 +66,7 @@
 | GET | /api/v1/user | Get the user information
 |---|---|---|---|
 
-###  ADD NOTES - API Request and response bodies
+# API Request and response bodies
 
 ### /api/v1/plants
 
@@ -119,7 +149,7 @@
   }]
 ```
 
-## ADD NOTES - Global State
+# Global State
 
 The global state object looks a bit like this:
 
@@ -161,24 +191,11 @@ const globalState = {
 }
 ```
 
-## ADD NOTES - Database Diagram
+# Database Diagram
 ![DatabaseDiagram](server/public/Diagram_inital_plan.png)
 
-## Details
 
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Jest and Enzyme (including JSDOM)
-* configuration for server-side debugging in VS Code
-* a single client-side test (`client/components/App.test.js`)
-
-# Leaf it to me
-
-# Getting Started
+# Leaf it to me - getting started with GIT
 
 * Clone & Make a branch Steps 1 - 4
 * Merge your feature Steps 5 - 11
@@ -265,8 +282,8 @@ npm run knex seed:run
 
 ```
 
-## Update 3.01pm HR
-just pulled and app crashing? 
+## Update 
+
 run this in the terminal for auth:
 
 ```
@@ -276,4 +293,9 @@ once your database has first been populated, you can now use this shortcut
 to delete the sql file, run migrations and run seed sequentially
 ```
 npm run db-reset
+```
+#### magical git witch shortcut to push your branch --> your branch
+
+```
+make pushbranch m='commitMessage'
 ```
