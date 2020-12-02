@@ -16,6 +16,44 @@
 
 The global state object looks a bit like this:
 
+
+```js
+
+const globalState = {
+  search: {
+    //search funcitonality for specific plant?
+  },
+  plants: [{
+    0: {
+      id: int,
+      common_name: string,
+      species_name: string,
+      water: string,
+      light: string,
+      temp: string,
+      humidity: string,
+      soil: string,
+      img: url
+      },
+  }],
+  auth: {
+    loggedIn: bool,
+    user: {
+      id: int,
+      username: string,
+    }
+  },
+  user_plants: {
+      id: int,
+      user_id: int,
+      plant_id: int,
+      name: string,
+      notes: string,
+      img: url
+  }
+}
+```
+
 ## ADD NOTES - Database Diagram
 
 ## Details
