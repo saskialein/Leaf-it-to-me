@@ -1,15 +1,15 @@
 const express = require('express')
 const path = require('path')
 
-const productRoutes = require('./routes/products')
-const orderRoutes = require('./routes/orders')
+const plantRoutes = require('./routes/plantRoutes')
+const userRoutes = require('./routes/userRoutes')
 
 const server = express()
 
 server.use(express.json())
 server.use(express.static(path.join(__dirname, 'public')))
 
-server.use('/api/products', productRoutes)
-server.use('/api/orders', orderRoutes)
+server.use('/api/v1/plants', plantRoutes)
+server.use('/api/v1/users', userRoutes)
 
 module.exports = server
