@@ -17,7 +17,7 @@
 | GET | /api/v1/user | Gets the user information
 | GET | /api/v1/plants | Gets all plants from the DB
 | POST | /api/v1/plants| Adds a newly created plant to the plants DB
-| ~~GET | /api/v1/plant/:name | shows individual plant with all details~~ | No additional db call necessary if we have all data in our global state 
+| ~~GET~~ | ~~/api/v1/plant/:name~~ | ~~shows individual plant with all details~~ | No additional db call necessary if we have all data in our global state 
 | GET | /api/v1/plants/saved | Gets the logged in persons plants from the users_plants DB
 | POST | /api/v1/plants/saved | Adds a plant to the users_plants DB (from the plants list or a newly created one)
 |---|---|---|---|
@@ -39,7 +39,8 @@
   }],
 ```
 
-### /api/v1/plant/:name <span style="color:red">Might not even be necessary if we get all the plants and details into the global space with the /api/v1/plants call. Should ask Ross/Kelly for best practice.</span>
+### /api/v1/plant/:name 
+<span style="color:red">Might not even be necessary if we get all the plants and details into the global space with the /api/v1/plants call. Should ask Ross/Kelly for best practice.</span>
 
 ##### _Response_
 
