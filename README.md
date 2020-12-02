@@ -1,12 +1,8 @@
+# Leaf it to me
 # -----PLANNING PRIORTY ---
+# ADD WIREFRAMES HERE
 
-## ADD WIREFRAMES HERE
-
-### ADD NOTES - Major Components
-
-
-#### Major Components
-
+# Major Components
 | Route | Component | Notes |
 |---|---|---|
 | / | App | Root Component |
@@ -20,8 +16,7 @@
 |---|---|---|
 
 
-#### Components & Children
-
+## Components & Children
 App\
 \
 -- Header\
@@ -187,8 +182,6 @@ const globalState = {
 
 
 # Leaf it to me
-
-# Getting Started
 
 * Clone & Make a branch Steps 1 - 4
 * Merge your feature Steps 5 - 11
