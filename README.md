@@ -21,7 +21,7 @@
 |---|---|---|
 | / | App | Root Component |
 | / | Header | Shows on all pages |
-| /home | AllWalks |
+| /home | AllPlants |
 | /plants/saved | SavedPlants | Authenticated |
 | /plants/:name | IndividualPlant
 | /user | User
