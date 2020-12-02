@@ -181,7 +181,7 @@ const globalState = {
 ![DatabaseDiagram](server/public/Diagram_inital_plan.png)
 
 
-# Leaf it to me
+# Leaf it to me - getting started with GIT
 
 * Clone & Make a branch Steps 1 - 4
 * Merge your feature Steps 5 - 11
