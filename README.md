@@ -5,7 +5,7 @@
 !.[Home].(wireframes/Homepage.png)
 
 #### PLANT PROFILE
-!.[PlantProfile].(wireframes/PlantProfile.png)
+![PlantProfile].(wireframes/PlantProfile.png)
 
 #### SIGN UP
 !.[SignUp/LogIn].(wireframes/SignUp.png)
