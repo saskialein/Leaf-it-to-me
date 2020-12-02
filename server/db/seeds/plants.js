@@ -14,16 +14,16 @@ exports.seed = function(knex) {
           id: 3, common_name: 'Yucca', species_name: '', water: '', light: '', temp: '', humidity: '', soil: '', lvl: '', more: '', img: ''
         },
         {
-          id: 4, common_name: 'Peace Lily', species_name: '', water: '', light: '', temp: '', humidity: '', soil: '', lvl: 'beginner', more: '', img: ''
+          id: 4, common_name: 'Peace Lily', species_name: 'Spathiphyllum wallisii', water: 'keep moist, but not wet', light: 'bright filtered light to full-shade', temp: 'all', humidity: '', soil: 'moist, rich, free-draining', lvl: 'beginner', more: '', img: ''
         },
         {
-          id: 5, common_name: 'Aloe', species_name: '', water: '', light: '', temp: '', humidity: '', soil: '', lvl: '', more: '', img: ''
+          id: 5, common_name: 'Aloe', species_name: 'Aloe Vera', water: 'minimal - let dry between watering', light: 'full sun', temp: '', humidity: '', soil: 'needs a soil with excellent drainage', lvl: '', more: '', img: ''
         },
         {
           id: 6, common_name: 'Rubber Plant', species_name: 'Ficus Elastica', water: '', light: '', temp: '', humidity: '', soil: '', lvl: 'beginner', more: '', img: ''
         },
         {
-          id: 7, common_name: 'Snake Plant', species_name: 'Sansevieria trifasciata', water: '', light: '', temp: '', humidity: '', soil: '', lvl: 'beginner', more: '', img: ''
+          id: 7, common_name: 'Snake Plant', species_name: 'Sansevieria trifasciata', water: 'water when soil completely dry', light: 'no direct sun', temp: 'cool', humidity: '', soil: 'free draining soil', lvl: 'beginner', more: '', img: ''
         },
         {
           id: 8, common_name: 'English Ivy', species_name: '', water: '', light: '', temp: '', humidity: '', soil: '', lvl: '', more: '', img: ''
