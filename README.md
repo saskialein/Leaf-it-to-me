@@ -10,7 +10,100 @@
 
 ## ADD NOTES - API
 
+| Method | Path | Description | NOTES |
+|---|---|---|---|
+| POST | /api/v1/register | adds a user - registering them | Authenticare
+| POST | /api/v1/login | logging in a user and getting user info from DB | Authenticare
+| GET | /api/v1/plants | let us see all plants on the page
+| GET | /api/v1/plant/:name | shows individual plant with all details 
+| POST | /api/v1/addplant | add a plant to my profile
+| GET | /api/v1/plants/saved | shows the logged in persons plants
+| POST | /api/v1/plants/saved/:id | saves a plant to a users saved plants table
+| GET | /api/v1/user | Get the user information
+|---|---|---|---|
+
 ###  ADD NOTES - API Request and response bodies
+
+### /api/v1/plants
+
+##### _Response_
+
+```js 
+     plants: [{
+    0: {
+      id: int,
+      common_name: string,
+      species_name: string,
+      img: url
+      },
+  }],
+```
+
+### /api/v1/plant/:name
+
+##### _Response_
+
+```js
+{
+      id: int,
+      common_name: string,
+      species_name: string,
+      water: string,
+      light: string,
+      temp: string,
+      humidity: string,
+      soil: string,
+      img: url
+      }
+```
+
+### /api/v1/addplant
+
+##### _Request_
+
+```js
+{
+ user_plants: {
+      id: int,
+      user_id: int,
+      plant_id: int,
+      name: string,
+      notes: string,
+      img: url
+  }
+}
+```
+
+##### _Response_
+<!-- TODO: What will the response be? -->
+
+### /api/v1/user
+
+##### _Response_
+
+```js
+{
+  id
+  username
+}
+```
+
+### /api/v1/plants/saved
+
+##### _Response_
+
+```js
+ user_plants: [{ 
+    0: {
+      id: int,
+      user_id: int,
+      plant_id: int,
+      name: string,
+      notes: string,
+      img: url
+      },
+  }]
+```
 
 ## ADD NOTES - Global State
 
