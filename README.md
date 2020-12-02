@@ -1,6 +1,20 @@
 # -----PLANNING PRIORTY ---
 
 ## ADD WIREFRAMES HERE
+#### HOME OR PLANTS FEED
+![Home].(wireframes/Homepage.png)
+
+#### PLANT PROFILE
+![PlantProfile].(wireframes/PlantProfile.png)
+
+#### SIGN UP
+![SignUp/LogIn].(wireframes/SignUp.png)
+
+#### USER PROFILE WITH PLANT
+![UserProfileWithPlants].(wireframes/UserProfileWithPlants.png)
+
+#### CREATE?ADD NEW PLANT TO DATABASE
+![AddNewPlantToDataBase].(wireframes/NewPlantProfile.png)
 
 ### ADD NOTES - Major Components
 
