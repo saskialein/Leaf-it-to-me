@@ -1,11 +1,11 @@
-import { SET_PRODUCTS } from '../actions'
+import { SET_PLANTS } from '../actions'
 
 const initialState = []
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_PRODUCTS:
-      return action.products
+    case SET_PLANTS:
+      return action.plants
     default:
       return state
   }
