@@ -1,67 +1,247 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
-html, 
+// sass variables
+
+$font-stack:'Raleway', sans-serif;
+$font-small: 15px;
+$font-medium: 20px;
+$font-large: 50px;
+$font-Xlarge: 100px;
+$text-shadow: 0 0 6px #000;
+
+$borderRadius: 3px;
+$box-shadow:
+  0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$box-shadow-inset:
+  inset 0 -0.6em 1em -0.35em 
+  rgba(0,0,0,0.17),
+  inset 0 0.6em 2em -0.3em
+  rgba(255,255,255,0.15),
+  inset 0 0 0em 0.05em 
+  rgba(255,255,255,0.12);
+
+  // $padding5-margin5-border0{
+  // }
+
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 22pt;
+  font-family: $font-stack;
+  font-size: $font-small; 
+
+  height: 100vh;
+  width: 100vw;
+  padding: 5px;
+  margin: 5px;
+  border: 0;
+  // background-size:cover;
+  // background: rgb(2,0,36);
+  // background: linear-gradient(90deg, 
+  // #a7aaa6 0%, 
+  // #6e726d 35%, 
+  // #30352e 100%);
 }
 
-h1 {
-  font-size: 200%;
-}
+//------- body background picture -------
+// background-image:
+// url("https://media.giphy.com/media/RHIKETUlUINYvV7CAO/giphy.gif");
 
-ul.products li {
-  font-size: 150%;
-  list-style: none;
-  padding-bottom: 20px;
-}
+.header {
+  font-size: $font-Xlarge;
+  text-shadow: $text-shadow;
 
-button {
-  background: #3D94F6;
-  background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
-  background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
-  background-image: -ms-linear-gradient(top, #3D94F6, #1E62D0);
-  background-image: -o-linear-gradient(top, #3D94F6, #1E62D0);
-  background-image: -webkit-gradient(to bottom, #3D94F6, #1E62D0);
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  color: #FFFFFF;
-  font-size: 20px;
-  font-weight: 100;
-  padding: 16px;
-  -webkit-box-shadow: 1px 1px 20px 0 #000000;
-  -moz-box-shadow: 1px 1px 20px 0 #000000;
-  box-shadow: 1px 1px 20px 0 #000000;
-  text-shadow: 1px 1px 20px #000000;
-  border: solid #337FED 1px;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
+ 
+  padding: 5px;
+  margin: 5px;
+  display: block;
   text-align: center;
-  margin-left: 20px;
 }
 
-button:hover {
-  border: solid #337FED 1px;
-  background: #1E62D0;
-  background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
-  background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
-  background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
-  background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
-  background-image: -webkit-gradient(to bottom, #1E62D0, #3D94F6);
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  text-decoration: none;
+// ----- with box-shadow and hover lighter -----
+.nav-horizontal-div {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+    button {
+      background-color: #5dacc0;
+      font-size: $font-small; 
+      color: rgb(70, 70, 70);
+      box-sizing: border-box;
+      padding: 10px;
+      margin: 8px;
+      border: 0;
+      border-radius: $borderRadius;
+      box-shadow: $box-shadow;
+      cursor: pointer;
+    }    
+    button:hover {
+      background-color: #d4a0d1;
+      color: rgb(241, 237, 237);
+    }
 }
 
-form label {
+// ----- with inset shading & hover darker -----
+
+
+.polaroid-wrapper {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  border: 0;
+  padding: 5px;
+  margin: 5px;
+
+}
+ .each-polaroid {
+  justify-content: center;
+  border: 10px;
+  padding: 10px;
+  margin: 20px;
+  background-color: #9dafa1; 
+  box-shadow: $box-shadow-inset;
+  border-radius: $borderRadius;
+}
+
+.polaroid-image-and-title {
+
+  position: relative;
+  background-size:cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  padding: 2px;
+  margin: 2px;
+  border: 2px;  
+    img {
+      /* display: flex; */
+      align-items: center;
+      justify-content: space-around;
+      width: 450px;
+      border: 5px;
+      padding: 5px;
+      margin: 5px;
+      border-radius: 2px;
+  }   
+}
+
+
+
+.polaroid-title-div {
+  position: absolute;
+  top: 20%;
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.polaroid-title {
+  font-size: $font-large; 
+  color: aliceblue;
+  border: 0;
+  margin: 5px;
   display: block;
   padding: 20px;
+  height: auto;
+  text-align: center;
+  text-shadow: $text-shadow;
 }
 
-form input {
-  font-size: 150%;
-  padding-left: 20px;
+ .polaroid-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+ .polaroid-detail {
+  font-weight: bold;
+  font-size: $font-small; 
+  margin: 0.5rem;
+
+}
+h4 {
+  font-size: $font-small; 
+  border: 0;
+  padding: 5px;
+  margin: 5px;
+  display: block;
+  align-items: center;
+  height: auto;
+  text-align: center;
+}
+
+h5 {
+  font-size: $font-medium; 
+  color: aliceblue;
+  background-color: #135e5e;
+  border: 0;
+  padding: 5px;
+  margin: 5px;
+  display: block;
+  height: auto;
+  text-align: center;
+  border-radius: $borderRadius;
+  box-shadow: $box-shadow;
+}
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;  
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+
+.each-profile {
+  justify-content: center;
+  border: 0px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 2px;
+  background-color: #848a8f;
+  border-radius: $borderRadius;
+  box-shadow: $box-shadow;
+}
+
+
+ .profile-picture {
+  text-align: center;
+  border: 0px;
+  padding: 5px;
+  margin: 5px;
+  background-color: #d1dce7;
+  border-radius: $borderRadius;
+  box-shadow: $box-shadow;
+img {
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-around;
+  background-color: #bba1b7;
+  width: 200px;
+  border: 0px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: $borderRadius;
+}
+ }
+
+ .profile-name-plate {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 5px;
+}
+
+ .profile-name {
+  font-size: $font-small; 
+  padding: 5px;
+
+}
+
+ .profile-sign {
+  font-style: italic;
+  font-size: $font-small; 
+  padding: 5px;
 }

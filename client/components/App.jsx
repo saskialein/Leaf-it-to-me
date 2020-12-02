@@ -1,26 +1,25 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
-import { fetchProducts } from '../actions'
-import Cart from './Cart'
-import Orders from './Orders'
-import Products from './Products'
 
-export class App extends React.Component {
-  componentDidMount () {
-    this.props.dispatch(fetchProducts())
+
+
+import NavVertical from './NavVertical.jsx'
+import NavHorizontal from './NavHorizontal.jsx'
+
+
+// import NewComponent from './NewComponent.jsx'
+
+
+
+class App extends React.Component {
+    render () {
+      return (
+        <>
+          <Header/>
+          <NavHorizontal/>
+        </>
+      )
+    }
   }
 
-  render () {
-    return (
-      <div className='app'>
-        <h1>Let's Go Shopping!</h1>
-        <Products/>
-        <Cart/>
-        <Orders/>
-      </div>
-    )
-  }
-}
-
-export default connect()(App)
+export default App
