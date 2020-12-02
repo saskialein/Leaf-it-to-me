@@ -1,46 +1,19 @@
-import { createOrder } from "../apis/orders"
-import { getProducts } from "../apis/products"
+import { getPlants } from "../apis/plants"
 
-export const SET_PRODUCTS = 'SET_PRODUCTS'
-export const ADD_TO_CART = 'ADD_TO_CART'
-export const ADD_TO_ORDERS = 'ADD_TO_ORDERS'
+export const SET_PLANTS = 'SET_PLANTS'
 
-export const setProducts = (products) => {
+export const setPlants = (plants) => {
   return {
-    type: SET_PRODUCTS,
-    products
+    type: SET_PLANTS,
+    plants
   }
 }
 
-export const addToCart = (product_id, quantity = 1) => {
-  return {
-    type: ADD_TO_CART,
-    product_id,
-    quantity
-  }
-}
-
-export const addToOrders = (order) => {
-  return {
-    type: ADD_TO_ORDERS,
-    order
-  }
-}
-
-export const fetchProducts = () => {
+export const fetchPlants = () => {
   return dispatch => {
-    return getProducts()
+    return getPlants()
       .then(products => {
-        dispatch(setProducts(products))
-      })
-  }
-}
-
-export const checkoutOrder = (order) => {
-  return dispatch => {
-    return createOrder(order)
-      .then(order => {
-        dispatch(addToOrders(order))
+        dispatch(setPlants(plants))
       })
   }
 }

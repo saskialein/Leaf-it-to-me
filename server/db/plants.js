@@ -1,10 +1,10 @@
 const e = require('express');
 const connection = require('./connection')
 
-function getProducts(db = connection) {
-  return db('products').select()
+function getAllPlants(db = connection) {
+  return db('plants').select()
 }
 
 module.exports = {
-  getProducts,
+  getAllPlants,
 }
