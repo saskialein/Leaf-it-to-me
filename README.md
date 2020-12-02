@@ -234,7 +234,7 @@ git push origin myBranch
 git checkout -b feature/myNextFeature  
 code .  
 ```
-## 10. GitKeeper (This is Kelly!) - merge the request
+## 10. GitKeeper - merge the request
 
 * Merge the pull request on Github only if there are 0 conflicts, then delete the branch.
 
@@ -262,9 +262,4 @@ once your database has first been populated, you can now use this shortcut
 to delete the sql file, run migrations and run seed sequentially
 ```
 npm run db-reset
-```
-You can now use this shortcut
-to run lint, then fix lint
-```
-npx eslint --ext .js,.jsx . --fix
 ```
