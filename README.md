@@ -40,7 +40,7 @@
 ```
 
 ### /api/v1/plant/:name 
-<span style="color:red">Might not even be necessary if we get all the plants and details into the global space with the /api/v1/plants call. Should ask Ross/Kelly for best practice.</span>
+<span style="color:red">*Might not even be necessary if we get all the plants and details into the global space with the /api/v1/plants call. Should ask Ross/Kelly for best practice.*</span>
 
 ##### _Response_
 
