@@ -1,6 +1,6 @@
 # Leaf it to me
 ## -----PLANNING PRIORTY ---
-# ADD WIREFRAMES HERE
+# WIREFRAMES
 #### HOME OR PLANT LIST
 ![Home](wireframes/Homepage.png)
 
