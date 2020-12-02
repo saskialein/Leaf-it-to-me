@@ -43,7 +43,7 @@ App\
 
 # -----then do: ---
 
-## ADD NOTES - API
+# API
 
 | Method | Path | Description | NOTES |
 |---|---|---|---|
@@ -57,7 +57,7 @@ App\
 | GET | /api/v1/user | Get the user information
 |---|---|---|---|
 
-###  ADD NOTES - API Request and response bodies
+# API Request and response bodies
 
 ### /api/v1/plants
 
@@ -140,7 +140,7 @@ App\
   }]
 ```
 
-## ADD NOTES - Global State
+# Global State
 
 The global state object looks a bit like this:
 
@@ -182,173 +182,9 @@ const globalState = {
 }
 ```
 
-## ADD NOTES - Database Diagram
+# Database Diagram
 ![DatabaseDiagram](server/public/Diagram_inital_plan.png)
 
-
-# -----PLANNING PRIORTY ---
-
-## ADD WIREFRAMES HERE
-
-### ADD NOTES - Major Components
-
-#### ADD NOTES -Components & Children
-
-# -----then do: ---
-
-## ADD NOTES - API
-
-| Method | Path | Description | NOTES |
-|---|---|---|---|
-| POST | /api/v1/register | adds a user - registering them | Authenticare
-| POST | /api/v1/login | logging in a user and getting user info from DB | Authenticare
-| GET | /api/v1/plants | let us see all plants on the page
-| GET | /api/v1/plant/:name | shows individual plant with all details 
-| POST | /api/v1/addplant | add a plant to my profile
-| GET | /api/v1/plants/saved | shows the logged in persons plants
-| POST | /api/v1/plants/saved/:id | saves a plant to a users saved plants table
-| GET | /api/v1/user | Get the user information
-|---|---|---|---|
-
-###  ADD NOTES - API Request and response bodies
-
-### /api/v1/plants
-
-##### _Response_
-
-```js 
-     plants: [{
-    0: {
-      id: int,
-      common_name: string,
-      species_name: string,
-      img: url
-      },
-  }],
-```
-
-### /api/v1/plant/:name
-
-##### _Response_
-
-```js
-{
-      id: int,
-      common_name: string,
-      species_name: string,
-      water: string,
-      light: string,
-      temp: string,
-      humidity: string,
-      soil: string,
-      img: url
-      }
-```
-
-### /api/v1/addplant
-
-##### _Request_
-
-```js
-{
- user_plants: {
-      id: int,
-      user_id: int,
-      plant_id: int,
-      name: string,
-      notes: string,
-      img: url
-  }
-}
-```
-
-##### _Response_
-<!-- TODO: What will the response be? -->
-
-### /api/v1/user
-
-##### _Response_
-
-```js
-{
-  id
-  username
-}
-```
-
-### /api/v1/plants/saved
-
-##### _Response_
-
-```js
- user_plants: [{ 
-    0: {
-      id: int,
-      user_id: int,
-      plant_id: int,
-      name: string,
-      notes: string,
-      img: url
-      },
-  }]
-```
-
-## ADD NOTES - Global State
-
-The global state object looks a bit like this:
-
-
-```js
-
-const globalState = {
-  search: {
-    //search funcitonality for specific plant?
-  },
-  plants: [{
-    0: {
-      id: int,
-      common_name: string,
-      species_name: string,
-      water: string,
-      light: string,
-      temp: string,
-      humidity: string,
-      soil: string,
-      img: url
-      },
-  }],
-  auth: {
-    loggedIn: bool,
-    user: {
-      id: int,
-      username: string,
-    }
-  },
-  user_plants: {
-      id: int,
-      user_id: int,
-      plant_id: int,
-      name: string,
-      notes: string,
-      img: url
-  }
-}
-```
-
-## ADD NOTES - Database Diagram
-![DatabaseDiagram](server/public/Diagram_inital_plan.png)
-
-## Details
-
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Jest and Enzyme (including JSDOM)
-* configuration for server-side debugging in VS Code
-* a single client-side test (`client/components/App.test.js`)
 
 # Leaf it to me
 
@@ -439,8 +275,8 @@ npm run knex seed:run
 
 ```
 
-## Update 3.01pm HR
-just pulled and app crashing? 
+## Update 
+
 run this in the terminal for auth:
 
 ```
