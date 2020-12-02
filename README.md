@@ -280,3 +280,8 @@ to delete the sql file, run migrations and run seed sequentially
 ```
 npm run db-reset
 ```
+git witch shortcut to push your branch --> your branch
+
+```
+make pushbranch m='commitMessage'
+```
