@@ -1,3 +1,35 @@
+# -----PLANNING PRIORTY ---
+
+## WIREFRAMES ADD HERE
+
+### ADD NOTES - Major Components
+
+#### ADD NOTES -Components & Children
+
+# -----the do: ---
+
+## ADD NOTES - API
+
+###  ADD NOTES - API Request and response bodies
+
+## ADD NOTES - Global State
+
+The global state object looks a bit like this:
+
+## ADD NOTES - Database Diagram
+
+## Details
+
+This repo includes:
+
+* a single, simple API endpoint (`/api/v1/fruits`)
+* a single React component (`<App />`)
+* an example database module (`server/db/fruits.js`)
+* an API client module (`client/apis/fruits.js`)
+* configuration for Jest and Enzyme (including JSDOM)
+* configuration for server-side debugging in VS Code
+* a single client-side test (`client/components/App.test.js`)
+
 # Leaf it to me
 
 # Getting Started
@@ -104,34 +136,3 @@ to run lint, then fix lint
 ```
 npx eslint --ext .js,.jsx . --fix
 ```
-# -----PRIORTY ---
-
-## WIREFRAMES ADD HERE
-
-### ADD NOTES - Major Components
-
-#### ADD NOTES -Components & Children
-
-# -----the do: ---
-
-## ADD NOTES - API
-
-###  ADD NOTES - API Request and response bodies
-
-## ADD NOTES - Global State
-
-The global state object looks a bit like this:
-
-## ADD NOTES - Database Diagram
-
-## Details
-
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Jest and Enzyme (including JSDOM)
-* configuration for server-side debugging in VS Code
-* a single client-side test (`client/components/App.test.js`)
