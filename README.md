@@ -1,12 +1,12 @@
 # -----PLANNING PRIORTY ---
 
-## WIREFRAMES ADD HERE
+## ADD WIREFRAMES HERE
 
 ### ADD NOTES - Major Components
 
 #### ADD NOTES -Components & Children
 
-# -----the do: ---
+# -----then do: ---
 
 ## ADD NOTES - API
 
