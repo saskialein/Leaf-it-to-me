@@ -148,6 +148,7 @@ const globalState = {
 ```
 
 ## ADD NOTES - Database Diagram
+![DatabaseDiagram](server/public/Diagram_inital_plan.png)
 
 ## Details
 
