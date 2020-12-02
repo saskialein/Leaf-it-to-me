@@ -33,12 +33,7 @@ body {
   padding: 5px;
   margin: 5px;
   border: 0;
-  // background-size:cover;
-  // background: rgb(2,0,36);
-  // background: linear-gradient(90deg, 
-  // #a7aaa6 0%, 
-  // #6e726d 35%, 
-  // #30352e 100%);
+
 }
 
 //------- body background picture -------
@@ -47,39 +42,32 @@ body {
 
 .header {
   font-size: $font-Xlarge;
-  text-shadow: $text-shadow;
-
- 
   padding: 5px;
   margin: 5px;
   display: block;
   text-align: center;
 }
 
-// ----- with box-shadow and hover lighter -----
 .nav-horizontal-div {
   text-align: center;
   padding: 5px;
   margin: 5px;
     button {
-      background-color: #5dacc0;
+      
       font-size: $font-small; 
-      color: rgb(70, 70, 70);
       box-sizing: border-box;
       padding: 10px;
       margin: 8px;
       border: 0;
       border-radius: $borderRadius;
-      box-shadow: $box-shadow;
       cursor: pointer;
     }    
     button:hover {
-      background-color: #d4a0d1;
+      background-color: #f0cfee;
       color: rgb(241, 237, 237);
     }
 }
 
-// ----- with inset shading & hover darker -----
 
 
 .polaroid-wrapper {

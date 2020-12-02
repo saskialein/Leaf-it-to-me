@@ -1,3 +1,202 @@
+# -----PLANNING PRIORTY ---
+
+## ADD WIREFRAMES HERE
+
+### ADD NOTES - Major Components
+
+
+#### Major Components
+
+| Route | Component | Notes |
+|---|---|---|
+| / | App | Root Component |
+| / | Header | Shows on all pages |
+| /Home | AllWalks |
+| /login | Login | NOT Authenticated |
+| /register | Register | NOT Authenticated |
+| /plants/saved | SavedPlants | Authenticated |
+| /plants/:name | IndividualWalk
+| /user | User
+|---|---|---|
+
+
+#### Components & Children
+
+App\
+\
+-- Header\
+-- -- Nav\
+\
+-- Home\
+-- -- PlantList\
+-- -- -- Plant
+\
+-- IndividualPlant\
+\
+-- SavedPlants\
+-- -- PlantList\
+-- -- -- Plant
+\
+-- Login\
+-- Register\
+-- User\
+
+# -----then do: ---
+
+## ADD NOTES - API
+
+| Method | Path | Description | NOTES |
+|---|---|---|---|
+| POST | /api/v1/register | adds a user - registering them | Authenticare
+| POST | /api/v1/login | logging in a user and getting user info from DB | Authenticare
+| GET | /api/v1/plants | let us see all plants on the page
+| GET | /api/v1/plant/:name | shows individual plant with all details 
+| POST | /api/v1/addplant | add a plant to my profile
+| GET | /api/v1/plants/saved | shows the logged in persons plants
+| POST | /api/v1/plants/saved/:id | saves a plant to a users saved plants table
+| GET | /api/v1/user | Get the user information
+|---|---|---|---|
+
+###  ADD NOTES - API Request and response bodies
+
+### /api/v1/plants
+
+##### _Response_
+
+```js 
+     plants: [{
+    0: {
+      id: int,
+      common_name: string,
+      species_name: string,
+      img: url
+      },
+  }],
+```
+
+### /api/v1/plant/:name
+
+##### _Response_
+
+```js
+{
+      id: int,
+      common_name: string,
+      species_name: string,
+      water: string,
+      light: string,
+      temp: string,
+      humidity: string,
+      soil: string,
+      img: url
+      }
+```
+
+### /api/v1/addplant
+
+##### _Request_
+
+```js
+{
+ user_plants: {
+      id: int,
+      user_id: int,
+      plant_id: int,
+      name: string,
+      notes: string,
+      img: url
+  }
+}
+```
+
+##### _Response_
+<!-- TODO: What will the response be? -->
+
+### /api/v1/user
+
+##### _Response_
+
+```js
+{
+  id
+  username
+}
+```
+
+### /api/v1/plants/saved
+
+##### _Response_
+
+```js
+ user_plants: [{ 
+    0: {
+      id: int,
+      user_id: int,
+      plant_id: int,
+      name: string,
+      notes: string,
+      img: url
+      },
+  }]
+```
+
+## ADD NOTES - Global State
+
+The global state object looks a bit like this:
+
+
+```js
+
+const globalState = {
+  search: {
+    //search funcitonality for specific plant?
+  },
+  plants: [{
+    0: {
+      id: int,
+      common_name: string,
+      species_name: string,
+      water: string,
+      light: string,
+      temp: string,
+      humidity: string,
+      soil: string,
+      img: url
+      },
+  }],
+  auth: {
+    loggedIn: bool,
+    user: {
+      id: int,
+      username: string,
+    }
+  },
+  user_plants: {
+      id: int,
+      user_id: int,
+      plant_id: int,
+      name: string,
+      notes: string,
+      img: url
+  }
+}
+```
+
+## ADD NOTES - Database Diagram
+![DatabaseDiagram](server/public/Diagram_inital_plan.png)
+
+## Details
+
+This repo includes:
+
+* a single, simple API endpoint (`/api/v1/fruits`)
+* a single React component (`<App />`)
+* an example database module (`server/db/fruits.js`)
+* an API client module (`client/apis/fruits.js`)
+* configuration for Jest and Enzyme (including JSDOM)
+* configuration for server-side debugging in VS Code
+* a single client-side test (`client/components/App.test.js`)
+
 # Leaf it to me
 
 # Getting Started
@@ -70,7 +269,7 @@ git push origin myBranch
 git checkout -b feature/myNextFeature  
 code .  
 ```
-## 10. GitKeeper (This is Kelly!) - merge the request
+## 10. GitKeeper - merge the request
 
 * Merge the pull request on Github only if there are 0 conflicts, then delete the branch.
 
@@ -99,39 +298,3 @@ to delete the sql file, run migrations and run seed sequentially
 ```
 npm run db-reset
 ```
-You can now use this shortcut
-to run lint, then fix lint
-```
-npx eslint --ext .js,.jsx . --fix
-```
-# -----PRIORTY ---
-
-## WIREFRAMES ADD HERE
-
-### ADD NOTES - Major Components
-
-#### ADD NOTES -Components & Children
-
-# -----the do: ---
-
-## ADD NOTES - API
-
-###  ADD NOTES - API Request and response bodies
-
-## ADD NOTES - Global State
-
-The global state object looks a bit like this:
-
-## ADD NOTES - Database Diagram
-
-## Details
-
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Jest and Enzyme (including JSDOM)
-* configuration for server-side debugging in VS Code
-* a single client-side test (`client/components/App.test.js`)
