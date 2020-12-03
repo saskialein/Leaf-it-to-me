@@ -10,6 +10,7 @@ import IndividualPlant from './IndividualPlant.jsx'
 import SavedPlants from './SavedPlants.jsx'
 import SignIn from './SignIn'
 import Register from './Register'
+import { checkAuth } from '../actions/auth.js'
 
 
 // import NewComponent from './NewComponent.jsx'
@@ -17,6 +18,10 @@ import Register from './Register'
 
 
 class App extends React.Component {
+
+  // componentDidMount () {
+  //   this.props.dispatch(checkAuth())
+  // }
     render () {
       return (
         <>
@@ -32,6 +37,11 @@ class App extends React.Component {
 
         </>
       )
+      // function mapStateToProps (globalState) {
+      //   return {
+
+      //   }
+      // }
     }
   }
 
