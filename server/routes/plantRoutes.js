@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const { getPlants, getPlant,createPlant } = require('../db/plantDbFuncs.js')
+const { getPlants, getPlant,createPlant } = require('../db/plantDbFuncs')
 
 // READ -- GET LIST OF PLANTS
 router.get('/', (req, res) => {

@@ -25,7 +25,6 @@ class App extends React.Component {
     return (
       <div className="app">
         <Header />
-        {this.props.setLoaded && (
           <>
             <Route exact path="/" component={Home} />
 
@@ -36,7 +35,6 @@ class App extends React.Component {
             {/* <Route exact path='/login' component={SignIn}/> */}
             <Route exact path="/register" component={Register} />
           </>
-        )}
       </div>
     );
   }
@@ -46,7 +44,6 @@ function mapStateToProps (globalState) {
   return {
    
     users: globalState.users,
-    setLoaded: globalState.setLoaded
 
   }
 }
