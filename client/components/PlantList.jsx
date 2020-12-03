@@ -16,7 +16,7 @@ class PlantList extends React.Component {
         {this.props.plants.map((plant) => {
 
           return (
-            <li><img src="{plant.img}" alt="PlantImage"/>{plant.common_name}</li>
+            <Plant key={plant.id} plant={plant}/>
           )
         })}
       </ul>
