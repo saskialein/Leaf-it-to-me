@@ -13,7 +13,7 @@ const acceptJsonHeader = { Accept: 'application/json' }
 //     .catch(logError)
 // }
 
-export function addNewUserToDb (user) {
+export function updateNameAndEmail (user) {
   return request.post(rootUrl)
     .set(acceptJsonHeader)
     .set(getAuthorizationHeader())
