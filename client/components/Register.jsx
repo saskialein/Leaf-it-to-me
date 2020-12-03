@@ -9,8 +9,10 @@ import { baseApiUrl as baseUrl } from '../config'
 
 class Register extends React.Component {
     state = {
+      name: '',        
       username: '',
-      password: ''
+      password: '',
+      email: ''
     }
 
     handleChange = (e) => {
@@ -21,13 +23,15 @@ class Register extends React.Component {
 
     handleClick = (e) => {
       e.preventDefault()
-      const { username, password } = this.state
-      register({ username, password }, { baseUrl })
+      console.log('after e in handleclick')
+      const { name, username, password, email } = this.state
+      register({ name, username, password, email }, { baseUrl })
         .then((token) => {
+          console.log('after .then token')
           if (isAuthenticated()) {
             const user = getDecodedToken()
             this.props.dispatch(logIn(user))
-            this.props.history.push('/home')
+            this.props.history.push('/')
           }
           return null
         })
@@ -39,6 +43,10 @@ class Register extends React.Component {
         <div>
           <h2>Register</h2>
           <form className='form' onSubmit={this.handleClick}>
+            <label className='btn' htmlFor="name">Your Name: </label>
+            <input onChange={this.handleChange} className='input' value={this.state.name} autoFocus={true} name="name" label='Name' type="text"/>  
+            <label className='btn' htmlFor="name">Your Email Address: </label>
+            <input onChange={this.handleChange} className='input' value={this.state.email} autoFocus={true} name="email" label='Name' type="text"/>
             <label className='btn' htmlFor="name">Username: </label>
             <input onChange={this.handleChange} className='input' value={this.state.username} autoFocus={true} name="username" label='Name' type="text"/>
             <br/>

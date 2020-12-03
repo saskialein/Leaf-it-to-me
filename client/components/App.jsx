@@ -8,9 +8,9 @@ import Header from './Header.jsx'
 import Home from './Home.jsx'
 import IndividualPlant from './IndividualPlant.jsx'
 import SavedPlants from './SavedPlants.jsx'
-import AddPlantForm from './AddPlantForm.jsx'
-import SignIn from './SignIn'
+// import SignIn from './SignIn'
 import Register from './Register'
+
 
 // import NewComponent from './NewComponent.jsx'
 
