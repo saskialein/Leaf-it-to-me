@@ -14,3 +14,5 @@ router.get('/:id', (req, res) => {
             res.status(500).json({ message: 'Something broke' })
         })
 })
+
+module.exports = router
