@@ -6,8 +6,9 @@ import PlantList from './PlantList.jsx'
 
 const SavedPlants = () => {
   return (
-    <div>   
-    <h1>SavedPlants</h1>
+    <div>
+   
+  
     <PlantList/>
     </div>
   )

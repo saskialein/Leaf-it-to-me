@@ -6,7 +6,7 @@ const PlantList = () => {
   return (
     <div>
    
-    <h1>PlantList</h1>
+
     <p>list of plants</p>
     <Plant/>
     </div>

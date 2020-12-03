@@ -5,11 +5,10 @@ const Plant = () => {
   return (
     <div>
    
-    <h1>Plant</h1>
-    <p>Show a small card of the plant</p>
+
     <>
 
-    <h1>Profile</h1>
+   
       <div className='profile-wrapper'>
 
       <div className='each-profile'>
