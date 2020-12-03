@@ -7,25 +7,21 @@ const Plant = () => {
    
     <h1>Plant</h1>
     <p>Show a small card of the plant</p>
-
- 
-    <div className='polaroid-wrapper'>
-         <div className='each-polaroid'>
-          <div className= 'polaroid-image-and-title'>
-              <img src='https://www.doc.govt.nz/globalassets/images/places/northland/waipoua-forest/te-matua-ngahere-walk/walkway-1200.jpg' alt="description"/>
-
-              <div className= 'polaroid-title-div'>
-              <span className= 'polaroid-title'>TITLE WITH DROP SHADOW</span>
-              <div><h5>h5 subtitle & border</h5></div>
-              </div>
-          </div>
-          <div className='polaroid-info'>
-              <div className='polaroid-detail'><h4>h4 text</h4></div>
-              <button>Button</button>
-          </div>
-         </div> {/*end of each walk div*/}
-          
-      </div>{/*end of walk wrapper vdiv*/}
+    <>
+    <h1>Profile</h1>
+      <div className='profile-wrapper'>
+      <div className='each-profile'>
+      <div className='profile-picture'>
+          <img src={`https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Noto_Emoji_KitKat_263a.svg/200px-Noto_Emoji_KitKat_263a.svg.png`}/>
+        <div className='profile-name-plate'>
+          <p className='profile-name'>Plant!</p>
+          <p className='profile-sign'>feeling fabulous</p>
+          <button>button</button>
+        </div>
+        </div>
+        </div>
+    </div>
+    </>
    
     </div>
   )
