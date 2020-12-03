@@ -1,22 +1,37 @@
 # Leaf it to me
-## -----PLANNING PRIORTY ---
-# WIREFRAMES
-#### HOME OR PLANT LIST
+## --- PLANNING ---
+# WIREFRAMES & components
+
+## Shows on all pages
+-- Header\
+-- -- Nav\
+
+## page 1
+## Home
+PlantList\Plant
 ![Home](wireframes/Homepage.png)
 
-#### PLANT PROFILE
-![PlantProfile](wireframes/PlantProfile.png)
+## Components & Children
 
-#### SIGN UP
-![SignUp/LogIn](wireframes/SignUp.png)
+## IndividualPlant\
+![IndividualPlant](wireframes/PlantProfile.png)
 
-#### USER PROFILE WITH PLANT
-![UserProfileWithPlants](wireframes/UserProfileWithPlants.png)
+## page 
+## Login\Register\User\
+![Login\Register\User\](wireframes/SignUp.png)
 
-#### CREATE?ADD NEW PLANT TO DATABASE
+## SavedPlants\
+PlantList\Plant
+![SavedPlants\](wireframes/UserProfileWithPlants.png)
+
+## page 5
+## AddPlantForm
+
 ![AddNewPlantToDataBase](wireframes/NewPlantProfile.png)
 
 # Major Components
+
+
 | Route | Component | Notes |
 |---|---|---|
 | / | App | Root Component |
@@ -24,10 +39,13 @@
 | /home | AllPlants |
 | /plants/saved | SavedPlants | Authenticated |
 | /plants/:name | IndividualPlant
+|---|---|---|
+|AddPlantForm|---|---|
 | /user | User
 | /login | Login | NOT Authenticated |
 | /register | Register | NOT Authenticated |
 |---|---|---|
+
 
 
 ## Components & Children
