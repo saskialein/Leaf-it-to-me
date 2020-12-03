@@ -2,7 +2,68 @@
 // variables
 $font-stack: "Roboto", sans-serif;
 
+//VARIABLES ARE MADE OF MVP BLOCKING LAYOUT
+//COLOR BLOCKS ARE FOR DISPLAYING PURPOSE
+//BRIEFLY SETTING UP SASS FOR WHEN DESIGN ARE FINALIZED
+//---JESS---
+
+//BACKGROUND COLORS
+$backgroundcolor01: #f8f7de;
+$backgroundcolor02: #d35d6e;
+$backgroundcolor03: #d0e8f2;
+$backgroundcolor04: #8db596;
+
+//MARGIN + PADDING SPACINGS
+$temp-margin: 30px;
+$temp-padding: 20px;
+
+//COLORS
+$commonNameFontColor: #222831;
+
+//TYPEFACE + FONT SIZING
+$font-body-paragraph: 1.1em;
+
 .individ-plant-main {
   font-family: $font-stack;
-  
+  display: block;
+  align-content: center;
+  background-color: $backgroundcolor01;
+  margin: $temp-margin;
+  padding: $temp-padding;
+
+  .commonName {
+    font-weight: bold;
+    color: $commonNameFontColor;
+    background-color: $backgroundcolor02;
+    padding: $temp-padding;
+  }
+  .spciesName {
+    background-color: $backgroundcolor03;
+    padding: $temp-padding;
+  }
+  img {
+    width: 50vh;
+    display: block;
+    float: left;
+  }
+
+  .careDetailWrapper {
+    display: block;
+    float: left;
+    margin-left: $temp-margin;
+
+    .careDetail {
+      font-size: $font-body-paragraph;
+      background-color: $backgroundcolor02;
+
+      p {
+        font-size: $font-body-paragraph;
+        background-color: $backgroundcolor03;
+      }
+      ul {
+        background-color: $backgroundcolor04;
+        margin-left: $temp-margin;
+      }
+    }
+  }
 }
