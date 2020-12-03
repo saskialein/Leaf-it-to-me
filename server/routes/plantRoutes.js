@@ -7,7 +7,6 @@ const { getPlants, getPlant,createPlant } = require('../db/plantDb.js')
 router.get('/', (req, res) => {
     getPlants()
         .then(plants => {
-            console.log('here are the plants: ',plants)
             res.json(plants)
             //res.json means stringify the response & put it in JSON format so we can then deal with it this way
         })

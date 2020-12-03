@@ -1,4 +1,4 @@
-import { getPlants } from "../apis/plants"
+import { retrievePlants } from "../apis/plants"
 
 export const SET_PLANTS = 'SET_PLANTS'
 
@@ -11,8 +11,8 @@ export const setPlants = (plants) => {
 
 export const fetchPlants = () => {
   return dispatch => {
-    return getPlants()
-      .then(products => {
+    return retrievePlants()
+      .then(plants => {
         dispatch(setPlants(plants))
       })
   }

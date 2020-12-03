@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
    
-    <span>Home</span>
+  
     <p>Show the plant list - all of the plants</p>
     <PlantList/>
    

@@ -1,229 +1,4 @@
 # Leaf it to me
-## -----PLANNING PRIORTY ---
-# WIREFRAMES
-#### HOME OR PLANT LIST
-![Home](wireframes/Homepage.png)
-
-#### PLANT PROFILE
-![PlantProfile](wireframes/PlantProfile.png)
-
-#### SIGN UP
-![SignUp/LogIn](wireframes/SignUp.png)
-
-#### USER PROFILE WITH PLANT
-![UserProfileWithPlants](wireframes/UserProfileWithPlants.png)
-
-#### CREATE?ADD NEW PLANT TO DATABASE
-![AddNewPlantToDataBase](wireframes/NewPlantProfile.png)
-
-# Major Components
-| Route | Component | Notes |
-|---|---|---|
-| / | App | Root Component |
-| / | Header | Shows on all pages |
-| /home | AllPlants |
-| /plants/saved | SavedPlants | Authenticated |
-| /plants/:name | IndividualPlant
-| /user | User
-| /login | Login | NOT Authenticated |
-| /register | Register | NOT Authenticated |
-|---|---|---|
-
-
-## Components & Children
-App\
-\
--- Header\
--- -- Nav\
-\
--- Home\
--- -- PlantList\
--- -- -- Plant
-\
--- IndividualPlant\
-\
--- SavedPlants\
--- -- PlantList\
--- -- -- Plant
-\
--- Login\
--- Register\
--- User\
-
-# -----then do: ---
-
-# API
-
-| Method | Path | Description | NOTES |
-|---|---|---|---|
-| POST | /api/v1/register | adds a user - registering them | Authenticare
-| POST | /api/v1/login | logging in a user and getting user info from DB | Authenticare
-| GET | /api/v1/plants | let us see all plants on the page
-| GET | /api/v1/plant/:name | shows individual plant with all details 
-| POST | /api/v1/addplant | add a plant to my profile
-| GET | /api/v1/plants/saved | shows the logged in persons plants
-| POST | /api/v1/plants/saved/:id | saves a plant to a users saved plants table
-| GET | /api/v1/user | Get the user information
-|---|---|---|---|
-
-# API Request and response bodies
-
-### /api/v1/plants
-
-##### _Response_
-
-```js 
-     plants: [{
-    0: {
-      id: int,
-      common_name: string,
-      species_name: string,
-      img: url
-      },
-  }],
-```
-
-### /api/v1/plant/:name
-
-##### _Response_
-
-```js
-{
-      id: int,
-      common_name: string,
-      species_name: string,
-      water: string,
-      light: string,
-      temp: string,
-      humidity: string,
-      soil: string,
-      img: url
-      }
-```
-
-### /api/v1/addplant
-
-##### _Request_
-
-```js
-{
- user_plants: {
-      id: int,
-      user_id: int,
-      plant_id: int,
-      name: string,
-      notes: string,
-      img: url
-  }
-}
-```
-
-##### _Response_
-<!-- TODO: What will the response be? -->
-
-### /api/v1/user
-
-##### _Response_
-
-```js
-{
-  id
-  username
-}
-```
-
-### /api/v1/plants/saved
-
-##### _Response_
-
-```js
- user_plants: [{ 
-    0: {
-      id: int,
-      user_id: int,
-      plant_id: int,
-      name: string,
-      notes: string,
-      img: url
-      },
-  }]
-```
-
-# Global State
-
-The global state object looks a bit like this:
-
-
-```js
-
-const globalState = {
-  search: {
-    //search funcitonality for specific plant?
-  },
-  plants: [{
-    0: {
-      id: int,
-      common_name: string,
-      species_name: string,
-      water: string,
-      light: string,
-      temp: string,
-      humidity: string,
-      soil: string,
-      img: url
-      },
-  }],
-  auth: {
-    loggedIn: bool,
-    user: {
-      id: int,
-      username: string,
-    }
-  },
-  user_plants: {
-      id: int,
-      user_id: int,
-      plant_id: int,
-      name: string,
-      notes: string,
-      img: url
-  }
-}
-```
-
-# Database Diagram
-![DatabaseDiagram](server/public/Diagram_inital_plan.png)
-
-
-# Leaf it to me - getting started with GIT
-
-* Clone & Make a branch Steps 1 - 4
-* Merge your feature Steps 5 - 11
-
-### 1. Clone
-```
-cd workspace
-git clone + https link
-cd myRepo
-```
-### 2. Make a branch using the name of your feature
-```
-git checkout -b feature/aFeature  
-code .  
-```
-### 3. Instal modules & reset the database
-```
-npm i
-npm run knex migrate:latest
-npm run knex seed:run
-```
-## 4. Commit & Push your branch
-```
-git status 
-git add .  
-git commit -m “commit message”  
-git push origin myBranch  
-```
 
 
 # MERGE TIME!! Git Protocol in a Team!
@@ -298,4 +73,225 @@ npm run db-reset
 
 ```
 make pushbranch m='commitMessage'
+```
+
+## WIREFRAMES & components
+### Components showing on all pages - Header.jsx, Nav.jsx
+
+## Page 1
+### Components - Home.jsx, PlantList.jsx, Plant.jsx
+### wireframe:
+![Home](wireframes/Homepage.png)
+
+## Page 2 
+### Components - IndividualPlant.jsx
+### wireframe:
+![IndividualPlant](wireframes/PlantProfile.png)
+
+## Page 3
+### Components - Login\Register\User\.jsx
+### wireframe:
+![Login\Register\User](wireframes/SignUp.png)
+
+## Page 4
+### Components - SavedPlants.jsx, PlantList.jsx Plant.jsx
+### wireframe:
+![SavedPlants](wireframes/UserProfileWithPlants.png) 
+
+
+## page 5 
+### Components - AddPlantForm.jsx
+###   wireframe:
+
+![AddNewPlantToDataBase](wireframes/NewPlantProfile.png)
+
+
+# USER STORIES
+
+### Unauthorised Users:
+
+1) As an unregistered user I would like to be able to see a list of all of the plants on the homepage
+2) As an unregistered user I would like to be able to search for a specific plant on the homepage
+3) As an unregistered user I would like to click on a plant from the homepage & be re-directed to see it’s individual profile page
+4) As an unregistered user I would like to be able to click on a button on the homepage to add a new plant and then be re-directed to the signup page which will tell me I need to register before I can add new plants to the main plant list and/or my own profile
+
+### Authorised Users: 
+
+1) As a signed in user I would like to be able to see a list of all of the plants on the homepage & then click on a plant to be re-directed to it’s individual profile page where I would be able to click to add the plant to my profile
+2) Once I’ve signed into my account (via clicking the login link on homepage) I’d like to be able to see a list of all of my saved plants 
+3) Once signed in I’d also like to see a ‘add your own plant’ button which once clicked would ask me if I would like to add a new plant to my profile from the existing database (in which case I’d be directed back to the homepage) OR whether I’d like to add my own custom plant 
+4) As a signed in user if I select to add my own plant I’d like to be able to fill out a form with my plant’s name & care details and also add an image. Once submitted my custom plant would automatically be added to my profile.
+5) _optional / stretch?_ As a signed in user I would like to be able to see a list of all the plants on the homepage and tick which plants I’d like to add to my profile 
+
+
+# API
+
+| Method | Path | Description | NOTES |
+|---|---|---|---|
+| POST | /api/v1/register | Adds a user - registering them | Authenticare
+| POST | /api/v1/login | Logs a user in and gets a users info from the DB | Authenticare
+| GET | /api/v1/user | Gets the user information
+| GET | /api/v1/plants | Gets all plants from the DB
+| POST | /api/v1/plants| Adds a newly created plant to the plants DB
+| ~~GET~~ | ~~/api/v1/plant/:name~~ | ~~shows individual plant with all details~~ | No additional db call necessary if we have all data in our global state 
+| GET | /api/v1/plants/saved | Gets the logged in persons plants from the users_plants DB
+| POST | /api/v1/plants/saved | Adds a plant to the users_plants DB (from the plants list or a newly created one)
+|---|---|---|---|
+
+# API Request and response bodies
+
+### /api/v1/plants
+
+##### _Response_
+
+```js 
+     plants: [{
+    0: {
+      id: int,
+      common_name: string,
+      species_name: string,
+      img: url
+      },
+  }],
+```
+
+### /api/v1/plant/:name 
+<span style="color:red">*Might not even be necessary if we get all the plants and details into the global space with the /api/v1/plants call. Should ask Ross/Kelly for best practice.*</span>
+
+##### _Response_
+
+```js
+{
+      id: int,
+      common_name: string,
+      species_name: string,
+      water: string,
+      light: string,
+      temp: string,
+      humidity: string,
+      soil: string,
+      img: url
+      }
+```
+
+### /api/v1/plants/saved
+
+##### _Request_
+
+```js
+{
+ user_plants: {
+      id: int,
+      user_id: int,
+      plant_id: int,
+      name: string,
+      notes: string,
+      img: url
+  }
+}
+```
+
+##### _Response_
+<!-- TODO: What will the response be? -->
+
+### /api/v1/user
+
+##### _Response_
+
+```js
+{
+  id
+  username
+}
+```
+
+### /api/v1/plants/saved
+
+##### _Response_
+
+```js
+ user_plants: [{ 
+    0: {
+      id: int,
+      user_id: int,
+      plant_id: int,
+      name: string,
+      notes: string,
+      img: url
+      },
+  }]
+```
+
+# Global State
+
+The global state object looks a bit like this:
+
+
+```js
+
+const globalState = {
+  search: {
+    //search functionality for specific plant?
+  },
+  plants: [{
+    0: {
+      id: int,
+      common_name: string,
+      species_name: string,
+      water: string,
+      light: string,
+      temp: string,
+      humidity: string,
+      soil: string,
+      img: url
+      },
+  }],
+  auth: {
+    loggedIn: bool,
+    user: {
+      id: int,
+      username: string,
+    }
+  },
+  user_plants: {
+      id: int,
+      user_id: int,
+      plant_id: int,
+      name: string,
+      notes: string,
+      img: url
+  }
+}
+```
+
+# Database Diagram
+![DatabaseDiagram](server/public/Diagram_inital_plan.png)
+
+
+* Clone & Make a branch Steps 1 - 4
+* Merge your feature Steps 5 - 11
+
+### 1. Clone
+```
+cd workspace
+git clone + https link
+cd myRepo
+```
+### 2. Make a branch using the name of your feature
+```
+git checkout -b feature/aFeature  
+code .  
+```
+### 3. Instal modules & reset the database
+```
+npm i
+npm run knex migrate:latest
+npm run knex seed:run
+```
+## 4. Commit & Push your branch
+```
+git status 
+git add .  
+git commit -m “commit message”  
+git push origin myBranch  
 ```
