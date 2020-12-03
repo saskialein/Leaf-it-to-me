@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 const Plant = (props) => {
 
@@ -19,7 +19,7 @@ const Plant = (props) => {
         <div className='profile-name-plate'>
           <p className='profile-name'>{plant.common_name}</p>
           <p className='profile-sign'>feeling fabulous</p>
-          <button>button</button>
+          <Link to={`/plants/${plant.common_name}`}><button>Click me</button></Link>
         </div>
         </div>
       
