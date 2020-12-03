@@ -1,16 +1,36 @@
-import React from 'react'
-import Plant from './Plant.jsx'
+import React from "react";
 
+import { fetchPlants } from "../actions/index";
+import { connect } from 'react-redux'
 
-const PlantList = () => {
-  return (
+class PlantList extends React.Component {
+  componentDidMount() {
+    this.props.dispatch(fetchPlants());
+  }
+  render() {
+
+  return(
     <div>
-   
-    <h1>PlantList</h1>
-    <p>list of plants</p>
-    <Plant/>
+      <h1>PlantList</h1>
+      <ul className="plantList">
+        {this.props.plants.map((plant) => {
+
+          return (
+            <li><img src="{plant.img}" alt="PlantImage"/>{plant.common_name}</li>
+          )
+        })}
+      </ul>
     </div>
-  )
+    )
+  }
 }
 
-export default PlantList
+
+
+
+function mapStateToProps(globalState) {
+  return {
+    plants: globalState.plants,
+  };
+}
+export default connect(mapStateToProps)(PlantList);
