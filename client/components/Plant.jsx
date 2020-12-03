@@ -52,7 +52,6 @@ const Plant = () => {
         </div>
         </div>
 
-
     </div>
     </>
    
