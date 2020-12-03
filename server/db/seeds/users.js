@@ -4,7 +4,11 @@ exports.seed = function(knex) {
     .then(function () {
       return knex('users').insert([
         {
-          id: 1, name: 'Saskia', password: '', email: ''
+          id: 1, 
+          name: 'Saskia', 
+          username: 'Saskia', 
+          password: '', 
+          email: ''
         },
       ]);
     });
