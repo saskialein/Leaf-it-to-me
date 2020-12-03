@@ -4,7 +4,7 @@ exports.up = function (knex) {
     table.increments('id')
     table.string('name')
     table.string('username')
-    table.string('password')
+    table.binary('hash')
     table.string('email')
   })
 }
