@@ -6,7 +6,7 @@ const IndividualPlant = () => {
       <div className="">
         <h2 className="">common_name</h2>
         <p>species_name</p>
-        <img className="" src='' />
+        <img src={`https://www.amara.com/static/uploads/images-2/products/huge/156501/big-cactus-cushion-603972.jpg`}/>
         <h3 className="">Plant Care Detail</h3>
       </div>
       <div className="">
