@@ -23,11 +23,9 @@ class Register extends React.Component {
 
     handleClick = (e) => {
       e.preventDefault()
-      console.log('after e in handleclick')
       const { name, username, password, email } = this.state
       register({ name, username, password, email }, { baseUrl })
         .then((token) => {
-          console.log('after .then token')
           if (isAuthenticated()) {
             const user = getDecodedToken()
             this.props.dispatch(logIn(user))
