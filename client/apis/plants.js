@@ -1,8 +1,8 @@
 import request from 'superagent'
 
-const rootUrl = '/api/products'
+const rootUrl = '/api/v1/plants'
 
-export function getProducts () {
+export function getPlants () {
   return request.get(rootUrl)
     .then(res => res.body)
 }

@@ -1,18 +1,17 @@
 import React from 'react'
 
+
 import PlantList from './PlantList.jsx'
 
 
-const Home = () => {
+const SavedPlants = () => {
   return (
     <div>
    
-    <span>Home</span>
-    <p>Show the plant list - all of the plants</p>
+    <h1>SavedPlants</h1>
     <PlantList/>
-   
     </div>
   )
 }
 
-export default Home
+export default SavedPlants
