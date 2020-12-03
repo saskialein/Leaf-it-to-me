@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const NavHorizontal = () => {
+const Nav = () => {
   return (
     <>
     <div className= 'nav-horizontal-div'>
@@ -15,4 +15,4 @@ const NavHorizontal = () => {
   )
 }
 
-export default NavHorizontal
+export default Nav
