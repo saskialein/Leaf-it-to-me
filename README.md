@@ -1,14 +1,42 @@
-# -----PLANNING PRIORTY ---
+# Leaf it to me
+## --- PLANNING ---
+# WIREFRAMES & components
 
-## ADD WIREFRAMES HERE
+## Shows on all pages
+## Components - Header.jsx, Nav.jsx
 
-### ADD NOTES - Major Components
+## Page 1
+## Components - Home.jsx, PlantList.jsx, Plant.jsx
+## wireframe:
+![Home](wireframes/Homepage.png)
 
-#### ADD NOTES - Components & Children
+## Page 2 
+## Components - IndividualPlant.jsx
+## wireframe:
+![IndividualPlant](wireframes/PlantProfile.png)
 
-# -----then do: ---
+## Page 3
+## Components - Login\Register\User\.jsx
+## wireframe:
+![Login\Register\User](wireframes/SignUp.png)
 
-## ADD NOTES - API
+
+## Page 4
+## Components - SavedPlants.jsx, PlantList.jsx Plant.jsx
+## wireframe:
+![SavedPlants](wireframes/UserProfileWithPlants.png) 
+
+
+## page 5 
+## Components - AddPlantForm.jsx
+## wireframe:
+
+![AddNewPlantToDataBase](wireframes/NewPlantProfile.png)
+
+
+
+
+# API
 
 | Method | Path | Description | NOTES |
 |---|---|---|---|
@@ -22,7 +50,7 @@
 | POST | /api/v1/plants/saved | Adds a plant to the users_plants DB (from the plants list or a newly created one)
 |---|---|---|---|
 
-##  ADD NOTES - API Request and response bodies
+# API Request and response bodies
 
 ### /api/v1/plants
 
@@ -106,7 +134,7 @@
   }]
 ```
 
-## ADD NOTES - Global State
+# Global State
 
 The global state object looks a bit like this:
 
@@ -148,29 +176,25 @@ const globalState = {
 }
 ```
 
-## ADD NOTES - Database Diagram
+# Database Diagram
 ![DatabaseDiagram](server/public/Diagram_inital_plan.png)
 
-
-# Leaf it to me
-
-# Getting Started
 
 * Clone & Make a branch Steps 1 - 4
 * Merge your feature Steps 5 - 11
 
-## 1. Clone
+### 1. Clone
 ```
 cd workspace
 git clone + https link
 cd myRepo
 ```
-## 2. Make a branch using the name of your feature
+### 2. Make a branch using the name of your feature
 ```
 git checkout -b feature/aFeature  
 code .  
 ```
-## 3. Instal modules & reset the database
+### 3. Instal modules & reset the database
 ```
 npm i
 npm run knex migrate:latest
@@ -188,47 +212,47 @@ git push origin myBranch
 # MERGE TIME!! Git Protocol in a Team!
 * Feature is done, ready to create a pull request to Development?? 
 
-## 5. Commit your branch
+### 5. Commit your branch
 ```
 git add .  
 git commit -m “readyToMerge”   
 ```
 
-## 6. Pull Development into your branch, open VScode & deal with the conflicts there.
+### 6. Pull Development into your branch, open VScode & deal with the conflicts there.
 
 ```
 git pull origin Development
 code .
 ```
-## 7. Vscode
+### 7. Vscode
 
 * Files marked C = Conflict
 * Files marked M = Modified
 * <<<<< Head  = This is you! Current changes, you are HEAD
 * <<<<<< Incoming change = pulled in from the Development branch
 
-## 8. Any conflicts or changes need to be saved, added, & committed again
+### 8. Any conflicts or changes need to be saved, added, & committed again
 
 ```
 git add .
 git commit -m “mergeTime”
 git push origin myBranch
 ```
-## 9. Github - create pull request
+### 9. Github - create pull request
 
 * Create pull request from mybranch to Development (on github)
 * Tell the git keeper, they will merge the pull request and there should be 0 conflicts as you have already resolved these in your branch.
 
-# Create a new branch with a new name
+### Create a new branch with a new name
 ```
 git checkout -b feature/myNextFeature  
 code .  
 ```
-## 10. GitKeeper - merge the request
+### 10. GitKeeper - merge the request
 
 * Merge the pull request on Github only if there are 0 conflicts, then delete the branch.
 
-## 11. Everyone else now needs to pull from Development & update their modules
+### 11. Everyone else now needs to pull from Development & update their modules
 ```
 git pull origin Development
 npm i
@@ -241,8 +265,8 @@ npm run knex seed:run
 
 ```
 
-## Update 3.01pm HR
-just pulled and app crashing? 
+### Update 
+
 run this in the terminal for auth:
 
 ```
@@ -252,4 +276,9 @@ once your database has first been populated, you can now use this shortcut
 to delete the sql file, run migrations and run seed sequentially
 ```
 npm run db-reset
+```
+## magical git witch shortcut to push your branch --> your branch
+
+```
+make pushbranch m='commitMessage'
 ```
