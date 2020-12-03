@@ -3,26 +3,28 @@
 # WIREFRAMES & components
 
 ## Shows on all pages
+Components:
 -- Header\
 -- -- Nav\
 
-## page 1
-## Home
-PlantList\Plant
+## page 1 Components & wireframe
+Home
+PlantList
+Plant
 ![Home](wireframes/Homepage.png)
 
-## Components & Children
+## page 2 Components & wireframe
 
 ## IndividualPlant\
 ![IndividualPlant](wireframes/PlantProfile.png)
 
 ## page 
 ## Login\Register\User\
-![Login\Register\User\](wireframes/SignUp.png)
+![Login\Register\User\] (wireframes/SignUp.png)
 
 ## SavedPlants\
 PlantList\Plant
-![SavedPlants\](wireframes/UserProfileWithPlants.png)
+![SavedPlants\] (wireframes/UserProfileWithPlants.png)
 
 ## page 5
 ## AddPlantForm
