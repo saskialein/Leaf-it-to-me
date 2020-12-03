@@ -9,9 +9,28 @@ exports.seed = (knex) => {
     ]))
     .then(([ianHash, orlandoHash, hortenseHash]) =>
       knex('users').insert([
-        { id: 1, username: 'Ian', hash: ianHash },
-        { id: 2, username: 'Orlando', hash: orlandoHash },
-        { id: 3, username: 'Hortense', hash: hortenseHash }
-      ])
-      )
-  }
+        {
+          id: 1, 
+          name: 'Ian', 
+          username: 'eeny', 
+          hash: ianHash, 
+          email: 'eeny@geni.com'
+        },
+        {
+          id: 2, 
+          name: 'Orlando', 
+          username: 'landi', 
+          hash: orlandoHash, 
+          email: 'landi@handi.com'
+        },
+        {
+          id: 3, 
+          name: 'Hortense', 
+          username: 'tensi', 
+          hash: hortenseHash, 
+          email: 'tensi@rensi.com'
+        },
+
+       ])
+    )
+}
