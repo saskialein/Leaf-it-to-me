@@ -7,6 +7,7 @@ const IndividualPlant = () => {
    
     <h1>IndividualPlant</h1>
     <p>Show a large card of the plant + the details</p>
+    
     </div>
   )
 }
