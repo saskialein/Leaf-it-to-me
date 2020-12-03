@@ -1,35 +1,31 @@
 # Leaf it to me
-## --- PLANNING ---
-# WIREFRAMES & components
-
-## Shows on all pages
-## Components - Header.jsx, Nav.jsx
+## WIREFRAMES & components
+### Components showing on all pages - Header.jsx, Nav.jsx
 
 ## Page 1
-## Components - Home.jsx, PlantList.jsx, Plant.jsx
-## wireframe:
+### Components - Home.jsx, PlantList.jsx, Plant.jsx
+### wireframe:
 ![Home](wireframes/Homepage.png)
 
 ## Page 2 
-## Components - IndividualPlant.jsx
-## wireframe:
+### Components - IndividualPlant.jsx
+### wireframe:
 ![IndividualPlant](wireframes/PlantProfile.png)
 
 ## Page 3
-## Components - Login\Register\User\.jsx
-## wireframe:
+### Components - Login\Register\User\.jsx
+### wireframe:
 ![Login\Register\User](wireframes/SignUp.png)
 
-
 ## Page 4
-## Components - SavedPlants.jsx, PlantList.jsx Plant.jsx
-## wireframe:
+### Components - SavedPlants.jsx, PlantList.jsx Plant.jsx
+### wireframe:
 ![SavedPlants](wireframes/UserProfileWithPlants.png) 
 
 
 ## page 5 
-## Components - AddPlantForm.jsx
-## wireframe:
+### Components - AddPlantForm.jsx
+###   wireframe:
 
 ![AddNewPlantToDataBase](wireframes/NewPlantProfile.png)
 
