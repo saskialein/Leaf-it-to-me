@@ -35,18 +35,19 @@
 
 
 
+
 # API
 
 | Method | Path | Description | NOTES |
 |---|---|---|---|
-| POST | /api/v1/register | adds a user - registering them | Authenticare
-| POST | /api/v1/login | logging in a user and getting user info from DB | Authenticare
-| GET | /api/v1/plants | let us see all plants on the page
-| GET | /api/v1/plant/:name | shows individual plant with all details 
-| POST | /api/v1/addplant | add a plant to my profile
-| GET | /api/v1/plants/saved | shows the logged in persons plants
-| POST | /api/v1/plants/saved/:id | saves a plant to a users saved plants table
-| GET | /api/v1/user | Get the user information
+| POST | /api/v1/register | Adds a user - registering them | Authenticare
+| POST | /api/v1/login | Logs a user in and gets a users info from the DB | Authenticare
+| GET | /api/v1/user | Gets the user information
+| GET | /api/v1/plants | Gets all plants from the DB
+| POST | /api/v1/plants| Adds a newly created plant to the plants DB
+| ~~GET~~ | ~~/api/v1/plant/:name~~ | ~~shows individual plant with all details~~ | No additional db call necessary if we have all data in our global state 
+| GET | /api/v1/plants/saved | Gets the logged in persons plants from the users_plants DB
+| POST | /api/v1/plants/saved | Adds a plant to the users_plants DB (from the plants list or a newly created one)
 |---|---|---|---|
 
 # API Request and response bodies
@@ -66,7 +67,8 @@
   }],
 ```
 
-### /api/v1/plant/:name
+### /api/v1/plant/:name 
+<span style="color:red">*Might not even be necessary if we get all the plants and details into the global space with the /api/v1/plants call. Should ask Ross/Kelly for best practice.*</span>
 
 ##### _Response_
 
@@ -84,7 +86,7 @@
       }
 ```
 
-### /api/v1/addplant
+### /api/v1/plants/saved
 
 ##### _Request_
 
@@ -141,7 +143,7 @@ The global state object looks a bit like this:
 
 const globalState = {
   search: {
-    //search funcitonality for specific plant?
+    //search functionality for specific plant?
   },
   plants: [{
     0: {
@@ -177,8 +179,6 @@ const globalState = {
 # Database Diagram
 ![DatabaseDiagram](server/public/Diagram_inital_plan.png)
 
-
-# Leaf it to me - getting started with GIT
 
 * Clone & Make a branch Steps 1 - 4
 * Merge your feature Steps 5 - 11
