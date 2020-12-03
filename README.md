@@ -3,74 +3,37 @@
 # WIREFRAMES & components
 
 ## Shows on all pages
-Components:
--- Header\
--- -- Nav\
+## Components - Header.jsx, Nav.jsx
 
-## page 1 Components & wireframe
-Home
-PlantList
-Plant
+## Page 1
+## Components - Home.jsx, PlantList.jsx, Plant.jsx
+## wireframe:
 ![Home](wireframes/Homepage.png)
 
-## page 2 Components & wireframe
-
-## IndividualPlant\
+## Page 2 
+## Components - IndividualPlant.jsx
+## wireframe:
 ![IndividualPlant](wireframes/PlantProfile.png)
 
-## page 
-## Login\Register\User\
-![Login\Register\User\] (wireframes/SignUp.png)
+## Page 3
+## Components - Login\Register\User\.jsx
+## wireframe:
+![Login\Register\User](wireframes/SignUp.png)
 
-## SavedPlants\
-PlantList\Plant
-![SavedPlants\] (wireframes/UserProfileWithPlants.png)
 
-## page 5
-## AddPlantForm
+## Page 4
+## Components - SavedPlants.jsx, PlantList.jsx Plant.jsx
+## wireframe:
+![SavedPlants](wireframes/UserProfileWithPlants.png) 
+
+
+## page 5 
+## Components - AddPlantForm.jsx
+## wireframe:
 
 ![AddNewPlantToDataBase](wireframes/NewPlantProfile.png)
 
-# Major Components
 
-
-| Route | Component | Notes |
-|---|---|---|
-| / | App | Root Component |
-| / | Header | Shows on all pages |
-| /home | AllPlants |
-| /plants/saved | SavedPlants | Authenticated |
-| /plants/:name | IndividualPlant
-|---|---|---|
-|AddPlantForm|---|---|
-| /user | User
-| /login | Login | NOT Authenticated |
-| /register | Register | NOT Authenticated |
-|---|---|---|
-
-
-
-## Components & Children
-App\
-\
--- Header\
--- -- Nav\
-\
--- Home\
--- -- PlantList\
--- -- -- Plant
-\
--- IndividualPlant\
-\
--- SavedPlants\
--- -- PlantList\
--- -- -- Plant
-\
--- Login\
--- Register\
--- User\
-
-# -----then do: ---
 
 # API
 
