@@ -27,17 +27,6 @@ const Plant = (props) => {
         </div>
        
         </div>
-<<<<<<< HEAD
-
-    </div>
-    </>
-||||||| merged common ancestors
-
-
-    </div>
-    </>
-=======
->>>>>>> 556301d903579e29337a7eb8cf54eb037c678cc0
    
   )
 }
