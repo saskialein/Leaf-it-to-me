@@ -5,22 +5,24 @@ const IndividualPlant = (props) => {
   const name = props.match.params.name;
 
   return (
-    <div className="">
+    <div>
+
       {props.plants
         .filter((plant) => plant.common_name == name)
         .map((plant) => {
           return (
             <div key={plant.id}>
-              <div className="">
-                <h2 className="">{plant.common_name}</h2>
-                <p>{plant.species_name}</p>
-                <img
+              <div className="individ-plant-main">
+                <h2 className="commonName">{plant.common_name}</h2>
+                <h3 className="commonName">{plant.species_name}</h3>
+
+                <div className="careDetailWrapper"></div>
+              
+              <div className="careDetail">                <img
                   src={`https://www.amara.com/static/uploads/images-2/products/huge/156501/big-cactus-cushion-603972.jpg`}
                 />
-                <h3 className="">Plant Care Details:</h3>
-              </div>
-              <div className="">
                 <ul className="">
+                  
                   <li>{plant.water}</li>
                   <li>{plant.light}</li>
                   <li>{plant.temp}</li>
@@ -28,12 +30,14 @@ const IndividualPlant = (props) => {
                   <li>{plant.soil}</li>
                   <li>{plant.lvl}</li>
                   <li>{plant.more}</li>
-                </ul>
-              </div>
-
-              <button className="" href="">
+                </ul>              
+                <button className="" href="">
                 Add Plant to Profile
               </button>
+              </div>
+
+
+            </div>
             </div>
           );
         })}
