@@ -8,7 +8,7 @@ const SavedPlants = () => {
   return (
     <div>
    
-    <h1>SavedPlants</h1>
+  
     <PlantList/>
     </div>
   )

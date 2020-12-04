@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 // import { connect } from 'react-redux'
 
-
+// Switch
 
 import Header from './Header.jsx'
 import Home from './Home.jsx'
@@ -12,13 +12,9 @@ import AddPlantForm from './AddPlantForm.jsx'
 // import SignIn from './SignIn'
 // import Register from './Register'
 
-
 // import NewComponent from './NewComponent.jsx'
 
 
-// -- Login\
-// -- Register\
-// -- User\
 
 class App extends React.Component {
     render () {
@@ -33,9 +29,6 @@ class App extends React.Component {
 
           {/* <Route exact path='/login' component={SignIn}/> */}
           {/* <Route exact path='/register' component={Register}/> */}
-
-
-
 
         </>
       )
