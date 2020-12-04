@@ -1,8 +1,13 @@
-import React from "react";
+import React from "react"
 import { connect } from 'react-redux'
+import { addPlantToReduxandDb } from '../actions/index'
 
 const IndividualPlant = (props) => {
-  const name = props.match.params.name;
+  const name = props.match.params.name
+  const userPlant = {
+    plant_id: 4,
+    user_id: 2
+  }
 
   return (
     <div>
@@ -31,12 +36,8 @@ const IndividualPlant = (props) => {
                   <li>{plant.lvl}</li>
                   <li>{plant.more}</li>
                 </ul>              
-                <button className="" href="">
-                Add Plant to Profile
-              </button>
+                <button onClick={() => {props.dispatch(addPlantToReduxandDb(userPlant))}}>Add Plant to profile</button>
               </div>
-
-
             </div>
             </div>
           );
@@ -48,7 +49,7 @@ const IndividualPlant = (props) => {
 function mapStateToProps(globalState) {
   return {
     plants: globalState.plants,
-  };
+  }
 }
-export default connect(mapStateToProps)(IndividualPlant);
+export default connect(mapStateToProps)(IndividualPlant)
 
