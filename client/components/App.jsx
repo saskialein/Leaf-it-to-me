@@ -15,7 +15,6 @@ import SignIn from './SignIn'
 import Register from './Register'
 
 
-
 class App extends React.Component {
   componentDidMount() {
     this.props.dispatch(checkAuth())
