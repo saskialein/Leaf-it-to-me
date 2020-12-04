@@ -111,9 +111,9 @@ make pushbranch m='commitMessage'
 ### Unauthorised Users:
 
 - [x] As an unregistered user I would like to be able to see a list of all of the plants on the homepage
-- [ ] As an unregistered user I would like to be able to search for a specific plant on the homepage
+- [x] As an unregistered user I would like to be able to search for a specific plant on the homepage
 - [x] As an unregistered user I would like to click on a plant from the homepage & be re-directed to see it’s individual profile page
-- [ ] As an unregistered user I would like to be able to click on a button on the homepage to add a new plant and then be re-directed to the signup page which will tell me I need to register before I can add new plants to the main plant list and/or my own profile
+- [] As an unregistered user I would like to be able to click on a button on the homepage to add a new plant and then be re-directed to the signup page which will tell me I need to register before I can add new plants to the main plant list and/or my own profile
 - [x] As an unauthorised user I would like to be able to register
 - [x] As an unauthorised user I would like to be able to log in
 
