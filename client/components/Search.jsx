@@ -1,44 +1,32 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from "react"
+import { connect } from "react-redux"
+import { setSearchTerm } from "../actions/search";
 
 
 class Search extends React.Component {
   state = {
-    // plants: [],
-    searchField: "",
-  };
+    searchTerm: ""
+  }
 
   handleChange = (e) => {
-    this.setState({ searchField: e.target.value });
+    
+    this.setState({ searchTerm: e.target.value })
+    this.props.dispatch(setSearchTerm(e.target.value))
   };
 
   render() {
-    const { searchField } = this.state;
-    const filteredPlants = this.props.plants.filter((plant) =>
-      plant.common_name.toLowerCase().includes(searchField.toLowerCase())
-    );
-    console.log(filteredPlants);
+ 
     return (
       <div className="">
         <h2>Search</h2>
         <input
           onChange={this.handleChange}
           className="input"
-          value={this.state.searchField}
-          name="searchField"
+          value={this.state.searchTerm}
+          name="searchTerm"
           type="text"
         />
-        <ul>
-          {filteredPlants.map((plant) => {
-              return ( 
-            <li>
-              <img src="{plant.img}" alt="PlantImage" />
-              {plant.common_name}
-            </li>
-              )
-          })
-          }
-        </ul>
+     
       </div>
     );
   }
@@ -47,7 +35,7 @@ class Search extends React.Component {
 function mapStateToProps(globalState) {
   return {
     plants: globalState.plants,
-  };
+  }
 }
 
-export default connect(mapStateToProps)(Search);
+export default connect(mapStateToProps)(Search)
