@@ -10,6 +10,7 @@ const Home = () => {
   
     <p>Show the plant list - all of the plants</p>
     <PlantList/>
+    <button></button>
    
     </div>
   )
