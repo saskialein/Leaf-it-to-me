@@ -151,7 +151,7 @@ exports.seed = function(knex) {
           common_name: 'Tillandsia (air plants)', 
           species_name: 'epiphytes or bromeliads', 
           water: 'Every 1-2 weeks, soak in room temp tap water for 10mins, then gently shake excess water from your plant. Turn it upside down and place it on a towel to dry in a bright space. This is very important! Air plants will quickly rot if they are allowed to stand in excess water for too long without drying. Regular misting is also encouraged', 
-          light: 'Bright, indirect light', 
+          light: 'Bright indirect light', 
           temp: '15-30°C', 
           humidity: 'Moderate humidity', 
           soil: 'No soil, hence the name Air Plant as they can thrive on nutrients provied from the surrounding air' , 
