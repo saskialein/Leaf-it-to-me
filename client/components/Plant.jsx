@@ -11,7 +11,7 @@ const Plant = (props) => {
     {/* <h1>Plant Comp rendered inside plantlist</h1>
     <p>Show a small card of the plant</p> */}
 
-      <div className='profile-wrapper'>
+      
 
       <div className='each-profile'>
       <div className='profile-picture'>
@@ -25,8 +25,7 @@ const Plant = (props) => {
       
         </div>
         </div>
-       
-        </div>
+      
    
   )
 }

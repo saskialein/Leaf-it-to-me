@@ -1,6 +1,7 @@
 import { retrievePlants } from "../apis/plants"
 
 export const SET_PLANTS = 'SET_PLANTS'
+// export const SET_LOADED = 'SET_LOADED'
 
 export const setPlants = (plants) => {
   return {
@@ -17,3 +18,9 @@ export const fetchPlants = () => {
       })
   }
 }
+
+// export const setLoaded = () => {
+//   return {
+//     type: SET_LOADED
+//   }
+// }
