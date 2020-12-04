@@ -11,14 +11,17 @@ import SavedPlants from "./SavedPlants.jsx";
 import AddPlantForm from "./AddPlantForm.jsx";
 // import SignIn from './SignIn'
 import Register from "./Register";
+import Search from "./Search"
 
 import { checkAuth } from "../actions/auth.js";
+import { fetchPlants } from "../actions/index.js";
 
 // import NewComponent from './NewComponent.jsx'
 
 class App extends React.Component {
   componentDidMount() {
     this.props.dispatch(checkAuth());
+    this.props.dispatch(fetchPlants());
   }
 
   render() {
@@ -34,6 +37,7 @@ class App extends React.Component {
 
             {/* <Route exact path='/login' component={SignIn}/> */}
             <Route exact path="/register" component={Register} />
+            <Route path="/search" component={Search} />
           </>
       </div>
     );
