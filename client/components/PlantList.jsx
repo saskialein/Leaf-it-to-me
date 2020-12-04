@@ -12,14 +12,16 @@ class PlantList extends React.Component {
   return(
     <div>
       <h1>PlantList</h1>
-      <ul className="plantList">
+
+
+      <div className="profile-wrapper">
         {this.props.plants.map((plant) => {
 
           return (
             <Plant key={plant.id} plant={plant}/>
           )
         })}
-      </ul>
+      </div>
     </div>
     )
   }
