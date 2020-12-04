@@ -1,5 +1,5 @@
 import React from "react";
-
+import Plant from "./Plant"
 import { fetchPlants } from "../actions/index";
 import { connect } from 'react-redux'
 
