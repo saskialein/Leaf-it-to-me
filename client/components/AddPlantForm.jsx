@@ -8,12 +8,12 @@ class AddPlantForm extends React.Component {
     light: '',
     temp: '',
     humidity: '',
-    img: ''
+    img: '',
   }
 
   handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     })
   }
 
@@ -26,27 +26,58 @@ class AddPlantForm extends React.Component {
   //     name: '',
   //   })
   // }
-  
 
-  render () {
+  render() {
     return (
       <div>
-        <form className='form'>
-
-          <label>Common Name: </label>
-          <input onChange={this.handleChange} className='input' value={this.state.name} autoFocus={true} name="name" type="text"/>
-          <br/>
-
-          <label>Water: </label>
-          <input onChange={this.handleChange} className='input' value={this.state.water}  name="water" type="text"/>
-
-          <label>Light: </label> <input onChange={this.handleChange} className='input' value={this.state.light} name="light" type="text"/>
-
-          <label>Temp: </label><input onChange={this.handleChange} className='input' value={this.state.temp} name="temp" type="text"/>
-
-          <label>Humidity: </label><input onChange={this.handleChange} className='input' value={this.state.humidity} name="humidity" type="text"/>
-          
-          <button>Submit</button>
+        <form className="form">
+          <h2>Enter Plant Detail</h2>
+          <label className="addPlantFormLabel">Common Name: </label>
+          <input
+            onChange={this.handleChange}
+            className="input"
+            value={this.state.name}
+            autoFocus={true}
+            name="name"
+            type="text"
+          />
+          <br />
+          <label className="addPlantFormLabel">Water: </label>
+          <input
+            onChange={this.handleChange}
+            className="input"
+            value={this.state.water}
+            name="water"
+            type="text"
+          />
+          <br />
+          <label className="addPlantFormLabel">Light: </label>
+          <input
+            onChange={this.handleChange}
+            className="input"
+            value={this.state.light}
+            name="light"
+            type="text"
+          />
+          <br />
+          <label className="addPlantFormLabel">Temp: </label>
+          <input
+            onChange={this.handleChange}
+            className="input"
+            value={this.state.temp}
+            name="temp"
+            type="text"
+          />
+          <br />
+          <label className="addPlantFormLabel">Humidity: </label>
+          <input
+            onChange={this.handleChange}
+            className="input"
+            value={this.state.humidity}
+            name="humidity"
+            type="text"
+          />
+          <button className="submitButton">Submit</button>
           {/* <button onClick ={(e) => this.submitHandler(e)} className='text-btn' type="submit"> Submit </button> */}
         </form>
       </div>

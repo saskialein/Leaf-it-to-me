@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+// variables
+$font-stack: 'Roboto', sans-serif;
+
+//VARIABLES ARE MADE OF MVP
+//COLOR BLOCKS ARE FOR DISPLAYING PURPOSE + STYLING TEXT COMPONENTS --- ish
+//BRIEFLY SETTING UP SASS FOR WHEN DESIGN ARE FINALIZED
+//---JESS---
+
+//BACKGROUND COLORS
+$backgroundcolor01: #f8f7de;
+$backgroundcolor02: #d35d6e;
+$backgroundcolor03: #d0e8f2;
+$backgroundcolor04: #8db596;
+
+//MARGIN + PADDING SPACINGS
+$temp-margin: 30px;
+$temp-padding: 20px;
+
+//COLORS
+$commonNameFontColor: #222831;
+$spaceGreyColor: #222831;
+
+//TYPEFACE + FONT SIZING
+$font-body-paragraph: 1.1em;
+
+.form {
+  margin: $temp-margin;
+  padding: $temp-padding;
+  border: 0.5px, solid, $spaceGreyColor;
+  display: inline-block;
+  background-color: $backgroundcolor02;
+  color: $spaceGreyColor;
+  align-content: left;
+}
+
+h2 {
+  font-weight: xx-large;
+}
+
+.addPlantFormLabel {
+  margin: $temp-margin, 0px, $temp-margin, 0px;
+  padding: $temp-padding, $temp-padding, $temp-padding, 0px;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.input {
+  margin-top: $temp-margin/4;
+  display: block;
+  font-size: 0.025 rem;
+}
+
+// button {
+//   margin-top: $temp-margin;
+//   padding: $temp-padding/3;
+//   font-weight: bold;
+//   border: 1.5px solid;
+//   border-radius: 20px 20px;
+// }
+
+.submitButton {
+  margin-top: $temp-margin/2;
+  padding: $temp-padding/3;
+  font-weight: bold;
+  border: 1.5px solid;
+  border-radius: 20px 20px;
+}
