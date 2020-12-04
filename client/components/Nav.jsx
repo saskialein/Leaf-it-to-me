@@ -1,9 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { logOff } from 'authenticare/client'
+import { connect } from 'react-redux'
 
-const logOutUser = dispatch => {
+import { logOut } from '../actions/auth'
+
+
+
+const logOutUser = (dispatch) => {
   logOff()
+  dispatch(logOut())
 }
 
 const Nav = (props) => {
@@ -24,4 +30,4 @@ const Nav = (props) => {
   )
 }
 
-export default Nav
+export default connect()(Nav)
