@@ -1,12 +1,9 @@
 import React from "react";
 
-import { fetchPlants } from "../actions/index";
 import { connect } from 'react-redux'
 
 class PlantList extends React.Component {
-  componentDidMount() {
-    this.props.dispatch(fetchPlants());
-  }
+  
   render() {
 
   return(
