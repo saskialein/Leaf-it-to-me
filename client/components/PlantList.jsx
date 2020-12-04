@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 
 class PlantList extends React.Component {
  
+  
   render() {
 
   return(
@@ -26,9 +27,9 @@ class PlantList extends React.Component {
 
 
 
-// function mapStateToProps(globalState) {
-//   return {
-//     plants: globalState.plants,
-//   };
-// }
-export default connect()(PlantList);
+function mapStateToProps(globalState) {
+  return {
+    plants: globalState.plants,
+  };
+}
+export default connect(mapStateToProps)(PlantList);
