@@ -1,6 +1,15 @@
 import React from "react";
+import { connect } from 'react-redux'
 
-const IndividualPlant = () => {
+import { addPlantToReduxandDb } from '../actions/index'
+
+const IndividualPlant = (props) => {
+
+  const plant = {
+    plant_id: 4,
+    user_id: 2
+  }
+
   return (
     <div className='individ-plant-main'>
    
@@ -25,30 +34,11 @@ const IndividualPlant = () => {
           <li>more</li>
         </ul>
 
-      <button>Add Plant to profile</button>
+      <button onClick={() => {props.dispatch(addPlantToReduxandDb(plant))}}>Add Plant to profile</button>
     </div>
   );
 };
 
-export default IndividualPlant;
+export default connect() (IndividualPlant)
 
-      {/* <div className="">
-        <h2 className="">{props.plant.common_name}</h2>
-        <p>{props.plant.species_name}</p>
-        <img className="" src={props.plant.img} />
-        <h3 className="">Plant Care Detail</h3>
-      </div>
-      <div className="">
-        <ul className="">
-          <li>{props.plant.water}</li>
-          <li>{props.plant.light}</li>
-          <li>{props.plant.temp}</li>
-          <li>{props.plant.humidity}</li>
-          <li>{props.plant.soil}</li>
-          <li>{props.plant.lvl}</li>
-          <li>{props.plant.more}</li>
-        </ul>
-      </div>
-      <button className="" href="">
-        Add Plant to Profile
-      </button> */}
+ 
