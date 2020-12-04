@@ -1,54 +1,55 @@
-import React from "react";
+import React from "react"
+import { connect } from 'react-redux'
+import { addPlantToReduxandDb } from '../actions/index'
 
-const IndividualPlant = () => {
+const IndividualPlant = (props) => {
+  const name = props.match.params.name
+  const userPlant = {
+    plant_id: 4,
+    user_id: 2
+  }
+
   return (
-    <div className='individ-plant-main'>
-   
-    <h2 className='individ-plant-'>Common Name</h2>
-    <h3>species_name</h3>
-    <p>Show a large card of the plant + the details</p>
-    
+    <div>
 
-    <img src={`https://www.amara.com/static/uploads/images-2/products/huge/156501/big-cactus-cushion-603972.jpg`}/>
+      {props.plants
+        .filter((plant) => plant.common_name == name)
+        .map((plant) => {
+          return (
+            <div key={plant.id}>
+              <div className="individ-plant-main">
+                <h2 className="commonName">{plant.common_name}</h2>
+                <h3 className="commonName">{plant.species_name}</h3>
 
-      <h3>Plant Care Detail</h3>
-      <p>The details for caring for the plant. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium inventore sunt facere saepe ratione numquam dicta aut qui voluptatem cupiditate adipisci, nesciunt debitis? Quo aspernatur ut aperiam obcaecati odio ea.
-      </p>
-
-      <ul className="">
-          <li>water</li>
-          <li>light</li>
-          <li>temp</li>
-          <li>humidity</li>
-          <li>soil</li>
-          <li>lvl</li>
-          <li>more</li>
-        </ul>
-
-      <button>Add Plant to profile</button>
+                <div className="careDetailWrapper"></div>
+              
+              <div className="careDetail">                <img
+                  src={`https://www.amara.com/static/uploads/images-2/products/huge/156501/big-cactus-cushion-603972.jpg`}
+                />
+                <ul className="">
+                  
+                  <li>{plant.water}</li>
+                  <li>{plant.light}</li>
+                  <li>{plant.temp}</li>
+                  <li>{plant.humidity}</li>
+                  <li>{plant.soil}</li>
+                  <li>{plant.lvl}</li>
+                  <li>{plant.more}</li>
+                </ul>              
+                <button onClick={() => {props.dispatch(addPlantToReduxandDb(userPlant))}}>Add Plant to profile</button>
+              </div>
+            </div>
+            </div>
+          );
+        })}
     </div>
   );
 };
 
-export default IndividualPlant;
+function mapStateToProps(globalState) {
+  return {
+    plants: globalState.plants,
+  }
+}
+export default connect(mapStateToProps)(IndividualPlant)
 
-      {/* <div className="">
-        <h2 className="">{props.plant.common_name}</h2>
-        <p>{props.plant.species_name}</p>
-        <img className="" src={props.plant.img} />
-        <h3 className="">Plant Care Detail</h3>
-      </div>
-      <div className="">
-        <ul className="">
-          <li>{props.plant.water}</li>
-          <li>{props.plant.light}</li>
-          <li>{props.plant.temp}</li>
-          <li>{props.plant.humidity}</li>
-          <li>{props.plant.soil}</li>
-          <li>{props.plant.lvl}</li>
-          <li>{props.plant.more}</li>
-        </ul>
-      </div>
-      <button className="" href="">
-        Add Plant to Profile
-      </button> */}

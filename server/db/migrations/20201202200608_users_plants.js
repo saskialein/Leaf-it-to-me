@@ -9,7 +9,7 @@ exports.up = function (knex) {
     table.string('img')
   })
 }
-
+//user and plant ids need to be integers not strings
 exports.down = function (knex) {
   return knex.schema.dropTable('users_plants')
 }
