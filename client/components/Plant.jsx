@@ -8,18 +8,19 @@ const Plant = (props) => {
   return (
     <div>
    
-    {/* <h1>Plant Comp rendered inside plantlist</h1>
-    <p>Show a small card of the plant</p> */}
 
+          {/* <img src={`https://www.amara.com/static/uploads/images-2/products/huge/156501/big-cactus-cushion-603972.jpg`}/> */}
       
 
       <div className='each-profile'>
       <div className='profile-picture'>
-          <img src={`https://www.amara.com/static/uploads/images-2/products/huge/156501/big-cactus-cushion-603972.jpg`}/>
+          <img src= {plant.img}/>
         <div className='profile-name-plate'>
-          <p className='profile-name'>{plant.common_name}</p>
-          <p className='profile-sign'>feeling fabulous</p>
-          <Link to={`/plants/${plant.common_name}`}><button>Click me</button></Link>
+          <h4 className='name'>{plant.common_name}</h4>
+          <p className='species'>{plant.species_name}</p>
+        </div>
+        <div className='button-plate'>
+          <Link to={`/plants/${plant.common_name}`}><button>More info</button></Link>
         </div>
         </div>
       

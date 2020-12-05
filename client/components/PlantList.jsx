@@ -13,9 +13,6 @@ class PlantList extends React.Component {
   return(
     <div>
       <Search />
-      <h1>PlantList</h1>
-
-
       <div className="profile-wrapper">
         {filteredPlants.map((plant) => {
 
