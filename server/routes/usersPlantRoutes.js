@@ -8,7 +8,6 @@ const { getUsersPlants } = require('../db/plantDbFuncs')
 router.get('/:id', (req, res) => {
     getUsersPlants(req.params.id)
         .then(plants => {
-            console.log(plants)
             res.json(plants)
             //res.json means stringify the response & put it in JSON format so we can then deal with it this way
         })
