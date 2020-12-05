@@ -1,25 +1,29 @@
 import React from "react";
-
-import { fetchPlants } from "../actions/index";
+import Plant from "./Plant"
 import { connect } from 'react-redux'
+import Search from './Search'
 
 class PlantList extends React.Component {
-  componentDidMount() {
-    this.props.dispatch(fetchPlants());
-  }
+  
   render() {
+    const filteredPlants = this.props.plants.filter((plant) =>
+    plant.common_name.toLowerCase().includes(this.props.searchTerm.toLowerCase())
+  )
 
   return(
     <div>
+      <Search />
       <h1>PlantList</h1>
-      <ul className="plantList">
-        {this.props.plants.map((plant) => {
+
+
+      <div className="profile-wrapper">
+        {filteredPlants.map((plant) => {
 
           return (
-            <li><img src="{plant.img}" alt="PlantImage"/>{plant.common_name}</li>
+            <Plant key={plant.id} plant={plant}/>
           )
         })}
-      </ul>
+      </div>
     </div>
     )
   }
@@ -31,6 +35,7 @@ class PlantList extends React.Component {
 function mapStateToProps(globalState) {
   return {
     plants: globalState.plants,
+    searchTerm: globalState.search
   };
 }
 export default connect(mapStateToProps)(PlantList);

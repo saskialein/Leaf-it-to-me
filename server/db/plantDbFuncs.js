@@ -20,8 +20,15 @@ function createPlant(newPlant, db = connection){
   .then(ids => ids[0])
 }
 
+//
+function addPlantToProfileDbFunc(plant, db = connection) {
+  return db('users_plants').insert(plant)
+}
+
+
 module.exports = {
   getPlants,
   getPlant,
-  createPlant
+  createPlant,
+  addPlantToProfileDbFunc
 }
