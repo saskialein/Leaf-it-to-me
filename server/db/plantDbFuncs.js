@@ -13,8 +13,8 @@ function getPlant(id, db = connection){
 // kind of like a find, run thru all of the plants and find the plant whose id matches the id that has been passed in 
 
 // READ - Get User Plants
-function getUsersPlants(db = connection) {
-  return db('users_plants').select()
+function getUsersPlants(id, db = connection) {
+  return db('users_plants').select().where('user_id', id)
 }
 
 
