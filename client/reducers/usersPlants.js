@@ -1,4 +1,4 @@
-import { SET_USERS_PLANTS } from '../actions'
+import { SET_USERS_PLANTS } from '../actions/usersPlants'
 
 const initialState = []
 

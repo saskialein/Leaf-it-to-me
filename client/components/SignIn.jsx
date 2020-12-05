@@ -4,7 +4,7 @@ import { getDecodedToken, isAuthenticated, signIn } from "authenticare/client";
 
 import { baseApiUrl as baseUrl } from "../config";
 import { logIn } from "../actions/auth";
-import { fetchUsersPlants } from "../actions";
+import { fetchUsersPlants } from "../actions/usersPlants";
 
 class SignIn extends React.Component {
   state = {
@@ -26,8 +26,8 @@ class SignIn extends React.Component {
         if (isAuthenticated()) {
           const user = getDecodedToken();
           this.props.dispatch(logIn(user))
-          this.props.dispatch(fetchUsersPlants());
-          this.props.history.push("/home");
+          this.props.dispatch(fetchUsersPlants(user.id));
+          this.props.history.push("/userprofile");
         }
         return null;
       })

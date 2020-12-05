@@ -2,11 +2,11 @@ import request from 'superagent'
 
 
 
-const rootUrl = '/api/v1/users_plants'
+const rootUrl = '/api/v1/users_plants/'
 
 
 
-export function retrieveUsersPlants () {
-  return request.get(rootUrl)
+export function retrieveUsersPlants (id) {
+  return request.get(rootUrl + id)
     .then(res => res.body)
 }

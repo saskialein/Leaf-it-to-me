@@ -15,12 +15,6 @@ export const setPlants = (plants) => {
   }
 }
 
-export const setUsersPlants = (plants) => {
-  return {
-    type: SET_USERS_PLANTS,
-    plants
-  }
-}
 
 export const addPlantToRedux = (plant) => {
   return {
@@ -41,15 +35,6 @@ export const fetchPlants = () => {
     return retrievePlants()
       .then(plants => {
         dispatch(setPlants(plants))
-      })
-  }
-}
-
-export const fetchUsersPlants = () => {
-  return dispatch => {
-    return retrieveUsersPlants()
-      .then(plants => {
-        dispatch(setUsersPlants(plants))
       })
   }
 }
