@@ -21,6 +21,8 @@ const Plant = (props) => {
         </div>
         <div className='button-plate'>
           <Link to={`/plants/${plant.common_name}`}><button>More info</button></Link>
+          <button>add to my profile</button>
+      
         </div>
         </div>
       
