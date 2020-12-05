@@ -38,7 +38,7 @@ h2 {
   font-weight: xx-large;
 }
 
-.addPlantFormLabel {
+ label {
   margin: $temp-margin, 0px, $temp-margin, 0px;
   padding: $temp-padding, $temp-padding, $temp-padding, 0px;
   font-size: x-large;
@@ -61,8 +61,8 @@ h2 {
 
 .submitButton {
   margin-top: $temp-margin/2;
-  padding: $temp-padding/3;
+  padding: $temp-padding/2.5;
   font-weight: bold;
   border: 1.5px solid;
-  border-radius: 20px 20px;
+  border-radius: 15px 15px;
 }
