@@ -13,6 +13,7 @@ import AddPlantForm from './AddPlantForm.jsx'
 import SavedPlants from './SavedPlants.jsx'
 import SignIn from './SignIn'
 import Register from './Register'
+import UserPlantList from './UserPlantList'
 
 
 class App extends React.Component {
@@ -21,10 +22,12 @@ class App extends React.Component {
     this.props.dispatch(fetchPlants())
   }
 
+
   render() {
     return (
       <div className="app">
         <Header />
+        <Route exact path="/userprofile" component={UserPlantList} />
           <>
             <Route exact path="/" component={Home} />
 
@@ -43,7 +46,6 @@ class App extends React.Component {
 
 function mapStateToProps (globalState) {
   return {
-   
     users: globalState.users,
 }
 }

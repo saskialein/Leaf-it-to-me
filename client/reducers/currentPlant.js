@@ -1,4 +1,4 @@
-import { CURRENT_PLANT } from '../actions/search'
+import { CURRENT_PLANT } from '../actions/index'
 
 const initialState = []
 
