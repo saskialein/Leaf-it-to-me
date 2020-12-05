@@ -4,10 +4,7 @@ import { addPlantToReduxandDb } from '../actions/index'
 
 const IndividualPlant = (props) => {
   const name = props.match.params.name
-  const userPlant = {
-    plant_id: 4,
-    user_id: 2
-  }
+
 
   return (
     <div>
@@ -36,7 +33,7 @@ const IndividualPlant = (props) => {
                   <li>{plant.lvl}</li>
                   <li>{plant.more}</li>
                 </ul>              
-                <button onClick={() => {props.dispatch(addPlantToReduxandDb(userPlant))}}>Add Plant to profile</button>
+                <button onClick={() => {props.dispatch(addPlantToReduxandDb(props.currentPlant))}}>Add Plant to profile</button>
               </div>
             </div>
             </div>
@@ -49,6 +46,7 @@ const IndividualPlant = (props) => {
 function mapStateToProps(globalState) {
   return {
     plants: globalState.plants,
+    currentPlant: globalState.currentPlant
   }
 }
 export default connect(mapStateToProps)(IndividualPlant)
