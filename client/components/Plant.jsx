@@ -7,11 +7,7 @@ const Plant = (props) => {
 
   return (
     <div>
-   
-
-          {/* <img src={`https://www.amara.com/static/uploads/images-2/products/huge/156501/big-cactus-cushion-603972.jpg`}/> */}
-      
-
+  
       <div className='each-profile'>
       <div className='profile-picture'>
           <img src= {plant.img}/>
