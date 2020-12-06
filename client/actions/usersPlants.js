@@ -3,7 +3,6 @@ import { retrieveUsersPlants } from "../apis/usersPlants"
 export const SET_USERS_PLANTS = 'SET_USERS_PLANTS'
 
 export const setUsersPlants = (plants) => {
-    console.log(plants)
     return {
       type: SET_USERS_PLANTS,
       plants

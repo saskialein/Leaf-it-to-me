@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+
+import { currentPlant } from '../actions/index'
 
 const Plant = (props) => {
 
@@ -19,7 +22,7 @@ const Plant = (props) => {
         <div className='profile-name-plate'>
           <p className='profile-name'>{plant.common_name}</p>
           <p className='profile-sign'>feeling fabulous</p>
-          <Link to={`/plants/${plant.common_name}`}><button>Click me</button></Link>
+          <Link to={`/plants/${plant.common_name}`}><button onClick={() => {props.dispatch(currentPlant(plant.id))}}>Click me</button></Link>
         </div>
         </div>
       
@@ -30,4 +33,4 @@ const Plant = (props) => {
   )
 }
 
-export default Plant
+export default connect()(Plant)

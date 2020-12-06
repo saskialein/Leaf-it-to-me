@@ -3,6 +3,8 @@ import { retrieveUsersPlants } from "../apis/usersPlants"
 
 export const SET_PLANTS = 'SET_PLANTS'
 export const ADD_PLANT_2PROFILE = 'ADD_PLANT_2PROFILE'
+export const CURRENT_PLANT = 'CURRENT_PLANT'
+export const SET_USERS_PLANTS = 'SET_USERS_PLANTS'
 
 
 
@@ -18,6 +20,13 @@ export const addPlantToRedux = (plant) => {
   return {
     type: ADD_PLANT_2PROFILE,
     plant
+  }
+}
+
+export const currentPlant = (currentPlant) => {
+  return {
+    type: CURRENT_PLANT,
+    currentPlant
   }
 }
 
@@ -38,5 +47,10 @@ export const addPlantToReduxandDb = (plant) => {
       })
   }
 }
+
+// export const addCurrentPlantToRedux = (plant) => {
+//   return dispatch(currentPlant(plant))
+// }
+
 
 
