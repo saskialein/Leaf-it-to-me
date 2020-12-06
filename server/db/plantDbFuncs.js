@@ -12,6 +12,11 @@ function getPlant(id, db = connection){
 }
 // kind of like a find, run thru all of the plants and find the plant whose id matches the id that has been passed in 
 
+// READ - Get User Plants
+function getUsersPlants(id, db = connection) {
+  return db('users_plants').select().where('user_id', id)
+}
+
 
 //CREATE (Single Resource)
 function createPlant(newPlant, db = connection){
@@ -25,10 +30,15 @@ function addPlantToProfileDbFunc(plant, db = connection) {
   return db('users_plants').insert(plant)
 }
 
+function deletePlant(id, db = connection) {
+  return db('users_plants').delete().where('plant_id', id)
+}
 
 module.exports = {
   getPlants,
   getPlant,
+  getUsersPlants,
   createPlant,
-  addPlantToProfileDbFunc
+  addPlantToProfileDbFunc,
+  deletePlant
 }

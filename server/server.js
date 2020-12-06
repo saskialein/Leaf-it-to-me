@@ -2,8 +2,10 @@ const express = require('express')
 const path = require('path')
 
 const plantRoutes = require('./routes/plantRoutes')
+const usersPlantRoutes = require('./routes/usersPlantRoutes')
 const userRoutes = require('./routes/userRoutes')
 const authRoutes = require('./routes/auth')
+const fileRoutes = require('./routes/file-upload')
 
 const server = express()
 
@@ -11,8 +13,10 @@ server.use(express.json())
 server.use(express.static(path.join(__dirname, 'public')))
 
 server.use('/api/v1/plants', plantRoutes)
+server.use('/api/v1/users_plants', usersPlantRoutes)
 server.use('/api/v1/users', userRoutes)
 server.use('/api/v1', authRoutes)
+server.use('/api/v1/', fileRoutes)
 
 server.use('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))

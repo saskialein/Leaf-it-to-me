@@ -8,7 +8,7 @@ module.exports = {
 }
 
 function createUser (user, db = connection) {
-  console.log(user)
+  // console.log(user)
   return userExists(user.username, db)
     .then(exists => {
       if (exists) {
