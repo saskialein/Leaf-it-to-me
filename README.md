@@ -126,6 +126,10 @@ make pushbranch m='commitMessage'
 - [ ] _optional / stretch?_ As a signed in user I would like to be able to see a list of all the plants on the homepage and tick which plants I’d like to add to my profile 
 - [x] I would like to be able to log out
 
+# STRETCH USER STORIES
+### Authorized Users:
+- [ ] As a user I'd like to be able to delete a selected plant of my choice that was added into my profile.
+
 
 # API
 
