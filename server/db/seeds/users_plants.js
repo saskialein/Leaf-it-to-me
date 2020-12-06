@@ -34,6 +34,22 @@ exports.seed = function(knex) {
           name: '', 
           notes: '', 
           img: ''
+        },
+        {
+          id: 5, 
+          user_id: 4, 
+          plant_id: 1, 
+          name: '', 
+          notes: '', 
+          img: ''
+        },
+        {
+          id: 6, 
+          user_id: 4, 
+          plant_id: 3, 
+          name: '', 
+          notes: '', 
+          img: ''
         }
       ]);
     });

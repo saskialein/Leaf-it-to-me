@@ -28,7 +28,7 @@ class Register extends React.Component {
           if (isAuthenticated()) {
             const user = getDecodedToken()
             this.props.dispatch(logIn(user))
-            this.props.history.push('/')
+            this.props.history.push('/saved')
           }
           return null
         })

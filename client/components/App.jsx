@@ -32,19 +32,18 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Header />
-        <Route exact path="/userprofile" component={UserPlantList} />
-          <>
-            <Route exact path="/" component={Home} />
+      <Header />
 
-            <Route exact path='/plants/:name' component = {IndividualPlant}/>
-            <Route exact path="/plants/saved" component={SavedPlants} />
-            <Route exact path="/plants/new" component={AddPlantForm} />
+      <Route exact path="/plants/saved" component={UserPlantList} />
+      {/* <Route exact path="/userprofile" component={UserPlantList} /> */}
+      <Route exact path="/" component={Home} />
 
-            <Route exact path='/login' component={SignIn}/>
-            <Route exact path="/register" component={Register} />
+      <Route exact path='/plants/:name' component = {IndividualPlant}/>
+      <Route exact path="/plants/new" component={AddPlantForm} />
 
-          </>
+      <Route exact path='/login' component={SignIn}/>
+      <Route exact path="/register" component={Register} />
+
       </div>
     );
   }
