@@ -53,7 +53,7 @@ exports.seed = function(knex) {
           soil: 'Moist, rich, free-draining soil, and repot annually', 
           lvl: 'Beginner', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image4.jpeg'
         },
         {
           id: 5,
@@ -66,7 +66,7 @@ exports.seed = function(knex) {
           soil: 'Needs a well draining potting mix such as those made for cacti and succulents with excellent drainage', 
           lvl: 'beginner', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image5.jpeg'
         },
         {
           id: 6,
@@ -79,7 +79,7 @@ exports.seed = function(knex) {
           soil: 'well-draining and well-aerated potting soil ', 
           lvl: 'beginner', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image7.jpeg'
         },
         {
           id: 7,
@@ -92,7 +92,7 @@ exports.seed = function(knex) {
           soil: 'A soilless potting mixture containing organic and inorganic materials instead of soil does wonders for snake plants because they can be prone to rotting. A regular soil mixture will work well too as long as you make sure the mixture is well-drained, free draining soil', 
           lvl: 'beginner', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image8.jpeg'
         },
         {
           id: 8,
@@ -105,7 +105,7 @@ exports.seed = function(knex) {
           soil: 'Fertile, moist, but well-drained soil', 
           lvl: 'Intermediate', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image9.jpeg'
         },
         {
           id: 9,
@@ -118,7 +118,7 @@ exports.seed = function(knex) {
           soil: 'Moist but well-draining potting soil', 
           lvl: 'Intermediate - advanced', 
           more: '',
-          img: ''
+          img: 'https://htense.github.io/images/image10.jpeg'
         },
         {
           id: 10,
@@ -131,7 +131,7 @@ exports.seed = function(knex) {
           soil: 'Good quality, well draining potting soil', 
           lvl: 'Beginner', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image11.jpeg'
         },
         {
           id: 11,
@@ -144,7 +144,7 @@ exports.seed = function(knex) {
           soil: 'Nutrient rich well draining potting mix', 
           lvl: 'Beginner', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image12.jpeg'
         },
         {
           id: 12,
@@ -157,7 +157,7 @@ exports.seed = function(knex) {
           soil: 'No soil, hence the name Air Plant as they can thrive on nutrients provied from the surrounding air' , 
           lvl: 'Intermediate', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image13.jpeg'
         },
         {
           id: 13,
@@ -170,7 +170,7 @@ exports.seed = function(knex) {
           soil: 'An all-purpose, peaty potting mix that drains well', 
           lvl: '', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image14.jpeg'
         },
         {
           id: 14,
@@ -183,7 +183,7 @@ exports.seed = function(knex) {
           soil: 'Fast draining, well aerated soils are ideal', 
           lvl: 'Intermediate - Advanced', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image15.jpeg'
         },
         {
           id: 15,
@@ -196,7 +196,7 @@ exports.seed = function(knex) {
           soil: 'Use a good quality potting mix that is fast draining', 
           lvl: '', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image16.jpeg'
         },
         {
           id: 16,
@@ -209,7 +209,7 @@ exports.seed = function(knex) {
           soil: 'well-drained', 
           lvl: 'Beginner', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image1.jpeg'
         },
         {
           id: 17,
@@ -222,7 +222,7 @@ exports.seed = function(knex) {
           soil: 'The soil mix must be free draining and not have a great deal of rich organic material', 
           lvl: '', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image2.jpeg'
         },
         {
           id: 18,
@@ -235,7 +235,7 @@ exports.seed = function(knex) {
           soil: 'Grow in a soil-based, well-draining potting mix', 
           lvl: 'Beginner', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image3.jpeg'
         },
         {
           id: 19,
@@ -248,7 +248,7 @@ exports.seed = function(knex) {
           soil: 'Prefers a well-draining acidic soil', 
           lvl: '', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image4.jpeg'
         },
         {
           id: 20,
@@ -261,7 +261,7 @@ exports.seed = function(knex) {
           soil: 'Thrives in compost-enriched, moist, and slightly acidic well-draining soil', 
           lvl: '', 
           more: 'Air purifier', 
-          img: ''
+          img: 'https://htense.github.io/images/image5.jpeg'
         },
       ]);
     });

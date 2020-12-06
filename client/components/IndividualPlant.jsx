@@ -27,9 +27,9 @@ const IndividualPlant = (props) => {
 
                 <div className="careDetailWrapper"></div>
               
-              <div className="careDetail">                <img
-                  src={`https://www.amara.com/static/uploads/images-2/products/huge/156501/big-cactus-cushion-603972.jpg`}
-                />
+              <div className="careDetail"> 
+              <img src= {plant.img}/>
+                
                 <ul className="">
                   
                   <li>{plant.water}</li>

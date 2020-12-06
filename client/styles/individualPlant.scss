@@ -2,7 +2,7 @@
 // variables
 $font-stack: "Roboto", sans-serif;
 
-//VARIABLES ARE MADE OF MVP BLOCKING LAYOUT
+//VARIABLES ARE MADE OF MVP 
 //COLOR BLOCKS ARE FOR DISPLAYING PURPOSE
 //BRIEFLY SETTING UP SASS FOR WHEN DESIGN ARE FINALIZED
 //---JESS---
@@ -27,18 +27,18 @@ $font-body-paragraph: 1.1em;
   font-family: $font-stack;
   display: block;
   align-content: center;
-  background-color: $backgroundcolor01;
-  margin: $temp-margin;
-  padding: $temp-padding;
+  background-color: $backgroundcolor01; // DISPLAY PURPOSE ONLY
+  margin: $temp-margin; // DISPLAY PURPOSE ONLY
+  padding: $temp-padding; // DISPLAY PURPOSE ONLY
 
   .commonName {
     font-weight: bold;
     color: $commonNameFontColor;
-    background-color: $backgroundcolor02;
+    background-color: $backgroundcolor02; // DISPLAY PURPOSE ONLY
     padding: $temp-padding;
   }
   .spciesName {
-    background-color: $backgroundcolor03;
+    background-color: $backgroundcolor03; // DISPLAY PURPOSE ONLY
     padding: $temp-padding;
   }
   img {
@@ -53,16 +53,18 @@ $font-body-paragraph: 1.1em;
     margin-left: $temp-margin;
 
     .careDetail {
-      font-size: $font-body-paragraph;
-      background-color: $backgroundcolor02;
+      font-size: $font-body-paragraph; // DISPLAY PURPOSE ONLY
+      background-color: $backgroundcolor02; // DISPLAY PURPOSE ONLY
+      padding: $temp-padding;
 
       p {
         font-size: $font-body-paragraph;
-        background-color: $backgroundcolor03;
+        background-color: $backgroundcolor03; // DISPLAY PURPOSE ONLY
       }
       ul {
-        background-color: $backgroundcolor04;
+        background-color: $backgroundcolor04; // DISPLAY PURPOSE ONLY
         margin-left: $temp-margin;
+        list-style: none;
       }
     }
   }

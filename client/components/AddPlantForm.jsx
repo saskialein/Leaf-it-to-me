@@ -10,7 +10,7 @@ class AddPlantForm extends React.Component {
     light: '',
     temp: '',
     humidity: '',
-    img: ''
+    img: '',
   }
 
   onChangeFile = (e) => {
@@ -20,7 +20,7 @@ class AddPlantForm extends React.Component {
 
   handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     })
   }
   handleSubmit = (event) => {
@@ -43,7 +43,7 @@ class AddPlantForm extends React.Component {
     this.props.history.push('/')
   }
 
-  render () {
+  render() {
     return (
       <div>
         <form encType='multipart/form-data' className='form' onSubmit={this.handleSubmit}>
