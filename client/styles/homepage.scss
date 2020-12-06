@@ -1,0 +1,20 @@
+$backgroundColor : #42B883; 
+$secondaryColor : #FAECC9; 
+$textColor:#086972;
+$buttonBorderRadius:3px;
+
+
+.home{
+background-color: $backgroundColor;
+}
+
+img{
+background-color: $backgroundcolor02;
+
+}
+
+.nav-link{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

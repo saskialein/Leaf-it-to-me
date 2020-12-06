@@ -17,7 +17,7 @@ const Nav = (props) => {
     <>
     <div className= 'nav'>
 
-    <h1 className="">Leaf it to me</h1>
+    <h1 className="">Leaf it to me</h1> 
       <NavLink to='/' exact activeClassName="active" className="nav-link"> Home</NavLink>
    
     <NavLink to='/plants/saved' activeClassName="active" className="nav-link">Saved Plants</NavLink>
