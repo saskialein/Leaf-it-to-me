@@ -1,33 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { addPlantToUsersPlantsDB } from '../apis/plants'
+
+import { addPlantToReduxandDb, currentPlant } from '../actions/index'
 
 const Plant = (props) => {
 
   const plant = props.plant 
-
+  const handleClick = () => {
+    console.log('hi i am handleclick')
+    // props.dispatch(addPlantToReduxandDb(plant.id)
+  } 
   return (
     <div>
-   
-    {/* <h1>Plant Comp rendered inside plantlist</h1>
-    <p>Show a small card of the plant</p> */}
-
-      
-
       <div className='each-profile'>
       <div className='profile-picture'>
-          <img src={`https://www.amara.com/static/uploads/images-2/products/huge/156501/big-cactus-cushion-603972.jpg`}/>
+          <img src= {plant.img}/>
         <div className='profile-name-plate'>
           <p className='profile-name'>{plant.common_name}</p>
-          <p className='profile-sign'>feeling fabulous</p>
+          <p className='species'>{plant.species_name}</p>
           <Link to={`/plants/${plant.common_name}`}><button>Click me</button></Link>
+          <h4 className='name'>{plant.common_name}</h4>
+          <button onClick={handleClick}>Add Me</button>
         </div>
-        </div>
+      </div>
       
         </div>
         </div>
-      
-   
   )
 }
 
-export default Plant
+export default connect()(Plant)

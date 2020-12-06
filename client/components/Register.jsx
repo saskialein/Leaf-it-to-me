@@ -28,7 +28,7 @@ class Register extends React.Component {
           if (isAuthenticated()) {
             const user = getDecodedToken()
             this.props.dispatch(logIn(user))
-            this.props.history.push('/')
+            this.props.history.push('/saved')
           }
           return null
         })
@@ -40,14 +40,16 @@ class Register extends React.Component {
         <div>
           <h2>Register</h2>
           <form className='form' onSubmit={this.handleClick}>
-            <label className='btn' htmlFor="name">Your Name: </label>
+            <label  htmlFor="name">Your Name: </label>
             <input onChange={this.handleChange} className='input' value={this.state.name} autoFocus={true} name="name" label='Name' type="text"/>  
-            <label className='btn' htmlFor="name">Your Email Address: </label>
-            <input onChange={this.handleChange} className='input' value={this.state.email} autoFocus={true} name="email" label='Name' type="text"/>
-            <label className='btn' htmlFor="name">Username: </label>
+             <br/>
+            <label htmlFor="name">Your Email Address: </label>
+            <input onChange={this.handleChange} className='input' value={this.state.email} autoFocus={true} name="email" label='Name' type="text" />
+             <br/>
+            <label  htmlFor="name">Username: </label>
             <input onChange={this.handleChange} className='input' value={this.state.username} autoFocus={true} name="username" label='Name' type="text"/>
             <br/>
-            <label className='btn' htmlFor="name">Password: </label>
+            <label htmlFor="name">Password: </label>
             <input onChange={this.handleChange} className='input' value={this.state.password} autoFocus={true} name="password" label='Name' type="password"/>
             <br/>
 
