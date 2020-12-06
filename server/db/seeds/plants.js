@@ -14,7 +14,7 @@ exports.seed = function(knex) {
           soil: 'Requires rich, nutrient rich dense soil that holds moisture', 
           lvl: 'beginner', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image1.jpeg'
         },
         {
           id: 2, 
@@ -27,7 +27,7 @@ exports.seed = function(knex) {
           soil: 'Moist, well-draining soil', 
           lvl: 'intermediate', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image2.jpeg'
         },
         {
           id: 3,
@@ -40,7 +40,7 @@ exports.seed = function(knex) {
           soil: 'Sandy', 
           lvl: 'Beginner', 
           more: '', 
-          img: ''
+          img: 'https://htense.github.io/images/image3.jpeg'
         },
         {
           id: 4,

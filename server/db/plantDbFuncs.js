@@ -30,11 +30,15 @@ function addPlantToProfileDbFunc(plant, db = connection) {
   return db('users_plants').insert(plant)
 }
 
+function deletePlant(id, db = connection) {
+  return db('users_plants').delete().where('plant_id', id)
+}
 
 module.exports = {
   getPlants,
   getPlant,
   getUsersPlants,
   createPlant,
-  addPlantToProfileDbFunc
+  addPlantToProfileDbFunc,
+  deletePlant
 }

@@ -27,7 +27,7 @@ class SignIn extends React.Component {
           const user = getDecodedToken();
           this.props.dispatch(logIn(user))
           this.props.dispatch(fetchUsersPlants(user.id));
-          this.props.history.push("/userprofile");
+          this.props.history.push("/plants/saved");
         }
         return null;
       })
