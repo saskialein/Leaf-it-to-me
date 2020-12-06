@@ -128,6 +128,7 @@ make pushbranch m='commitMessage'
 
 # STRETCH USER STORIES
 ### Authorized Users:
+- [ ] As a user I'd like to see my name or usersname on my profile to indicate that it's my profile.
 - [ ] As a user I'd like to be able to delete a selected plant of my choice that was added into my profile.
 
 
