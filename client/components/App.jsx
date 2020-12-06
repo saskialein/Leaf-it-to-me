@@ -29,7 +29,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-      <Header />
+      <Nav />
 
       <Route exact path="/plants/saved" component={UserPlantList} />
       {/* <Route exact path="/userprofile" component={UserPlantList} /> */}
