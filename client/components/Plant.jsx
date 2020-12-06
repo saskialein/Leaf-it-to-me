@@ -16,8 +16,8 @@ const Plant = (props) => {
           <p className='species'>{plant.species_name}</p>
         </div>
         <div className='button-plate'>
-          <Link to={`/plants/${plant.common_name}`}><button>More info</button></Link>
-          <button>add to my profile</button>
+          <Link to={`/plants/${plant.common_name}`}>More info</Link>
+          <a>add to my profile</a>
       
         </div>
         </div>
