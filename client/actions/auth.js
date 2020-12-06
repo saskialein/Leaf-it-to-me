@@ -1,4 +1,5 @@
 import { getDecodedToken } from 'authenticare/client/auth'
+import { fetchUsersPlants } from './usersPlants'
 
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
 export const LOGOUT = 'LOGOUT'
@@ -21,6 +22,7 @@ export const checkAuth = () => {
     const user = getDecodedToken()
     if (user) {
       dispatch(logIn(user))
+      dispatch(fetchUsersPlants(user.id));
     }
   }
 }

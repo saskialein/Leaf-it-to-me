@@ -24,6 +24,9 @@ export const fetchUsersPlants = (id) => {
         .then(plants => {
           return  dispatch(setUsersPlants(plants))
         })
+        .catch(() => {
+          return  dispatch(clearUsersPlants())
+        })
     }
   }
 
