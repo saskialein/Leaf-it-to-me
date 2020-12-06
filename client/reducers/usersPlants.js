@@ -1,4 +1,5 @@
-import { SET_USERS_PLANTS, DEL_USER_PLANT, CLEAR_USERS_PLANTS } from '../actions/usersPlants'
+import { SET_USERS_PLANTS, DEL_USER_PLANT, CLEAR_USERS_PLANTS} from '../actions/usersPlants'
+import { ADD_USER_PLANT } from '../actions/index'
 
 const initialState = []
 
@@ -12,6 +13,9 @@ const reducer = (state = initialState, action) => {
       
       case DEL_USER_PLANT:
         return state.filter((plant) => plant.id != action.id)
+
+      case ADD_USER_PLANT:
+        return [...state, action.plant]
 
       default:
         return state

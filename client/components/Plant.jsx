@@ -1,13 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { addPlantToUsersPlantsDB } from '../apis/plants'
 
-import { currentPlant } from '../actions/index'
+import { addPlantToReduxandDb, currentPlant } from '../actions/index'
 
 const Plant = (props) => {
 
   const plant = props.plant 
-
+  const handleClick = () => {
+    console.log('hi i am handleclick')
+    // props.dispatch(addPlantToReduxandDb(plant.id)
+  } 
   return (
     <div>
    
@@ -22,7 +26,8 @@ const Plant = (props) => {
         <div className='profile-name-plate'>
           <p className='profile-name'>{plant.common_name}</p>
           <p className='profile-sign'>feeling fabulous</p>
-          <Link to={`/plants/${plant.common_name}`}><button onClick={() => {props.dispatch(currentPlant(plant.id))}}>Click me</button></Link>
+          <button onClick={handleClick}>Add Me</button>
+          <Link to={`/plants/${plant.common_name}`}><button>Click me</button></Link>
         </div>
         </div>
       

@@ -3,7 +3,8 @@ import { retrievePlants, addPlantToUsersPlantsDB, addPlantImage, addPlantData } 
 export const SET_PLANTS = 'SET_PLANTS'
 export const ADD_PLANT = 'ADD_PLANT'
 export const ADD_PLANT_2PROFILE = 'ADD_PLANT_2PROFILE'
-export const CURRENT_PLANT = 'CURRENT_PLANT'
+// export const CURRENT_PLANT = 'CURRENT_PLANT'
+export const ADD_USER_PLANT = 'ADD_USER_PLANT'
 //export const SET_USERS_PLANTS = 'SET_USERS_PLANTS'
 
 export const setPlants = (plants) => {
@@ -20,17 +21,17 @@ export function pushPlant (plant) {
   }
 }
 
-export const addPlantToRedux = (plant) => {
-  return {
-    type: ADD_PLANT_2PROFILE,
-    plant
-  }
-}
+// export const addPlantToRedux = (plant) => {
+//   return {
+//     type: ADD_PLANT_2PROFILE,
+//     plant
+//   }
+// }
 
-export const currentPlant = (currentPlant) => {
+export const currentPlant = (plant) => {
   return {
-    type: CURRENT_PLANT,
-    currentPlant
+    type: ADD_USER_PLANT,
+    plant
   }
 }
 
@@ -63,11 +64,12 @@ export function addPlant (plantImage, plantData) {
   }
 }
 
-export const addPlantToReduxandDb = (plant) => {
+export const addPlantToReduxandDb = (plantObject) => {
   return dispatch => {
-    return addPlantToUsersPlantsDB(plant)
-      .then(res => {
-        dispatch(addPlantToRedux(plant.plant_id))
+    return addPlantToUsersPlantsDB(plantObject)
+      .then(id => {
+        plantObject.id = id
+        dispatch(currentPlant(plantObject))
       })
   }
 }
