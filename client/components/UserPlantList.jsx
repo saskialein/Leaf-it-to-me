@@ -2,9 +2,17 @@ import React from "react";
 import Plant from "./Plant"
 import { connect } from 'react-redux'
 import Search from './Search'
+import { fetchUsersPlants } from "../actions/usersPlants";
+import { getDecodedToken, isAuthenticated } from "authenticare/client/auth";
 
 class UserPlantList extends React.Component {
-
+  // componentDidMount() {
+  //   if (isAuthenticated()) {
+  //     const user = getDecodedToken()
+  //     this.props.dispatch(fetchUsersPlants(user.id))
+  //   }
+  // }
+  
   render() {
 
     const userPlantIds = this.props.usersPlants.map((userPlant) => {

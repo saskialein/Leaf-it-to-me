@@ -1,9 +1,11 @@
 import React from 'react'
 import { Route,  } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { getDecodedToken, isAuthenticated } from "authenticare/client/auth"
+
 import { checkAuth } from "../actions/auth.js"
 import { fetchPlants } from "../actions/index.js"
-
+import { fetchUsersPlants } from "../actions/usersPlants"
 
 
 import Header from './Header.jsx'
@@ -20,6 +22,10 @@ class App extends React.Component {
   componentDidMount() {
     this.props.dispatch(checkAuth())
     this.props.dispatch(fetchPlants())
+    if (isAuthenticated()) {
+      const user = getDecodedToken()
+      this.props.dispatch(fetchUsersPlants(user.id))
+    }
   }
 
 
