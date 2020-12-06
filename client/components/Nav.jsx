@@ -4,12 +4,14 @@ import { logOff } from 'authenticare/client'
 import { connect } from 'react-redux'
 
 import { logOut } from '../actions/auth'
+import { clearUsersPlants } from '../actions/usersPlants'
 
 
 
 const logOutUser = (dispatch) => {
   logOff()
   dispatch(logOut())
+  dispatch(clearUsersPlants())
 }
 
 const Nav = (props) => {
