@@ -225,10 +225,23 @@ h5 {
   text-align: right;
   justify-content: space-between;
   padding: 5px;
-  margin: 5px;
-    button {
-      font-size: $font-small; 
-      flex: right;
-      padding: 2px;
-    }
- }
+}
+
+// #image-button {
+//   background: url('/images/dead-plant.png') no-repeat center #fff;
+//   background-size: contain;
+//   width: 40px;
+//   height: 40px;
+//   padding: 10px;
+//   margin: 0 auto;
+//   cursor: pointer;
+//   border-style: none;
+//   border-radius: 10px;
+// }
+//   margin: 5px;
+//     button {
+//       font-size: $font-small; 
+//       flex: right;
+//       padding: 2px;
+//     }
+//  }

@@ -3,7 +3,9 @@ import { connect } from "react-redux";
 import { getDecodedToken, isAuthenticated, signIn } from "authenticare/client";
 
 import { baseApiUrl as baseUrl } from "../config";
-import { logIn } from "../actions/auth";
+import { checkAuth, logIn } from "../actions/auth";
+import { fetchUsersPlants } from "../actions/usersPlants";
+
 
 class SignIn extends React.Component {
   state = {
@@ -23,9 +25,8 @@ class SignIn extends React.Component {
     signIn({ username, password }, { baseUrl })
       .then((token) => {
         if (isAuthenticated()) {
-          const user = getDecodedToken();
-          this.props.dispatch(logIn(user));
-          this.props.history.push("/home");
+          this.props.dispatch(checkAuth())
+          this.props.history.push("/plants/saved");
         }
         return null;
       })
