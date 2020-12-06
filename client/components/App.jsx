@@ -22,10 +22,6 @@ class App extends React.Component {
   componentDidMount() {
     this.props.dispatch(checkAuth())
     this.props.dispatch(fetchPlants())
-    if (isAuthenticated()) {
-      const user = getDecodedToken()
-      this.props.dispatch(fetchUsersPlants(user.id))
-    }
   }
 
 
