@@ -1,17 +1,15 @@
+
 import React from "react"
 import { connect } from 'react-redux'
-
+import { removePlant } from "../actions/usersPlants"
 import Plant from "./Plant"
 import Search from "./Search"
+import { Link } from 'react-router-dom'
 
 class UserPlantList extends React.Component {
 
   
   render() {
-
-    // filter through userPlants in global state and pull out the plant_id of each object in the array and push into new array called userPlantIds
-    
-    // , and then map over the plants in global state and render any plant that matches that id 
 
     const nameMatchesSearch = (name) => name.toLowerCase().includes(this.props.searchTerm.toLowerCase())
 
@@ -24,14 +22,31 @@ class UserPlantList extends React.Component {
         <h1>My happy plants</h1>
         <Search />
         <div className="profile-wrapper">
-          {usersFilteredArray.map((userPlant) => <Plant key={userPlant.id} plant={userPlant}/>)}
-        </div>
+          {usersFilteredArray.map((userPlant) => {
+          return (
+          
+          
+          // <UserPlant key={userPlant.id} plant={userPlant}/>
+            <div key={userPlant.id} className='each-profile'>
+              <div className='profile-picture'>
+                <img src={userPlant.img} />
+              </div>
+              <div className='profile-name-plate'>
+                <h4 className='name'>{userPlant.common_name}</h4>
+                <p className='species'>{userPlant.species_name}</p>
+              </div>
+              <div className='button-plate'>
+                <Link to={`/plants/${userPlant.common_name}`}><button>More info</button></Link>
+                <button onClick={() => this.props.dispatch(removePlant(userPlant.id))} >Remove</button>
+              </div>
+          </div>
+          )
+        })}
+      </div>
       </> 
     )
   }
 }
-
-
 function mapStateToProps(globalState) {
   return {
     plants: globalState.plants,
@@ -39,5 +54,4 @@ function mapStateToProps(globalState) {
     searchTerm: globalState.search
   };
 }
-
 export default connect(mapStateToProps)(UserPlantList);
