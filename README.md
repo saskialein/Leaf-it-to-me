@@ -123,12 +123,27 @@ make pushbranch m='commitMessage'
 - [x] Once I’ve signed into my account (via clicking the login link on homepage) I’d like to be able to see a list of all of my saved plants 
 
 - [x] As a signed in user if I select to add my own plant I’d like to be able to fill out a form with my plant’s name & care details and also add an image.
-- [ ] _optional / stretch?_ As a signed in user I would like to be able to see a list of all the plants on the homepage and tick which plants I’d like to add to my profile 
 - [x] I would like to be able to log out
+
+## At this stage all MVP user stories are complete :) however it'd be good to work on the general functionality / user experience flow of the site to ensure it's easy to use & accessible for all. I've listed some suggestions below: 
+
+### Functionality / UX Tweaks: 
+
+### Unauthorised Users: 
+
+- [ ] When I click to 'Sign Up' this page heading should say 'Sign Up' rather than 'Register' and could incl more descriptive details on what I get by signing up i.e 'Sign up to add plants to your very own personalised profile where you can keep track of all of your plant needs in one handy location and leaf the rest to us". It'd also be good to add more fun / descriptive words to the sign up form and submit button
+- [ ] When I click 'more details' from the hompage to see an individual plant profile I currently don't see any of the care categories - i.e water, sun instead we just see the needs i.e 'once a week'. Make sure we are rendering care icons, or otherwise render care categories on this page & update addplant button text 
+- [ ] Would be good to indicate to user what page of the site they're on by for eg having the navlink of the current page underlined or a different colour when active - someone to do research into this / ask Bren, should be able to style Nav with 'active' keyword attached differently 
+
+### Authorised Users: 
+
+- [ ] When on my 'Saved Plants' page perhaps add tagline up the top & update plant buttons 
 
 # STRETCH USER STORIES
 ### Authorized Users:
 - [ ] As a user I'd like to see my name or usersname on my profile to indicate that it's my profile.
+- [ ] As a signed in user I'd like to be able to edit my saved plants to add additional notes about my plants but only render these edited plants on my 'saved plants list' rather than the homepage
+- [ ] As a signed in user I would like to be able to see a list of all the plants on the homepage and tick which plants I’d like to add to my profile 
 - [x] As a user I'd like to be able to delete a selected plant of my choice that was added into my profile.
 - [x] Once signed in I’d also like to see a ‘add your own plant’ button which once clicked would ask me if I would like to add a new plant to my profile from the existing database (in which case I’d be directed back to the homepage) OR whether I’d like to add my own custom plant 
 
