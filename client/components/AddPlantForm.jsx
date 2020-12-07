@@ -49,7 +49,7 @@ class AddPlantForm extends React.Component {
         <form encType='multipart/form-data' className='form' onSubmit={this.handleSubmit}>
 
           <label>Common Name: </label>
-          <input onChange={this.handleChange} className='input' value={this.state.name} autoFocus={true} name="name" type="text"/>
+          <input onChange={this.handleChange} className='input' value={this.state.common_name} autoFocus={true} name="common_name" type="text"/>
           <br/>
 
           <label>Water: </label>

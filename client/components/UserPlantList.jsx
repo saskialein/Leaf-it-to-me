@@ -20,7 +20,7 @@ let usersFilteredArray = this.props.plants.filter((matchingPlant) => {
     return oneUserPlant.plant_id == matchingPlant.id
   })
 })
-console.log(usersFilteredArray);
+// console.log(usersFilteredArray);
 
   return(
     <>
@@ -31,20 +31,20 @@ console.log(usersFilteredArray);
           return (
           
           
-          <Plant key={userPlant.id} plant={userPlant}/>
-          //   <div key={userPlant.id} className='each-profile'>
-          //     <div className='profile-picture'>
-          //       <img src={userPlant.img} />
-          //     </div>
-          //     <div className='profile-name-plate'>
-          //       <h4 className='name'>{userPlant.common_name}</h4>
-          //       <p className='species'>{userPlant.species_name}</p>
-          //     </div>
-          //     <div className='button-plate'>
-          //       <Link to={`/plants/${userPlant.common_name}`}><button>More info</button></Link>
-          //       <button onClick={() => this.props.dispatch(removePlant(userPlant.id))} id="image-button">Remove</button>
-          //     </div>
-          // </div>
+          // <UserPlant key={userPlant.id} plant={userPlant}/>
+            <div key={userPlant.id} className='each-profile'>
+              <div className='profile-picture'>
+                <img src={userPlant.img} />
+              </div>
+              <div className='profile-name-plate'>
+                <h4 className='name'>{userPlant.common_name}</h4>
+                <p className='species'>{userPlant.species_name}</p>
+              </div>
+              <div className='button-plate'>
+                <Link to={`/plants/${userPlant.common_name}`}><button>More info</button></Link>
+                <button onClick={() => this.props.dispatch(removePlant(userPlant.id))} >Remove</button>
+              </div>
+          </div>
           )
         })}
       </div>

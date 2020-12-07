@@ -28,7 +28,7 @@ const Nav = (props) => {
 
     <NavLink to='/login' activeClassName="active" className="nav-link"> Sign In</NavLink>
 
-    <NavLink to='/home' activeClassName="active" className="nav-link" onClick={() => logOutUser(props.dispatch)}> Logout</NavLink>
+    <NavLink to='/' activeClassName="active" className="nav-link" onClick={() => logOutUser(props.dispatch)}> Logout</NavLink>
 
     <NavLink to='/register' activeClassName="active" className="nav-link"> Sign Up</NavLink>
      

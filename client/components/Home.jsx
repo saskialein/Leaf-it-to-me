@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 
 import PlantList from './PlantList.jsx'
 
@@ -17,7 +18,7 @@ const Home = () => {
     </div>
 
 
-    <PlantList/>
+    <Route path='/' component={PlantList}/>
    
     </div>
   )
