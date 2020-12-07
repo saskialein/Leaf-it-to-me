@@ -38,6 +38,7 @@ export const fetchUsersPlants = (id) => {
   }
   
   export function removePlant(id){
+    console.log('I got to removePlant action')
     return (dispatch) => {
       deletePlantAPI(id)
       .then(() => dispatch(deletePlant(id)))

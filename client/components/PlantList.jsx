@@ -17,7 +17,7 @@ class PlantList extends React.Component {
         {filteredPlants.map((plant) => {
 
           return (
-            <Plant key={plant.id} plant={plant}/>
+            <Plant key={plant.id} plant={plant} history={this.props.history}/>
           )
         })}
       </div>

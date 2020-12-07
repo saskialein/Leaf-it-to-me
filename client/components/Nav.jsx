@@ -53,7 +53,7 @@ const Nav = (props) => {
 
         <IfAuthenticated>
           <NavLink
-            to="/home"
+            to="/"
             activeClassName="active"
             className="nav-link"
             onClick={() => logOutUser(props.dispatch)}

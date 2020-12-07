@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux'
-
+import { Link } from 'react-router-dom'
 import Plant from "./Plant";
 
 
@@ -26,7 +26,22 @@ let usersFilteredArray = this.props.plants.filter((matchingPlant) => {
       <div className="profile-wrapper">
         {usersFilteredArray.map((userPlant) => {
           return (
-          <Plant key={userPlant.id} plant={userPlant}/>
+          
+          
+          // <UserPlant key={userPlant.id} plant={userPlant}/>
+            <div key={userPlant.id} className='each-profile'>
+              <div className='profile-picture'>
+                <img src={userPlant.img} />
+              </div>
+              <div className='profile-name-plate'>
+                <h4 className='name'>{userPlant.common_name}</h4>
+                <p className='species'>{userPlant.species_name}</p>
+              </div>
+              <div className='button-plate'>
+                <Link to={`/plants/${userPlant.common_name}`}><button>More info</button></Link>
+                <button onClick={() => this.props.dispatch(removePlant(userPlant.id))} >Remove</button>
+              </div>
+          </div>
           )
         })}
       </div>
