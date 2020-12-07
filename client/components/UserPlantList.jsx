@@ -1,10 +1,10 @@
 
 import React from "react"
 import { connect } from 'react-redux'
-import { removePlant } from "../actions/usersPlants"
-import Plant from "./Plant"
+
+import UserPlant from "./UserPlant"
 import Search from "./Search"
-import { Link } from 'react-router-dom'
+
 
 class UserPlantList extends React.Component {
 
@@ -22,27 +22,8 @@ class UserPlantList extends React.Component {
         <h1>My happy plants</h1>
         <Search />
         <div className="profile-wrapper">
-          {usersFilteredArray.map((userPlant) => {
-          return (
-          
-          
-          // <UserPlant key={userPlant.id} plant={userPlant}/>
-            <div key={userPlant.id} className='each-profile'>
-              <div className='profile-picture'>
-                <img src={userPlant.img} />
-              </div>
-              <div className='profile-name-plate'>
-                <h4 className='name'>{userPlant.common_name}</h4>
-                <p className='species'>{userPlant.species_name}</p>
-              </div>
-              <div className='button-plate'>
-                <Link to={`/plants/${userPlant.common_name}`}><button>More info</button></Link>
-                <button onClick={() => this.props.dispatch(removePlant(userPlant.id))} >Remove</button>
-              </div>
-          </div>
-          )
-        })}
-      </div>
+          {usersFilteredArray.map((userPlant, index) => <UserPlant key={userPlant.id} plant={userPlant} isOdd={index % 2 == 1} />)}
+        </div>
       </> 
     )
   }
