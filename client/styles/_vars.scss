@@ -26,3 +26,38 @@ $box-shadow-inset:
   rgba(255,255,255,0.15),
   inset 0 0 0em 0.05em 
   rgba(255,255,255,0.12);
+
+
+//VARIABLES ARE MADE OF MVP
+//COLOR BLOCKS ARE FOR DISPLAYING PURPOSE + STYLING TEXT COMPONENTS --- ish
+//BRIEFLY SETTING UP SASS FOR WHEN DESIGN ARE FINALIZED
+//---JESS---
+
+//BACKGROUND COLORS
+$backgroundcolor01: #f8f7de;
+$backgroundcolor02: #d35d6e;
+$backgroundcolor03: #d0e8f2;
+$backgroundcolor04: #8db596;
+
+//MARGIN + PADDING SPACINGS
+$temp-margin: 30px;
+$temp-padding: 20px;
+
+//COLORS
+$commonNameFontColor: #222831;
+$spaceGreyColor: #222831;
+
+//TYPEFACE + FONT SIZING
+$font-body-paragraph: 1.1em;
+
+$font-stack: "Roboto", sans-serif;
+
+
+//COLORS
+$commonNameFontColor: #222831;
+
+//TYPEFACE + FONT SIZING
+$font-body-paragraph: 1.1em;
+
+
+$homepage-margin:100px;

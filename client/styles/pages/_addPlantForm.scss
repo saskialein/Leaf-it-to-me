@@ -1,26 +1,3 @@
-@import "_vars.scss";
-
-//VARIABLES ARE MADE OF MVP
-//COLOR BLOCKS ARE FOR DISPLAYING PURPOSE + STYLING TEXT COMPONENTS --- ish
-//BRIEFLY SETTING UP SASS FOR WHEN DESIGN ARE FINALIZED
-//---JESS---
-
-//BACKGROUND COLORS
-$backgroundcolor01: #f8f7de;
-$backgroundcolor02: #d35d6e;
-$backgroundcolor03: #d0e8f2;
-$backgroundcolor04: #8db596;
-
-//MARGIN + PADDING SPACINGS
-$temp-margin: 30px;
-$temp-padding: 20px;
-
-//COLORS
-$commonNameFontColor: #222831;
-$spaceGreyColor: #222831;
-
-//TYPEFACE + FONT SIZING
-$font-body-paragraph: 1.1em;
 
 .form {
   margin: $temp-margin;
@@ -32,9 +9,6 @@ $font-body-paragraph: 1.1em;
   align-content: left;
 }
 
-h2 {
-  font-weight: xx-large;
-}
 
  label {
   margin: $temp-margin, 0px, $temp-margin, 0px;
@@ -49,13 +23,6 @@ h2 {
   font-size: 0.025 rem;
 }
 
-// button {
-//   margin-top: $temp-margin;
-//   padding: $temp-padding/3;
-//   font-weight: bold;
-//   border: 1.5px solid;
-//   border-radius: 20px 20px;
-// }
 
 .submitButton {
   margin-top: $temp-margin/2;

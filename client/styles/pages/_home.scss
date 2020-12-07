@@ -1,14 +1,15 @@
-@import '_vars.scss';
-
-$homepage-margin:100px;
-
-body{
-  background-color: $background-color;
+.home  {
+  height: 100vw;
+  background-color: #51c08f;
+  display: block;
 }
+/*  */
+
+
 .home { 
   height: 100vw;
   display: block;
-  margin: $homepage-margin/2, $homepage-margin, 0px, $homepage-margin;
+//   margin: $homepage-margin/2, $homepage-margin, 0px, $homepage-margin;
 }
 
 
@@ -21,7 +22,6 @@ body{
 .main {
   margin-top: 4vw;
 }
-
 
 
 .plant-div{
@@ -53,15 +53,50 @@ body{
     border-radius: 35px;
   }
   
-  .plant-name{
-    position: absolute;
-    background-color: white;
-    padding-right: 9vw;
-    padding-left: 9vw;
-    border-radius: 35px;
-    border: 3px solid #307256;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .head {
+    margin-top: -2vw;
   }
   
+  span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #307256;
+  border-radius: 3px;
+  }
+  
+  div{
+    display: block;
+  }
+  
+  input{
+    margin-left: 20vw;
+    width: 60vw;
+    border: 3px solid #307256;
+    border-radius: 35px;
+    padding-top: 2vw;
+  }
+  
+  /* .one{
+    background-image: url("
+    https://www.thespruce.com/thmb/9PICtNPcU3yIk9uaeUNuKBLtFRA=/3038x3038/smart/filters:no_upscale()/how-to-determine-sunlight-levels-for-houseplants-1402652-01-a5b73a78040c41b9b87e6cd4fc33fa03.jpg");
+    border: 3px solid #307256;
+    border-radius: 35px;
+    height: auto;
+  }
+  .two{
+    height: 20px;
+    width: 20px;
+    border: 3px solid #307256;
+    border-radius: 35px;
+    padding-top: 2vw;
+  }
+  .three{
+    height: 20px;
+    width: 20px;
+    border: 3px solid #307256;
+    border-radius: 35px;
+    padding-top: 2vw;
+  } */
