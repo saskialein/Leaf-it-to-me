@@ -39,8 +39,8 @@ const Nav = (props) => {
           <NavLink
             to="/#search"
             activeClassName="active"
-            className="nav-link"
-            id="nav-btn-addNewPlant"
+            // className="nav-link"
+            // id="nav-btn-addNewPlant"
           >
             {/* Add New Plant */}
             <ModalPopUp/>
