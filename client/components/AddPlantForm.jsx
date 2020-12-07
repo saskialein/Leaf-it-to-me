@@ -54,9 +54,6 @@ class AddPlantForm extends React.Component {
           <input onChange={this.handleChange} className='input' value={this.state.common_name} autoFocus={true} name="common_name" type="text"/>
           <br/>
 
-
-
-
           <label>Water: </label>
           <select onChange={this.handleChange} className='select' value={this.state.water}  name="water" type="text">
               <option value="">Select</option>
@@ -105,10 +102,10 @@ class AddPlantForm extends React.Component {
           <label>Plant Image: </label>
           <input onChange={this.onChangeFile} className='input' name="img" type="file"/>
 
-          <label>Notes: </label>
+          {/* <label>Notes: </label>
             <textarea onChange={this.handleChange} className='select' value={this.state.notes} name="notes" type="text">
             
-            </textarea>
+            </textarea> */}
           
           <button>Submit</button>
 
@@ -121,18 +118,3 @@ class AddPlantForm extends React.Component {
 export default connect()(AddPlantForm)
 
 
-{/* <select onChange={this.handleChange} className='input' value={this.state.sign} name="sign" type="text" >
-<option value="">Select</option>
-<option value="Aries">Aries</option>
-<option value="Cancer">Cancer</option>
-<option value="Leo">Leo</option>
-<option value="Pisces">Pisces</option>
-<option value="Gemini">Gemini</option>
-<option value="Sagittarius">Sagittarius</option>
-<option value="Virgo">Virgo</option>
-<option value="Taurus">Taurus</option>
-<option value="Libra">Libra</option>
-<option value="Capricorn">Capricorn</option>
-<option value="Scorpio">Scorpio</option>
-<option value="Aquarius">Aquarius</option>
-</select> */}
