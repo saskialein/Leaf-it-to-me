@@ -1,4 +1,4 @@
-import { SET_SEARCH } from '../actions/search'
+import { SET_SEARCH, CLEAR_SEARCH } from '../actions/search'
 
 const initialState = ""
 
@@ -6,7 +6,11 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_SEARCH:
       return action.searchTerm
-    default:
+    
+    case CLEAR_SEARCH:
+      return initialState
+    
+      default:
       return state
   }
 }
