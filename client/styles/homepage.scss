@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-
-$background-color: #42b883;
-$secondary-color: #faecc9;
-$text-color: #086972;
-
-$btnBorderRadius: 3px;
-$font-stack: 'Roboto', sans-serif;
+@import '_vars.scss';
 
 .home {
   background-color: $background-color;
@@ -13,31 +6,13 @@ $font-stack: 'Roboto', sans-serif;
   display: block;
 }
 
-
-
-.home  {
-  height: 100vw;
-  background-color:$background-color;
-  display: block;
-}
-
-h1{
-  color:$text-color;
+h2 {
+  color: $text-color;
   // margin-top: 3vw;
   // margin-left: 3vw;
 }
 
-
-span {
-display: block;
-width: 33px;
-height: 4px;
-margin-bottom: 5px;
-position: relative;
-background: $background-color;
-border-radius: 3px;
-}
-
+//TO BE DEICIDED 
 // .hamburg {
 //   display: inline-block;
 //   position: relative;
@@ -49,88 +24,31 @@ border-radius: 3px;
 //   /* justify-content: flex-end; */
 // }
 
-
-
-a:hover{
-  color: #faecc9;
-  border: 3px solid #faecc9;
-}
-
 h2 {
-  color: #faecc9;
+  color:$secondary-color;
   margin-left: 5vw;
   font-size: 10vw;
   width: 50vw;
 }
 
-h3{
-  color: #faecc9;
-  font-size: 2.8vw;
-  width: 70vw;
-  margin-left: 7vw;
-  line-height: 4vw;
-}
-
-.main-img{
+.main-img {
   margin-top: 4vw;
   float: right;
   height: 45vw;
 }
 
-.main{
+.main {
   margin-top: 4vw;
 }
 
-div{
-  display: block;
-}
 
-input{
-  margin-left: 20vw;
-  width: 60vw;
-  border: 3px solid #307256;
-  border-radius: 35px;
-  padding-top: 2vw;
-}
 
-.plant-div{
-  position: relative;
-  text-align: center;
-  color: white;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
-}
 
-.plant-img{
-  display: block;
-  border: 3px solid #307256;
-  border-radius: 35px;
-}
 
-.img-div {
-  border: 3px solid #307256;
-  border-radius: 35px;
-  width: 30vw;
-  height: 30vw;
-  position: relative;
-}
 
-.pic{
-  height: 30vw;
-  width: 30vw;
-  position: relative;
-  border-radius: 35px;
-}
 
-.plant-name{
-  position: absolute;
-  background-color: white;
-  padding-right: 9vw;
-  padding-left: 9vw;
-  border-radius: 35px;
-  border: 3px solid #307256;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
+
+
+
 
