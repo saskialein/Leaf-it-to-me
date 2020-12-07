@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { removePlant } from '../actions/usersPlants'
 import Plant from "./Plant";
 
 
@@ -20,7 +18,6 @@ let usersFilteredArray = this.props.plants.filter((matchingPlant) => {
     return oneUserPlant.plant_id == matchingPlant.id
   })
 })
-// console.log(usersFilteredArray);
 
   return(
     <>

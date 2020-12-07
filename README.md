@@ -113,7 +113,7 @@ make pushbranch m='commitMessage'
 - [x] As an unregistered user I would like to be able to see a list of all of the plants on the homepage
 - [x] As an unregistered user I would like to be able to search for a specific plant on the homepage
 - [x] As an unregistered user I would like to click on a plant from the homepage & be re-directed to see it’s individual profile page
-- [ ] As an unregistered user I would like to be able to click on a button on the homepage to add a new plant and then be re-directed to the signup page which will tell me I need to register before I can add new plants to the main plant list and/or my own profile
+- [X] As an unregistered user I would like to be able to click on a button on the plant to add a new plant and then be re-directed to the signup page which will tell me I need to register before I can add new plants to the main plant list and/or my own profile
 - [x] As an unauthorised user I would like to be able to register
 - [x] As an unauthorised user I would like to be able to log in
 
@@ -121,8 +121,9 @@ make pushbranch m='commitMessage'
 
 - [x] As a signed in user I would like to be able to see a list of all of the plants on the homepage & then click on a plant to be re-directed to it’s individual profile page where I would be able to click to add the plant to my profile
 - [x] Once I’ve signed into my account (via clicking the login link on homepage) I’d like to be able to see a list of all of my saved plants 
-- [ ] Once signed in I’d also like to see a ‘add your own plant’ button which once clicked would ask me if I would like to add a new plant to my profile from the existing database (in which case I’d be directed back to the homepage) OR whether I’d like to add my own custom plant 
-- [ ] As a signed in user if I select to add my own plant I’d like to be able to fill out a form with my plant’s name & care details and also add an image. Once submitted my custom plant would automatically be added to my profile.
+
+- [x] As a signed in user if I select to add my own plant I’d like to be able to fill out a form with my plant’s name & care details and also add an image.
+- [ ] Once submitted my custom plant would automatically be added to my profile.
 - [ ] _optional / stretch?_ As a signed in user I would like to be able to see a list of all the plants on the homepage and tick which plants I’d like to add to my profile 
 - [x] I would like to be able to log out
 
@@ -130,7 +131,7 @@ make pushbranch m='commitMessage'
 ### Authorized Users:
 - [ ] As a user I'd like to see my name or usersname on my profile to indicate that it's my profile.
 - [ ] As a user I'd like to be able to delete a selected plant of my choice that was added into my profile.
-
+- [ ] Once signed in I’d also like to see a ‘add your own plant’ button which once clicked would ask me if I would like to add a new plant to my profile from the existing database (in which case I’d be directed back to the homepage) OR whether I’d like to add my own custom plant 
 
 # API
 

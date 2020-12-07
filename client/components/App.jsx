@@ -1,19 +1,15 @@
 import React from 'react'
 import { Route,  } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { getDecodedToken, isAuthenticated } from "authenticare/client/auth"
 
 import { checkAuth } from "../actions/auth.js"
 import { fetchPlants } from "../actions/index.js"
-import { fetchUsersPlants } from "../actions/usersPlants"
-
 
 // import Header from './Header.jsx'
 import Home from './Home.jsx'
 import Nav from './Nav.jsx'
 import IndividualPlant from './IndividualPlant.jsx'
 import AddPlantForm from './AddPlantForm.jsx'
-import SavedPlants from './SavedPlants.jsx'
 import SignIn from './SignIn'
 import Register from './Register'
 import UserPlantList from './UserPlantList'

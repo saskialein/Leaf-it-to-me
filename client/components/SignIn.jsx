@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getDecodedToken, isAuthenticated, signIn } from "authenticare/client";
+import { isAuthenticated, signIn } from "authenticare/client";
 
 import { baseApiUrl as baseUrl } from "../config";
-import { checkAuth, logIn } from "../actions/auth";
-import { fetchUsersPlants } from "../actions/usersPlants";
+import { checkAuth } from "../actions/auth";
 
 
 class SignIn extends React.Component {
