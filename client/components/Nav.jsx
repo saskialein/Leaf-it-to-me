@@ -9,6 +9,8 @@ import { logOut } from '../actions/auth'
 import { clearUsersPlants } from '../actions/usersPlants'
 import ModalPopUp from './ModalPopUp'
 
+// modal
+
 const logOutUser = (dispatch) => {
   logOff()
   dispatch(logOut())
