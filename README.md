@@ -9,20 +9,14 @@
 
 # UPDATED GIT PROTOCOL: 
 
-Each time we merge a new feature, we need to get back on the same page, I spoke to Ross and Kelly, best practice is to actually delete the local version of development that you have on your computer, and then bring it down again so you are sure you have the exact same.
-To do this, please do these commands:
-Firstly, you need to be in a different branch to development, so either move to a branch you have or make a new one.
-git checkout -b newbranch
-Now delete the local/your computers version of development
-git branch -D development
-Now let’s pull down the latest, start with Fetch to make sure you have all the branches
-git fetch
-Now move into development- it will be exactly the same as the remote
-git checkout development
-gst or git status, make sure your tree is clean and up to date!
-Now you can branch off from our shared/latest development, to a new branch
-git checkout -b myNewBranch
-Your old branch will be deleted! It’s merged in at this point so we should not confuse ourself by keeping it.
+Each time we merge a new feature, we need to get back on the same page, I spoke to Ross and Kelly, best practice is to actually delete the local version of development that you have on your computer, and then bring it down again so you are sure you have the exact same. To do this, please do these commands:
+
+- Firstly, you need to be in a different branch to development, so either move to a branch you have or make a new one. `git checkout -b newbranch`
+- Now delete the local/your computers version of development `git branch -D development`
+- Now let’s pull down the latest, start with Fetch to make sure you have all the branches `git fetch`
+- Now move into development- it will be exactly the same as the remote git checkout development gst or git status, make sure your tree is clean and up to date!
+- Now you can branch off from our shared/latest development, to a new branch `git checkout -b myNewBranch`
+- Your old branch will be deleted! It’s merged in at this point so we should not confuse ourself by keeping it.
 
 # MERGE TIME!! Git Protocol in a Team!
 * Feature is done, ready to create a pull request to Development?? 
