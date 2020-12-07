@@ -14,11 +14,26 @@ class Register extends React.Component {
     email: '',
   }
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    })
-  }
+    handleChange = (e) => {
+      this.setState({
+        [e.target.name]: e.target.value
+      })
+    }
+
+    handleClick = (e) => {
+      e.preventDefault()
+      const { name, username, password, email } = this.state
+      register({ name, username, password, email }, { baseUrl })
+        .then((token) => {
+          if (isAuthenticated()) {
+            const user = getDecodedToken()
+            this.props.dispatch(logIn(user))
+            this.props.history.push('/saved')
+          }
+          return null
+        })
+        .catch(err => alert(err.message))
+    }
 
   handleClick = (e) => {
     e.preventDefault()

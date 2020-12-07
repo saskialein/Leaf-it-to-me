@@ -12,12 +12,28 @@ export function retrievePlants () {
     .then(res => res.body)
 }
 
+export function addPlantImage (plantImage) {
+  return request.post('/api/v1/image-upload')
+    .send(plantImage)
+    .then(res => {
+      return res.text
+    })
+}
+
+export function addPlantData (plantData) {
+  return request.post(rootUrl)
+    .send(plantData)
+    .then(res => {
+      return res.body
+    })
+}
+
 export function addPlantToUsersPlantsDB (plant) {
   return request.post(rootUrl + '/addtoprofile')
     .set(acceptJsonHeader)
     .set(getAuthorizationHeader())
     .send(plant)
-    .then(res => res.body)
+    .then(res => res.body.id)
     .catch(err => console.log(err))
 }
 

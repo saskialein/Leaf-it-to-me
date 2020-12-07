@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { setSearchTerm } from "../actions/search";
+import { clearSearch, setSearchTerm } from "../actions/search";
 
 
 class Search extends React.Component {
@@ -12,7 +12,12 @@ class Search extends React.Component {
     
     this.setState({ searchTerm: e.target.value })
     this.props.dispatch(setSearchTerm(e.target.value))
-  };
+  }
+
+  componentWillUnmount() {
+    this.setState({searchTerm:""})
+    this.props.dispatch(clearSearch())
+  }
 
   render() {
  

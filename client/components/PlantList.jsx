@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Search from './Search'
 
 class PlantList extends React.Component {
-  
+
   render() {
     const filteredPlants = this.props.plants.filter((plant) =>
     plant.common_name.toLowerCase().includes(this.props.searchTerm.toLowerCase())
@@ -13,11 +13,11 @@ class PlantList extends React.Component {
   return(
     <div>
       <Search />
-      <div className="profile-wrapper">
+      <div className="smolPlant-wrapper">
         {filteredPlants.map((plant) => {
 
           return (
-            <Plant key={plant.id} plant={plant}/>
+            <Plant key={plant.id} plant={plant} history={this.props.history}/>
           )
         })}
       </div>

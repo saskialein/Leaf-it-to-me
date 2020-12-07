@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
+const { getTokenDecoder } = require('authenticare/server')
 
-const { getPlants, getPlant,createPlant, addPlantToProfileDbFunc } = require('../db/plantDbFuncs')
+const { getPlants, getPlant, createPlant, addPlantToProfileDbFunc, } = require('../db/plantDbFuncs')
 
 
 // READ -- GET LIST OF PLANTS
@@ -37,26 +38,30 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     const newPlant = req.body
     createPlant(newPlant)
-    .then( id => {
-        res.json({id: id})
-        // at this stage one bit of info we don't have is the auto generated id of the new plant, which is why we're passing this back as the response 
-    })
-    .catch(err => {
-        console.log(err)
-        res.status(500).json({ message: 'Something broke' })
-    })
+        .then(id => {
+            res.json({ id: id })
+            // at this stage one bit of info we don't have is the auto generated id of the new plant, which is why we're passing this back as the response 
+        })
+        .catch(err => {
+            console.log(err)
+            res.status(500).json({ message: 'Something broke' })
+        })
 })
 // ADDS PLANT TO USERS_PLANTS DB (WHEN PLANT CLICKED TO ADD TO PROFILE)
-router.post('/addtoprofile', (req, res) => {
+router.post('/addtoprofile', getTokenDecoder(), (req, res) => {
     const plant = req.body
+    const user = req.user
+    plant.user_id = user.id
     addPlantToProfileDbFunc(plant)
-    .then( () => {
-        res.json({})
-    })
-    .catch(err => {
-        console.log(err)
-        res.status(500).json({ message: 'Something broke' })
-    })
+        .then((plantIds) => {
+            res.json({id:plantIds[0]})
+        })
+        .catch(err => {
+            console.log(err)
+            res.status(500).json({ message: 'Something broke' })
+        })
 })
+
+
 
 module.exports = router

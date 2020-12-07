@@ -3,11 +3,14 @@ import { NavLink } from 'react-router-dom'
 import { logOff } from 'authenticare/client'
 import { connect } from 'react-redux'
 
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 import { logOut } from '../actions/auth'
+import { clearUsersPlants } from '../actions/usersPlants'
 
 const logOutUser = (dispatch) => {
   logOff()
   dispatch(logOut())
+  dispatch(clearUsersPlants())
 }
 
 const Nav = (props) => {
@@ -19,48 +22,56 @@ const Nav = (props) => {
           Home
         </NavLink>
 
-        <NavLink
-          to="/plants/saved"
-          activeClassName="active"
-          className="nav-link"
-        >
-          Saved Plants
-        </NavLink>
+        <IfAuthenticated>
+          <NavLink
+            to="/plants/saved"
+            activeClassName="active"
+            className="nav-link"
+            id="nav-btn-savedPlants"
+          >
+            Saved Plants
+          </NavLink>
+        </IfAuthenticated>
 
-        <NavLink to="/plants/new" activeClassName="active" className="nav-link">
-          New Plant Form
-        </NavLink>
+        <IfAuthenticated>
+          <NavLink
+            to="/plants/new"
+            activeClassName="active"
+            className="nav-link"
+            id="nav-btn-addNewPlant"
+          >
+            New Plant Form
+          </NavLink>
+        </IfAuthenticated>
 
-        <NavLink
-          to="/login"
-          activeClassName="active"
-          className="nav-link"
-          id="btn-sign-in"
-        >
-          Sign In
-        </NavLink>
+        <IfNotAuthenticated>
+          <NavLink to="/login" activeClassName="active" className="nav-link">
+            Sign In
+          </NavLink>
+        </IfNotAuthenticated>
 
-        <NavLink
-          to="/home"
-          activeClassName="active"
-          className="nav-link"
-          id="btn-sign-out"
-          onClick={() => logOutUser(props.dispatch)}
-        >
-          Sign Out
-        </NavLink>
+        <IfAuthenticated>
+          <NavLink
+            to="/"
+            activeClassName="active"
+            className="nav-link"
+            onClick={() => logOutUser(props.dispatch)}
+          >
+            Sign Out
+          </NavLink>
+        </IfAuthenticated>
 
-        <NavLink
-          to="/register"
-          activeClassName="active"
-          className="nav-link"
-          id="btn-sign-up"
-        >
-          Sign Up
-        </NavLink>
+        <IfNotAuthenticated>
+          <NavLink to="/register" activeClassName="active" className="nav-link">
+            Sign Up
+          </NavLink>
+        </IfNotAuthenticated>
       </div>
     </>
   )
+}
+function mapStateToProps(globalState) {
+  return {}
 }
 
 export default connect()(Nav)
