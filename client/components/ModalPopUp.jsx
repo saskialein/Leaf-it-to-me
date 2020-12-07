@@ -25,7 +25,10 @@ class ModalPopUp extends React.Component {
 	render() {
 		return (
     <>
-    <button onClick={this.handleOpenModal}>Add Plant</button>
+    <NavLink to= "/" activeClassName="active"
+            className="nav-link"
+            id="nav-btn-savedPlants"onClick={this.handleOpenModal}>Add Plant
+      </NavLink>
     <Modal 
            isOpen={this.state.showModal}
            contentLabel="Minimal Modal Example"

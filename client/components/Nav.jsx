@@ -36,15 +36,7 @@ const Nav = (props) => {
         </IfAuthenticated>
 
         <IfAuthenticated>
-          <NavLink
-            to="/#search"
-            activeClassName="active"
-            className="nav-link"
-            id="nav-btn-addNewPlant"
-          >
-            {/* Add New Plant */}
             <ModalPopUp/>
-          </NavLink>
         </IfAuthenticated>
 
         <IfNotAuthenticated>
