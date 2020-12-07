@@ -1,79 +1,76 @@
-.home  {
-  height: 100vw;
-  background-color: #51c08f;
+.home {
+  height: 75vw;
+  background-color: $background-color;
   display: block;
+
+  div h2 {
+    font-size: $font-large * 2;
+  }
+
+  h3 {
+    font-weight: Normal;
+  }
+  P {
+    font-size: $font-medium *2;
+    font-weight: Normal;
+    margin-left:$temp-margin *3;
+  }
 }
-/*  */
-
-
-.home { 
-  height: 100vw;
-  display: block;
-//   margin: $homepage-margin/2, $homepage-margin, 0px, $homepage-margin;
-}
-
 
 .main-img {
-  margin-top: 4vw;
+  //margin-top: 4vw;
   float: right;
   height: 45vw;
 }
 
-.main {
-  margin-top: 4vw;
+.plant-div {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
 }
 
+// .plant-img {
+//   display: block;
+//   border: 3px solid #307256;
+//   border-radius: 35px;
+// }
 
-.plant-div{
-    position: relative;
-    text-align: center;
-    color: white;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-  }
-  
-  .plant-img{
-    display: block;
-    border: 3px solid #307256;
-    border-radius: 35px;
-  }
-  
-  .img-div {
-    border: 3px solid #307256;
-    border-radius: 35px;
-    width: 30vw;
-    height: 30vw;
-    position: relative;
-  }
-  
-  .pic{
-    height: 30vw;
-    width: 30vw;
-    position: relative;
-    border-radius: 35px;
-  }
-  
-  .head {
-    margin-top: -2vw;
-  }
-  
-  span {
+// .img-div {
+//   border: 3px solid #307256;
+//   border-radius: 35px;
+//   width: 30vw;
+//   height: 30vw;
+//   position: relative;
+// }
+
+// .pic {
+//   height: 30vw;
+//   width: 30vw;
+//   position: relative;
+//   border-radius: 35px;
+// }
+
+// .head {
+//   margin-top: -2vw;
+// }
+
+// span {
+//   display: block;
+//   width: 33px;
+//   height: 4px;
+//   margin-bottom: 5px;
+//   position: relative;
+//   background: #307256;
+//   border-radius: 3px;
+// }
+
+div {
   display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #307256;
-  border-radius: 3px;
-  }
-  
-  div{
-    display: block;
-  }
-  
+}
 
-  
-  /* .one{
+/* .one{
     background-image: url("
     https://www.thespruce.com/thmb/9PICtNPcU3yIk9uaeUNuKBLtFRA=/3038x3038/smart/filters:no_upscale()/how-to-determine-sunlight-levels-for-houseplants-1402652-01-a5b73a78040c41b9b87e6cd4fc33fa03.jpg");
     border: 3px solid #307256;
