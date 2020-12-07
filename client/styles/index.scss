@@ -1,28 +1,20 @@
-// @import 'hortense.scss';
-@import 'smallPlant.scss';
-@import "individualPlant.scss";
-@import "addPlantForm.scss";
-// @import "homePageJesse.scss";
-@import"homepage.scss";
+
 
 @import
   'vars';
 
 @import
   'base/base',
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
-
+  'base/typography';
 
 @import
   'layout/footer',
-  'layout/nav',
   'layout/modal',
+  'layout/nav',
   'layout/smallPlant';
 
 @import
-  'pages/home',
   'pages/addPlantForm',
+  'pages/home',
   'pages/_individualPlant',
-  'pages/home';
+  'pages/home'; 

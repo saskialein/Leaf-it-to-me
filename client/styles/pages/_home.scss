@@ -11,12 +11,6 @@ body{
   margin: $homepage-margin/2, $homepage-margin, 0px, $homepage-margin;
 }
 
-h2 {
-  color: $secondary-color;
-  margin-left: 5vw;
-  font-size: 10vw;
-  width: 50vw;
-}
 
 .main-img {
   margin-top: 4vw;
@@ -28,14 +22,46 @@ h2 {
   margin-top: 4vw;
 }
 
-//TO BE DEICIDED
-// .hamburg {
-//   display: inline-block;
-//   position: relative;
-//   margin-right: 2vw;
-//   margin-top: 3vw;
-//   margin-left: 2vw;
-//   /* float: right; */
-//   /* position: relative; */
-//   /* justify-content: flex-end; */
-// }
+
+
+.plant-div{
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+  
+  .plant-img{
+    display: block;
+    border: 3px solid #307256;
+    border-radius: 35px;
+  }
+  
+  .img-div {
+    border: 3px solid #307256;
+    border-radius: 35px;
+    width: 30vw;
+    height: 30vw;
+    position: relative;
+  }
+  
+  .pic{
+    height: 30vw;
+    width: 30vw;
+    position: relative;
+    border-radius: 35px;
+  }
+  
+  .plant-name{
+    position: absolute;
+    background-color: white;
+    padding-right: 9vw;
+    padding-left: 9vw;
+    border-radius: 35px;
+    border: 3px solid #307256;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

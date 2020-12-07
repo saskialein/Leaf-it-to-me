@@ -6,3 +6,23 @@ $text-color: #086972;
 $btnBorderRadius: 3px;
 $btn-hover-color: ORANGE; // TO BE CHANGED LATER
 $font-stack: 'Roboto', sans-serif; //TO BE CHANGED LATER
+
+// sass variables
+$font-stack:'Raleway', sans-serif;
+$font-small: 15px;
+$font-medium: 20px;
+$font-large: 50px;
+$font-Xlarge: 100px;
+$text-shadow: 0 0 6px #000;
+
+$borderRadius: 3px;
+$box-shadow:
+  0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$box-shadow-inset:
+  inset 0 -0.6em 1em -0.35em 
+  rgba(0,0,0,0.17),
+  inset 0 0.6em 2em -0.3em
+  rgba(255,255,255,0.15),
+  inset 0 0 0em 0.05em 
+  rgba(255,255,255,0.12);
