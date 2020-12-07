@@ -23,6 +23,7 @@ class AddPlantForm extends React.Component {
       [e.target.name]: e.target.value,
     })
   }
+
   handleSubmit = (event) => {
     event.preventDefault()
 
@@ -50,20 +51,24 @@ class AddPlantForm extends React.Component {
 
           <label>Common Name: </label>
           <input onChange={this.handleChange} className='input' value={this.state.name} autoFocus={true} name="name" type="text"/>
-          <br/>
 
           <label>Water: </label>
           <input onChange={this.handleChange} className='input' value={this.state.water}  name="water" type="text"/>
 
-          <label>Light: </label> <input onChange={this.handleChange} className='input' value={this.state.light} name="light" type="text"/>
+          <label>Light: </label> 
+          <input onChange={this.handleChange} className='input' value={this.state.light} name="light" type="text"/>
 
-          <label>Temp: </label><input onChange={this.handleChange} className='input' value={this.state.temp} name="temp" type="text"/>
+          <label>Temp: </label>
+          <input onChange={this.handleChange} className='input' value={this.state.temp} name="temp" type="text"/>
 
-          <label>Humidity: </label><input onChange={this.handleChange} className='input' value={this.state.humidity} name="humidity" type="text"/>
+          <label>Humidity: </label>
+          <input onChange={this.handleChange} className='input' value={this.state.humidity} name="humidity" type="text"/>
           
-          <label>Plant Image: </label><input onChange={this.onChangeFile} className='input' name="img" type="file" />
+          <label>Plant Image: </label>
+          <input onChange={this.onChangeFile} className='input' name="img" type="file" />
           
           <button>Submit</button>
+
         </form>
       </div>
     )

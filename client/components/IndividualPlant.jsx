@@ -33,8 +33,7 @@ const IndividualPlant = (props) => {
               <div className="careDetail"> 
               <img src= {plant.img}/>
                 
-                <ul className="">
-                  
+                <ul className="">         
                   <li>{plant.water}</li>
                   <li>{plant.light}</li>
                   <li>{plant.temp}</li>

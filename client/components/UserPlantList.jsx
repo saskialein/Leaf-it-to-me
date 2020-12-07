@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 import { connect } from 'react-redux'
 
-import Plant from "./Plant";
-
+import Plant from "./Plant"
+import Search from "./Search"
 
 class UserPlantList extends React.Component {
 
@@ -13,24 +13,20 @@ class UserPlantList extends React.Component {
     
     // , and then map over the plants in global state and render any plant that matches that id 
 
-let usersFilteredArray = this.props.plants.filter((matchingPlant) => {
-  return this.props.usersPlants.some((oneUserPlant) => {
-    return oneUserPlant.plant_id == matchingPlant.id
-  })
-})
+    const nameMatchesSearch = (name) => name.toLowerCase().includes(this.props.searchTerm.toLowerCase())
 
-  return(
-    <>
-      <h1>My happy plants</h1>
+    const userOwnsOne = (plant) => this.props.usersPlants.some((oneUserPlant) => oneUserPlant.plant_id == plant.id)
 
-      <div className="profile-wrapper">
-        {usersFilteredArray.map((userPlant) => {
-          return (
-          <Plant key={userPlant.id} plant={userPlant}/>
-          )
-        })}
-      </div>
-    </> 
+    let usersFilteredArray = this.props.plants.filter((plant) => nameMatchesSearch(plant.common_name) && userOwnsOne(plant))
+
+    return (
+      <>
+        <h1>My happy plants</h1>
+        <Search />
+        <div className="profile-wrapper">
+          {usersFilteredArray.map((userPlant) => <Plant key={userPlant.id} plant={userPlant}/>)}
+        </div>
+      </> 
     )
   }
 }
@@ -43,4 +39,5 @@ function mapStateToProps(globalState) {
     searchTerm: globalState.search
   };
 }
+
 export default connect(mapStateToProps)(UserPlantList);

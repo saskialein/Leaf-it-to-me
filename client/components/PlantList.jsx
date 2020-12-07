@@ -6,22 +6,18 @@ import Search from './Search'
 class PlantList extends React.Component {
 
   render() {
+    
     const filteredPlants = this.props.plants.filter((plant) =>
-    plant.common_name.toLowerCase().includes(this.props.searchTerm.toLowerCase())
-  )
+      plant.common_name.toLowerCase().includes(this.props.searchTerm.toLowerCase())
+    )
 
-  return(
-    <div>
-      <Search />
-      <div className="smolPlant-wrapper">
-        {filteredPlants.map((plant) => {
-
-          return (
-            <Plant key={plant.id} plant={plant}/>
-          )
-        })}
+    return (
+      <div>
+        <Search />
+        <div className="smolPlant-wrapper">
+          {filteredPlants.map((plant) => <Plant key={plant.id} plant={plant}/>)}
+        </div>
       </div>
-    </div>
     )
   }
 }
