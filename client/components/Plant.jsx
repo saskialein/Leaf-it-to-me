@@ -18,11 +18,11 @@ const Plant = (props) => {
   
   return (
     <div>
-      <div className='each-profile'>
-      <div className='profile-picture'>
-          <img className='profile-picture__image' src= {plant.img}/>
-        <div className='profile-name-plate'>
-          <p className='profile-name'>{plant.common_name}</p>
+      <div className='each-smallPlant'>
+      <div className='smallPlant-picture'>
+          <img className='smallPlant-picture' src= {plant.img}/>
+        <div className='smallPlant-name-plate'>
+          <p className='name'>{plant.common_name}</p>
           <p className='species'>{plant.species_name}</p>
 
         </div>
