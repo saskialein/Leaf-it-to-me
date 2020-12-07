@@ -1,5 +1,12 @@
 # Leaf it to me
 
+## FUNCTIONALITY CHECKLIST TO CHECK BEFORE YOU MERGE YOUR BRANCH: 
+
+- [ ] When I'm signed out I should be able to go to the homepage, search for a plant, and only see the 'more info' button and then sign in, sign up & home nav links
+- [ ] Once I click more info on a plant I should then see it's individual profile & the 'add plant to profile' button, which once clicked will take me to the sign up page
+- [ ] I should be able to sign up / sign in. Once signed in I should be able to go to the home page and see the 'more info' and 'add a plant' buttons, if I click to 'add a plant' I should be automatically taken to my saved plants profile page, and from here I should see the option to 'remove' any plants I've added and also the option to search for a plant within my plant list
+- [ ] Once signed in I should also be able to click the 'Add Plant' nav button and this will show me a pop up Modal, where I can choose from 3 options - all of these options should be working
+
 # UPDATED GIT PROTOCOL: 
 
 Each time we merge a new feature, we need to get back on the same page, I spoke to Ross and Kelly, best practice is to actually delete the local version of development that you have on your computer, and then bring it down again so you are sure you have the exact same.
