@@ -9,7 +9,7 @@ const UserPlant = (props) => {
   return (
     <div>
       <div key={plant.id}>
-        <div className={`individ-plant-main ${rowClass}`}>
+        <div className={`user-plant-main ${rowClass}`}>
           <h2 className="commonName">{plant.common_name}</h2>
           <h3 className="commonName">{plant.species_name}</h3>
           <div className="careDetail"> 
@@ -21,7 +21,7 @@ const UserPlant = (props) => {
               <li>{plant.humidity}</li>
               <li>{plant.soil}</li>
               <li>{plant.lvl}</li>
-              <li>{plant.more}</li>
+              <li>{plant.notes}</li>
             </ul>              
             <button >Delete</button>
           </div>
