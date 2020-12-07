@@ -15,12 +15,13 @@ const customStyles = {
     borderColor: '#307256',
     borderWidth: '2px',
     borderRadius: '20px',
-    padding: '60px 40px'
+    padding: '60px 40px',
+    fontWeight: 'bolder'
   }
 };
 
 Modal.setAppElement('#app');
-// test2
+
 class ModalPopUp extends React.Component {
 
   state = {
@@ -38,7 +39,7 @@ class ModalPopUp extends React.Component {
 	render() {
 		return (
     <>
-    <NavLink to= "/" activeClassName="active"
+     <NavLink to= "/" activeClassName="active"
             className="nav-link"
             id="nav-btn-savedPlants"onClick={this.handleOpenModal}>Add Plant
       </NavLink>
@@ -48,9 +49,9 @@ class ModalPopUp extends React.Component {
           style={customStyles}
         >
         
-          <NavLink to={'/#search'} className="nav-link"><button className='modal-button' onClick={this.handleCloseModal}>Add existing plant to profile</button></NavLink>
-          <NavLink to={'/plants/new'} className="nav-link"><button className='modal-button' onClick={this.handleCloseModal}>Add new plant</button></NavLink>
-          <NavLink to={'/plants/saved'} className="nav-link"><button className='modal-button' onClick={this.handleCloseModal}>Back to profile</button></NavLink>
+          <NavLink to={'/#search'} className="nav-link" onClick={this.handleCloseModal}>Add existing plant to profile</NavLink>
+          <NavLink to={'/plants/new'} className="nav-link" onClick={this.handleCloseModal}>Add new plant</NavLink>
+          <NavLink to={'/plants/saved'} className="nav-link" onClick={this.handleCloseModal}>Back to profile</NavLink>
     </Modal>
     </>
     )
