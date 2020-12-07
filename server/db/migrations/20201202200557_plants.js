@@ -10,7 +10,7 @@ exports.up = function (knex) {
     table.string('humidity')
     table.string('soil')
     table.string('lvl')
-    table.string('more', 5000)
+    table.string('notes', 5000)
     table.string('img')
   })
 }

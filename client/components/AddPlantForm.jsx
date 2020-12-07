@@ -37,7 +37,8 @@ class AddPlantForm extends React.Component {
       water: this.state.water,
       light: this.state.light,
       temp: this.state.temp,
-      humidity: this.state.humidity
+      humidity: this.state.humidity,
+      notes: this.state.notes
     }
 
     this.props.dispatch(addPlant(plantImage, plantData))
@@ -53,20 +54,61 @@ class AddPlantForm extends React.Component {
           <input onChange={this.handleChange} className='input' value={this.state.common_name} autoFocus={true} name="common_name" type="text"/>
           <br/>
 
+
+
+
           <label>Water: </label>
-          <input onChange={this.handleChange} className='input' value={this.state.water}  name="water" type="text"/>
+          <select onChange={this.handleChange} className='select' value={this.state.water}  name="water" type="text">
+              <option value="">Select</option>
+              <option value="once per week">once per week</option>
+              <option value="only when soil is completely dry">only when soil is completely dry</option>
+              <option value="keep moist but not wet">keep moist but not wet</option>
+              <option value="one to two weeks">one to two weeks</option>
+              <option value="once every 2 weeks">once every 2 weeks</option>
+              <option value="soak every 1-2 weeks">soak every 1-2 weeks</option>
+              </select>
 
           <label>Light: </label> 
-          <input onChange={this.handleChange} className='input' value={this.state.light} name="light" type="text"/>
+          <select onChange={this.handleChange} className='select' value={this.state.light} name="light" type="text">
+            <option value="">Select</option>
+            <option value="bright-medium indirect">bright-medium indirect</option>
+            <option value="filtered indirect">filtered indirect</option>
+            <option value="bright indirect">bright indirect</option>
+            <option value="full shade">full shade</option>
+            <option value="bright filtered-full shade">bright filtered-full shade</option>
+            <option value="bright filtered-can tolerate direct">bright filtered-can tolerate direct</option>
+            <option value="filtered medium">filtered medium</option>
+            <option value="low">low</option>
+            <option value="direct">direct</option>
+          </select>
 
           <label>Temp: </label>
-          <input onChange={this.handleChange} className='input' value={this.state.temp} name="temp" type="text"/>
-
+            <select onChange={this.handleChange} className='select' value={this.state.temp} name="temp" type="text">
+            <option value="">Select</option>
+            <option value="cool">cool</option>
+            <option value="cool-warm">cool-warm</option>
+            <option value="cool-hot">cool-hot</option>
+            <option value="warm">warm</option>
+            <option value="warm-hot">warm-hot</option>
+            <option value="hot">hot</option>
+            </select>
           <label>Humidity: </label>
-          <input onChange={this.handleChange} className='input' value={this.state.humidity} name="humidity" type="text"/>
-          
+          <select onChange={this.handleChange} className='select' value={this.state.humidity} name="humidity" type="text">
+            <option value="">Select</option>
+            <option value="low">low</option>
+            <option value="low-moderate">low-moderate</option>
+            <option value="moderate">moderate</option>
+            <option value="moderate-high">moderate-high</option>
+            <option value="high">high</option>
+            <option value="adaptable">adaptable</option>
+            </select>
           <label>Plant Image: </label>
-          <input onChange={this.onChangeFile} className='input' name="img" type="file" />
+          <input onChange={this.onChangeFile} className='input' name="img" type="file"/>
+
+          <label>Notes: </label>
+            <textarea onChange={this.handleChange} className='select' value={this.state.notes} name="notes" type="text">
+            
+            </textarea>
           
           <button>Submit</button>
 
@@ -77,3 +119,20 @@ class AddPlantForm extends React.Component {
 }
 
 export default connect()(AddPlantForm)
+
+
+{/* <select onChange={this.handleChange} className='input' value={this.state.sign} name="sign" type="text" >
+<option value="">Select</option>
+<option value="Aries">Aries</option>
+<option value="Cancer">Cancer</option>
+<option value="Leo">Leo</option>
+<option value="Pisces">Pisces</option>
+<option value="Gemini">Gemini</option>
+<option value="Sagittarius">Sagittarius</option>
+<option value="Virgo">Virgo</option>
+<option value="Taurus">Taurus</option>
+<option value="Libra">Libra</option>
+<option value="Capricorn">Capricorn</option>
+<option value="Scorpio">Scorpio</option>
+<option value="Aquarius">Aquarius</option>
+</select> */}
