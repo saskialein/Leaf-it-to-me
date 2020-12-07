@@ -1,12 +1,10 @@
 import React from "react"
 import { connect } from 'react-redux'
-import '../styles/individualPlant.scss'
 
 const UserPlant = (props) => {
   
   const plant = props.plant
   const rowClass = props.isOdd ? 'odd' : 'even'
-
 
   return (
     <div>
