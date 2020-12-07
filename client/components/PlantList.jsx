@@ -12,12 +12,17 @@ class PlantList extends React.Component {
     )
 
     return (
+      <>
       <div>
         <Search />
+        </div>
+      
+        <div>
         <div className="smallPlant-wrapper">
           {filteredPlants.map((plant) => <Plant key={plant.id} plant={plant}/>)}
         </div>
-      </div>
+        </div>
+        </>
     )
   }
 }

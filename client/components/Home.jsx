@@ -5,11 +5,11 @@ import PlantList from './PlantList.jsx'
 
 const Home = () => {
   return (
-    <div>
+    <>
       <div className="home">
         <img
           className="main-img"
-          src="./potted-plant-transparent-background-5.png"
+          src="./images/potted-plant-transparent-background-5.png"
           alt=""
         />
         <div>
@@ -21,9 +21,12 @@ const Home = () => {
         </div>
       </div>
 
-    <Route path='/' component={PlantList}/>
-   
+    <div>     
+       <Route path="/" component={PlantList} />
+    
     </div>
+      </>
+
   )
 }
 

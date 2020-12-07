@@ -1,17 +1,15 @@
 .home  {
   height: 100vw;
-  background-color: #51c08f;
+  background-color:$background-color;
   display: block;
 }
 /*  */
-
 
 .home { 
   height: 100vw;
   display: block;
 //   margin: $homepage-margin/2, $homepage-margin, 0px, $homepage-margin;
 }
-
 
 .main-img {
   margin-top: 4vw;
@@ -22,7 +20,6 @@
 .main {
   margin-top: 4vw;
 }
-
 
 .plant-div{
     position: relative;
