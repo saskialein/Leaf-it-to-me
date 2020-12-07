@@ -25,46 +25,15 @@ const Nav = (props) => {
         </NavLink>
 
         <IfAuthenticated>
-<<<<<<< HEAD
           <NavLink to="/plants/saved" activeClassName="active" className="nav-link" id="nav-btn-savedPlants">
-=======
-          <NavLink
-            to="/plants/saved"
-            activeClassName="active"
-            className="nav-link"
-            id="nav-btn-savedPlants"
-          >
->>>>>>> b9843b4238f65d94f7c4b1ff6b5cb72629719d5f
             Saved Plants
           </NavLink>
 
-<<<<<<< HEAD
           <NavLink to="/plants/new" activeClassName="active" className="nav-link" id="nav-btn-addNewPlant">
             New Plant Form
-=======
-        <IfAuthenticated>
-          <NavLink
-            to="/#search"
-            activeClassName="active"
-            // className="nav-link"
-            // id="nav-btn-addNewPlant"
-          >
-            {/* Add New Plant */}
-            <ModalPopUp/>
->>>>>>> b9843b4238f65d94f7c4b1ff6b5cb72629719d5f
           </NavLink>
 
-<<<<<<< HEAD
           <NavLink to="/home" activeClassName="active" className="nav-link" onClick={() => logOutUser(props.dispatch)}>
-=======
-        <IfAuthenticated>
-          <NavLink
-            to="/"
-            activeClassName="active"
-            className="nav-link"
-            onClick={() => logOutUser(props.dispatch)}
-          >
->>>>>>> b9843b4238f65d94f7c4b1ff6b5cb72629719d5f
             Sign Out
           </NavLink>
         </IfAuthenticated>
@@ -82,11 +51,5 @@ const Nav = (props) => {
     </>
   )
 }
-<<<<<<< HEAD
-=======
-function mapStateToProps(globalState) {
-  return {}
-}
->>>>>>> b9843b4238f65d94f7c4b1ff6b5cb72629719d5f
 
 export default connect()(Nav)
