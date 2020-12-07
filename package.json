@@ -15,7 +15,7 @@
     "dev:server": "nodemon --watch server server/index.js",
     "build": "run-p build:client build:server",
     "build:client": "webpack --mode=production",
-    "build:server": "knex migrate:latest",
+    "build:server": "npm run knex migrate:latest",
     "db-reset": "run-s db:*",
     "db:delete": "rm server/db/dev.sqlite3",
     "db:migrate": "npm run knex migrate:latest",
