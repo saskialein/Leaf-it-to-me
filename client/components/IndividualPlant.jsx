@@ -8,7 +8,7 @@ const IndividualPlant = (props) => {
   const plant = props.plants.find((plant) => plant.common_name == name)
 
   const handleClick = () => {
-    console.log('hi i am handleclick')
+
     const plantObject = {
         plant_id: plant.id,
         name: 'emily'
@@ -30,8 +30,7 @@ const IndividualPlant = (props) => {
               <div className="careDetail"> 
               <img src= {plant.img}/>
                 
-                <ul className="">
-                  
+                <ul className="">         
                   <li>{plant.water}</li>
                   <li>{plant.light}</li>
                   <li>{plant.temp}</li>

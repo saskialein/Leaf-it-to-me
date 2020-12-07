@@ -18,7 +18,7 @@ class SignIn extends React.Component {
     });
   };
 
-  handleClick = (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
     const { username, password } = this.state;
     signIn({ username, password }, { baseUrl })
@@ -36,7 +36,7 @@ class SignIn extends React.Component {
     return (
       <div>
         <h2>Sign in</h2>
-        <form className="form" onSubmit={this.handleClick}>
+        <form className="form" onSubmit={this.handleSubmit}>
           <label className="btn" htmlFor="name">
             Username:{" "}
           </label>

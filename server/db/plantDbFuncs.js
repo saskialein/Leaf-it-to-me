@@ -3,12 +3,16 @@ const connection = require('./connection')
 
 // READ - Get All Plants
 function getPlants(db = connection) {
-  return db('plants').select()
+  return db('plants')
+    .select()
 }
 
 // READ - Get Single Plant
 function getPlant(id, db = connection){
-  return db('plants').select().where('id', id).first()
+  return db('plants')
+  .select()
+  .where('id', id)
+  .first()
 }
 // kind of like a find, run thru all of the plants and find the plant whose id matches the id that has been passed in 
 

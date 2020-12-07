@@ -4,7 +4,6 @@ const { getTokenDecoder } = require('authenticare/server')
 
 const { getPlants, getPlant, createPlant, addPlantToProfileDbFunc, } = require('../db/plantDbFuncs')
 
-
 // READ -- GET LIST OF PLANTS
 router.get('/', (req, res) => {
     getPlants()
@@ -19,7 +18,6 @@ router.get('/', (req, res) => {
 })
 
 // READ -- GET SINGLE PLANT 
-
 router.get('/:id', (req, res) => {
     const id = req.params.id
     getPlant(id)
@@ -32,7 +30,6 @@ router.get('/:id', (req, res) => {
             res.status(500).json({ message: 'Something broke' })
         })
 })
-
 
 // CREATE i.e ADD ONE NEW PLANT 
 router.post('/', (req, res) => {
@@ -47,6 +44,7 @@ router.post('/', (req, res) => {
             res.status(500).json({ message: 'Something broke' })
         })
 })
+
 // ADDS PLANT TO USERS_PLANTS DB (WHEN PLANT CLICKED TO ADD TO PROFILE)
 router.post('/addtoprofile', getTokenDecoder(), (req, res) => {
     const plant = req.body
@@ -61,7 +59,5 @@ router.post('/addtoprofile', getTokenDecoder(), (req, res) => {
             res.status(500).json({ message: 'Something broke' })
         })
 })
-
-
 
 module.exports = router

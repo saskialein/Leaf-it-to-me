@@ -19,29 +19,20 @@ const Nav = (props) => {
       <div className="nav">
         <h1 className="">Leaf it to me</h1>
         <NavLink to="/" exact activeClassName="active" className="nav-link">
-          {' '}
           Home
         </NavLink>
 
         <IfAuthenticated>
-        <NavLink
-            to="/plants/saved"
-            activeClassName="active"
-            className="nav-link"
-            id="nav-btn-savedPlants"
-          >
+          <NavLink to="/plants/saved" activeClassName="active" className="nav-link" id="nav-btn-savedPlants">
             Saved Plants
           </NavLink>
-        </IfAuthenticated>
 
-        <IfAuthenticated>
-          <NavLink
-            to="/plants/new"
-            activeClassName="active"
-            className="nav-link"
-            id="nav-btn-addNewPlant"
-          >
+          <NavLink to="/plants/new" activeClassName="active" className="nav-link" id="nav-btn-addNewPlant">
             New Plant Form
+          </NavLink>
+
+          <NavLink to="/home" activeClassName="active" className="nav-link" onClick={() => logOutUser(props.dispatch)}>
+            Sign Out
           </NavLink>
         </IfAuthenticated>
 
@@ -49,20 +40,7 @@ const Nav = (props) => {
           <NavLink to="/login" activeClassName="active" className="nav-link">
             Sign In
           </NavLink>
-        </IfNotAuthenticated>
-
-        <IfAuthenticated>
-          <NavLink
-            to="/home"
-            activeClassName="active"
-            className="nav-link"
-            onClick={() => logOutUser(props.dispatch)}
-          >
-            Sign Out
-          </NavLink>
-        </IfAuthenticated>
-
-        <IfNotAuthenticated>
+        
           <NavLink to="/register" activeClassName="active" className="nav-link">
             Sign Up
           </NavLink>
@@ -70,11 +48,6 @@ const Nav = (props) => {
       </div>
     </>
   )
-}
-function mapStateToProps (globalState) {
-  return {
-    
-  }
 }
 
 export default connect()(Nav)
