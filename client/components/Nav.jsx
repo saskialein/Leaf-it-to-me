@@ -27,17 +27,10 @@ const Nav = (props) => {
         </NavLink>
 
         <IfAuthenticated>
-          <NavLink
-            to="/plants/saved"
-            activeClassName="active"
-            className="nav-link"
-            id="nav-btn-savedPlants"
-          >
+          <NavLink to="/plants/saved" activeClassName="active" className="nav-link" id="nav-btn-savedPlants">
             Saved Plants
           </NavLink>
-        </IfAuthenticated>
 
-        <IfAuthenticated>
             <ModalPopUp/>
         </IfAuthenticated>
 
@@ -45,20 +38,16 @@ const Nav = (props) => {
           <NavLink to="/login" activeClassName="active" className="nav-link">
             Sign In
           </NavLink>
-        </IfNotAuthenticated>
+          </IfNotAuthenticated>
 
-        <IfAuthenticated>
-          <NavLink
-            to="/"
-            activeClassName="active"
-            className="nav-link"
-            onClick={() => logOutUser(props.dispatch)}
-          >
+          <IfAuthenticated>
+          <NavLink to="/home" activeClassName="active" className="nav-link" onClick={() => logOutUser(props.dispatch)}>
             Sign Out
           </NavLink>
         </IfAuthenticated>
 
         <IfNotAuthenticated>
+        
           <NavLink to="/register" activeClassName="active" className="nav-link">
             Sign Up
           </NavLink>
@@ -66,9 +55,6 @@ const Nav = (props) => {
       </div>
     </>
   )
-}
-function mapStateToProps(globalState) {
-  return {}
 }
 
 export default connect()(Nav)

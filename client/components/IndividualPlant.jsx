@@ -1,9 +1,7 @@
 import React from "react"
 import { connect } from 'react-redux'
 import { addPlantToReduxandDb } from '../actions/index'
-// import { addPlantToUsersPlantsDB } from '../apis/plants'
 import { isAuthenticated } from 'authenticare/client'
-
 
 const IndividualPlant = (props) => {
   const name = props.match.params.name
@@ -12,7 +10,7 @@ const IndividualPlant = (props) => {
   const handleClick = () => {
     const plantObject = {
         plant_id: plant.id,
-        name: 'emily'
+        name: ''
       }
       if (isAuthenticated()) {
         props.dispatch(addPlantToReduxandDb(plantObject))
@@ -38,8 +36,7 @@ const IndividualPlant = (props) => {
               <div className="careDetail"> 
               <img src= {plant.img}/>
                 
-                <ul className="">
-                  
+                <ul className="">         
                   <li>{plant.water}</li>
                   <li>{plant.light}</li>
                   <li>{plant.temp}</li>

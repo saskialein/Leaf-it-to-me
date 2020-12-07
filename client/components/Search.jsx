@@ -8,14 +8,12 @@ class Search extends React.Component {
     searchTerm: ""
   }
 
-  handleChange = (e) => {
-    
+  handleChange = (e) => {  
     this.setState({ searchTerm: e.target.value })
     this.props.dispatch(setSearchTerm(e.target.value))
   }
 
   componentWillUnmount() {
-    this.setState({searchTerm:""})
     this.props.dispatch(clearSearch())
   }
 

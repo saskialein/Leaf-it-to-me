@@ -43,7 +43,6 @@ const Plant = (props) => {
 function mapStateToProps(globalState) {
   return {
     plants: globalState.plants,
-    currentPlant: globalState.currentPlant,
   }
 }
 export default connect(mapStateToProps)(Plant)
