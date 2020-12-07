@@ -123,15 +123,14 @@ make pushbranch m='commitMessage'
 - [x] Once I’ve signed into my account (via clicking the login link on homepage) I’d like to be able to see a list of all of my saved plants 
 
 - [x] As a signed in user if I select to add my own plant I’d like to be able to fill out a form with my plant’s name & care details and also add an image.
-- [ ] Once submitted my custom plant would automatically be added to my profile.
 - [ ] _optional / stretch?_ As a signed in user I would like to be able to see a list of all the plants on the homepage and tick which plants I’d like to add to my profile 
 - [x] I would like to be able to log out
 
 # STRETCH USER STORIES
 ### Authorized Users:
 - [ ] As a user I'd like to see my name or usersname on my profile to indicate that it's my profile.
-- [ ] As a user I'd like to be able to delete a selected plant of my choice that was added into my profile.
-- [ ] Once signed in I’d also like to see a ‘add your own plant’ button which once clicked would ask me if I would like to add a new plant to my profile from the existing database (in which case I’d be directed back to the homepage) OR whether I’d like to add my own custom plant 
+- [x] As a user I'd like to be able to delete a selected plant of my choice that was added into my profile.
+- [x] Once signed in I’d also like to see a ‘add your own plant’ button which once clicked would ask me if I would like to add a new plant to my profile from the existing database (in which case I’d be directed back to the homepage) OR whether I’d like to add my own custom plant 
 
 # API
 
