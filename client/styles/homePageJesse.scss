@@ -1,0 +1,170 @@
+body{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* width: 100%; */
+}
+
+.home  {
+  height: 100vw;
+  background-color: #51c08f;
+  display: block;
+}
+
+h1{
+  color: #307256;
+  // margin-top: 3vw;
+  // margin-left: 3vw;
+}
+
+.head {
+  margin-top: -2vw;
+}
+
+span {
+display: block;
+width: 33px;
+height: 4px;
+margin-bottom: 5px;
+position: relative;
+background: #307256;
+border-radius: 3px;
+}
+
+.hamburg {
+  display: inline-block;
+  position: relative;
+  margin-right: 2vw;
+  margin-top: 3vw;
+  margin-left: 2vw;
+  /* float: right; */
+  /* position: relative; */
+  /* justify-content: flex-end; */
+}
+
+a {
+  margin-top: 2vw;
+  /* margin-left: 65vw; */
+  display: inline-block;
+  padding-left: 2vw;
+  padding-right: 2vw; 
+  border-radius: 35px;
+  color: #307256;
+  letter-spacing: .1em;
+  line-height: 70px;
+  text-transform: uppercase;
+  text-decoration: none;
+  right: 0;
+  bottom: 0;
+  border: 3px solid #307256;
+}
+
+a:hover{
+  color: #faecc9;
+  border: 3px solid #faecc9;
+}
+
+h2 {
+  color: #faecc9;
+  margin-left: 5vw;
+  font-size: 10vw;
+  width: 50vw;
+}
+
+h3{
+  color: #faecc9;
+  font-size: 2.8vw;
+  width: 70vw;
+  margin-left: 7vw;
+  line-height: 4vw;
+}
+
+.main-img{
+  margin-top: 4vw;
+  float: right;
+  height: 45vw;
+}
+
+.main{
+  margin-top: 4vw;
+}
+
+div{
+  display: block;
+}
+
+input{
+  margin-left: 20vw;
+  width: 60vw;
+  border: 3px solid #307256;
+  border-radius: 35px;
+  padding-top: 2vw;
+}
+
+/* .one{
+  background-image: url("
+  https://www.thespruce.com/thmb/9PICtNPcU3yIk9uaeUNuKBLtFRA=/3038x3038/smart/filters:no_upscale()/how-to-determine-sunlight-levels-for-houseplants-1402652-01-a5b73a78040c41b9b87e6cd4fc33fa03.jpg");
+  border: 3px solid #307256;
+  border-radius: 35px;
+  height: auto;
+}
+.two{
+  height: 20px;
+  width: 20px;
+  border: 3px solid #307256;
+  border-radius: 35px;
+  padding-top: 2vw;
+}
+.three{
+  height: 20px;
+  width: 20px;
+  border: 3px solid #307256;
+  border-radius: 35px;
+  padding-top: 2vw;
+} */
+
+.plant-div{
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.plant-img{
+  display: block;
+  border: 3px solid #307256;
+  border-radius: 35px;
+}
+
+.img-div {
+  border: 3px solid #307256;
+  border-radius: 35px;
+  width: 30vw;
+  height: 30vw;
+  position: relative;
+}
+
+.pic{
+  height: 30vw;
+  width: 30vw;
+  position: relative;
+  border-radius: 35px;
+}
+
+.plant-name{
+  position: absolute;
+  background-color: white;
+  padding-right: 9vw;
+  padding-left: 9vw;
+  border-radius: 35px;
+  border: 3px solid #307256;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
