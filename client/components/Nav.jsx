@@ -1,11 +1,13 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { logOff } from 'authenticare/client'
 import { connect } from 'react-redux'
 
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 import { logOut } from '../actions/auth'
 import { clearUsersPlants } from '../actions/usersPlants'
+import ModalPopUp from './ModalPopUp'
 
 const logOutUser = (dispatch) => {
   logOff()
@@ -19,7 +21,6 @@ const Nav = (props) => {
       <div className="nav">
         <h1 className="">Leaf it to me</h1>
         <NavLink to="/" exact activeClassName="active" className="nav-link">
-          {' '}
           Home
         </NavLink>
 
@@ -36,12 +37,13 @@ const Nav = (props) => {
 
         <IfAuthenticated>
           <NavLink
-            to="/plants/new"
+            to="/#search"
             activeClassName="active"
             className="nav-link"
             id="nav-btn-addNewPlant"
           >
-            New Plant Form
+            {/* Add New Plant */}
+            <ModalPopUp/>
           </NavLink>
         </IfAuthenticated>
 
