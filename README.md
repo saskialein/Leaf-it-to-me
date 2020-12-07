@@ -305,3 +305,12 @@ git add .
 git commit -m “commit message”  
 git push origin myBranch  
 ```
+# Accessibility
+pulling out all of the Web Content Accessibility Guidelines (WCAG) that apply to our site currently
+
+##principle 1 - PERCEIVABLE
+Text alt:
+-provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language
+-Controls, Input: If non-text content is a control or accepts user input, then it has a name that describes its purpose.
+Decoration, Formatting, Invisible: If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented in a way that it can be ignored by assistive technology
+Adaptable:
