@@ -2,6 +2,7 @@
   height: 75vw;
   background-color: $background-color;
   display: block;
+  padding: 50px 0px 0px 50px;
 
   div h2 {
     font-size: $font-large * 2;
@@ -11,9 +12,9 @@
     font-weight: Normal;
   }
   P {
-    font-size: $font-medium *2;
+    font-size: $font-medium * 2;
     font-weight: Normal;
-    margin-left:$temp-margin *3;
+    margin-left: $temp-margin * 3;
   }
 }
 
