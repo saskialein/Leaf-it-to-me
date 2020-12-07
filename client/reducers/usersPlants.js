@@ -12,7 +12,7 @@ const reducer = (state = initialState, action) => {
         return initialState
       
       case DEL_USER_PLANT:
-        return state.filter((plant) => plant.id != action.id)
+        return state.filter((plant) => plant.plant_id != action.id)
 
       case ADD_USER_PLANT:
         return [...state, action.plant]

@@ -123,15 +123,14 @@ make pushbranch m='commitMessage'
 - [x] Once I’ve signed into my account (via clicking the login link on homepage) I’d like to be able to see a list of all of my saved plants 
 
 - [x] As a signed in user if I select to add my own plant I’d like to be able to fill out a form with my plant’s name & care details and also add an image.
-- [ ] Once submitted my custom plant would automatically be added to my profile.
 - [ ] _optional / stretch?_ As a signed in user I would like to be able to see a list of all the plants on the homepage and tick which plants I’d like to add to my profile 
 - [x] I would like to be able to log out
 
 # STRETCH USER STORIES
 ### Authorized Users:
 - [ ] As a user I'd like to see my name or usersname on my profile to indicate that it's my profile.
-- [ ] As a user I'd like to be able to delete a selected plant of my choice that was added into my profile.
-- [ ] Once signed in I’d also like to see a ‘add your own plant’ button which once clicked would ask me if I would like to add a new plant to my profile from the existing database (in which case I’d be directed back to the homepage) OR whether I’d like to add my own custom plant 
+- [x] As a user I'd like to be able to delete a selected plant of my choice that was added into my profile.
+- [x] Once signed in I’d also like to see a ‘add your own plant’ button which once clicked would ask me if I would like to add a new plant to my profile from the existing database (in which case I’d be directed back to the homepage) OR whether I’d like to add my own custom plant 
 
 # API
 
@@ -305,3 +304,57 @@ git add .
 git commit -m “commit message”  
 git push origin myBranch  
 ```
+# Accessibility
+pulling out all of the Web Content Accessibility Guidelines (WCAG) that apply to our site currently. not all of this will be doable in our time frame of course, i am just throwing up most of whats relevant to our project and we can try and do what we can
+
+## principle 1 - PERCEIVABLE
+## 1 Text alt:
+-provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language
+-Controls, Input: If non-text content is a control or accepts user input, then it has a name that describes its purpose.
+Decoration, Formatting, Invisible: If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented in a way that it can be ignored by assistive technology
+-colour
+- Large-scale text and images of large-scale text have a contrast ratio of at least 3:1
+-Some people with cognitive disabilities require specific color combinations of foreground text and background to help them successfully understand the contents of the Web page. Most popular browsers provide the option to change colors settings globally within the browser. In this case the colors selected by the user override the foreground and background colors specified by the Web author. --In order to meet this success criteria, the Web author would design             the page so that it works with browsers that have these controls, and           the author does not override these controls.
+-text can be resized wihtout assistive tech up to 200% w/out loss of content or functionality
+-Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for: 
+
+     Vertical scrolling content at a width equivalent to 320 CSS pixels;
+
+     Horizontal scrolling content at a height equivalent to 256 CSS pixels;
+
+-In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property: 
+
+     Line height (line spacing) to at least 1.5 times the font size;
+
+     Spacing following paragraphs to at least 2 times the font size;
+
+     Letter spacing (tracking) to at least 0.12 times the font size;
+
+     Word spacing to at least 0.16 times the font size.
+## 2 Operable:  
+-  All functionality of the content is operable through a keyboard interface *THIS WILL NOT LIKELY BE SOMETHING WE CAN DO BUT WE CAN MENTION IT DURING OUR PRESENTATION FOR WHAT WE WOULD DO IF WE HAD MORE TIME AND WHY *
+- When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating.
+- Web pages have titles that describe topic or purpose/Headings and labels describe topic or purpose.
+- If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.
+- The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.
+- More than one way is available to locate a Web page within a set of Web pages except where the Web Page is the result of, or a step in, a process.
+- Information about the user's location within a set of Web pages is available.
+- Section headings are used to organize the content.
+## 4 Understandable:
+- The default human language of each Web page can be programmatically determined.
+- Navigational mechanisms that are repeated on multiple Web pages within a set of Web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.
+- Components that have the same functionality within a set of Web pages are identified consistently.
+- Labels or instructions are provided when content requires user input
+- For Web pages that require the user to submit information, at least one of the following is true: 
+
+         Reversible: Submissions are reversible.
+
+         Checked: Data entered by the user is checked for input errors and the          user is provided an opportunity to correct them.
+
+         Confirmed: A mechanism is available for reviewing, confirming, and            correcting information before finalizing the submission.
+      
+ ## 4 Robust:
+ - parsing: In content implemented using markup languages, elements have complete start and end tags, elements are nested according to their specifications, elements do not contain duplicate attributes, and any IDs are unique, except where the specifications allow these features.
+ 
+ - 
+
