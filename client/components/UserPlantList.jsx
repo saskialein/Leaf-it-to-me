@@ -39,7 +39,6 @@ let usersFilteredArray = this.props.plants.filter((matchingPlant) => {
 function mapStateToProps(globalState) {
   return {
     plants: globalState.plants,
-    currentPlant: globalState.currentPlant,
     usersPlants: globalState.usersPlants,
     searchTerm: globalState.search
   };

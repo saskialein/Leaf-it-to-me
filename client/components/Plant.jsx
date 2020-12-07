@@ -9,7 +9,6 @@ const Plant = (props) => {
 
   const plant = props.plant 
   const handleClick = () => {
-    console.log('hi i am handleclick')
     // props.dispatch(addPlantToReduxandDb(plant.id)
   } 
   return (
@@ -24,7 +23,7 @@ const Plant = (props) => {
         </div>
         <div className='button-plate'>
           <Link to={`/plants/${plant.common_name}`}><a>Click me</a></Link>
-          <a onClick={handleClick}>Add Me</a>
+          <button onClick={handleClick}>Add Me</button>
           <Link to={`/plants/${plant.common_name}`}>More info</Link>
         </div>
         </div>

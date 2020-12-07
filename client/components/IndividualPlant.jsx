@@ -2,19 +2,22 @@ import React from "react"
 import { connect } from 'react-redux'
 import { addPlantToReduxandDb } from '../actions/index'
 import { addPlantToUsersPlantsDB } from '../apis/plants'
+import { isAuthenticated } from 'authenticare/client'
 
 const IndividualPlant = (props) => {
   const name = props.match.params.name
   const plant = props.plants.find((plant) => plant.common_name == name)
 
   const handleClick = () => {
-    console.log('hi i am handleclick')
     const plantObject = {
         plant_id: plant.id,
-        name: 'emily'
+        name: ''
       }
-    props.dispatch(addPlantToReduxandDb(plantObject))
-    props.history.push('/plants/saved')
+    if (isAuthenticated()) {
+      props.dispatch(addPlantToReduxandDb(plantObject))
+      props.history.push('/plants/saved')
+    }
+    else return props.history.push('/register')
   } 
 
   return (
