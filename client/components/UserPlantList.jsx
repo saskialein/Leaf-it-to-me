@@ -1,8 +1,10 @@
+
 import React from "react"
 import { connect } from 'react-redux'
 
 import UserPlant from "./UserPlant"
 import Search from "./Search"
+
 
 class UserPlantList extends React.Component {
 
@@ -26,8 +28,6 @@ class UserPlantList extends React.Component {
     )
   }
 }
-
-
 function mapStateToProps(globalState) {
   return {
     plants: globalState.plants,
@@ -35,5 +35,4 @@ function mapStateToProps(globalState) {
     searchTerm: globalState.search
   };
 }
-
 export default connect(mapStateToProps)(UserPlantList);

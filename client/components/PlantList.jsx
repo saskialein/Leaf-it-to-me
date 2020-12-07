@@ -15,7 +15,7 @@ class PlantList extends React.Component {
       <div>
         <Search />
         <div className="smallPlant-wrapper">
-          {filteredPlants.map((plant) => <Plant key={plant.id} plant={plant}/>)}
+          {filteredPlants.map((plant) => <Plant key={plant.id} plant={plant} history={this.props.history}/>)}
         </div>
       </div>
     )

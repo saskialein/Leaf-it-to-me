@@ -1,5 +1,7 @@
 import React from "react"
 import { connect } from 'react-redux'
+import { removePlant } from "../actions/usersPlants"
+import { Link } from 'react-router-dom'
 
 const UserPlant = (props) => {
   
@@ -21,9 +23,10 @@ const UserPlant = (props) => {
               <li>{plant.humidity}</li>
               <li>{plant.soil}</li>
               <li>{plant.lvl}</li>
-              <li>{plant.notes}</li>
-            </ul>              
-            <button >Delete</button>
+              <li>{plant.more}</li>
+            </ul> 
+            <Link to={`/plants/${plant.common_name}`}><button>More info</button></Link>             
+            <button onClick={() => props.dispatch(removePlant(plant.id))} >Delete</button>
           </div>
         </div>
       </div>
