@@ -1,16 +1,14 @@
-import React from 'react'
-import Nav from './Nav.jsx'
+// import React from 'react'
+// import Nav from './Nav.jsx'
 
-const Header = () => {
-  return (
-    <div>
-      <Nav/>
-    <h1 className='main-title'>LEAF IT TO ME</h1>
-    <h2>Hello, welcome. this is plant care made easy</h2>
- 
-    
-    </div>
-  )
-}
+// const Header = () => {
+//   return (
+//     <div>
+//           <h1 className="head">Leaf it to me</h1>
+//       <Nav/>
 
-export default Header
+//     </div>
+//   )
+// }
+
+// export default Header

@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const { getTokenDecoder } = require('authenticare/server')
 
 const { getPlants, getPlant, createPlant, addPlantToProfileDbFunc, } = require('../db/plantDbFuncs')
 
@@ -47,11 +48,13 @@ router.post('/', (req, res) => {
         })
 })
 // ADDS PLANT TO USERS_PLANTS DB (WHEN PLANT CLICKED TO ADD TO PROFILE)
-router.post('/addtoprofile', (req, res) => {
+router.post('/addtoprofile', getTokenDecoder(), (req, res) => {
     const plant = req.body
+    const user = req.user
+    plant.user_id = user.id
     addPlantToProfileDbFunc(plant)
-        .then(() => {
-            res.json({})
+        .then((plantIds) => {
+            res.json({id:plantIds[0]})
         })
         .catch(err => {
             console.log(err)

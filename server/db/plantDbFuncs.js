@@ -27,11 +27,11 @@ function createPlant(newPlant, db = connection){
 
 //
 function addPlantToProfileDbFunc(plant, db = connection) {
-  return db('users_plants').insert(plant)
+  return db('users_plants').insert(plant, 'id')
 }
 
 function deletePlant(id, db = connection) {
-  return db('users_plants').delete().where('plant_id', id)
+  return db('users_plants').delete().where('plant_id', 'id')
 }
 
 module.exports = {

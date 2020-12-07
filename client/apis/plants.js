@@ -33,7 +33,7 @@ export function addPlantToUsersPlantsDB (plant) {
     .set(acceptJsonHeader)
     .set(getAuthorizationHeader())
     .send(plant)
-    .then(res => res.body)
+    .then(res => res.body.id)
     .catch(err => console.log(err))
 }
 

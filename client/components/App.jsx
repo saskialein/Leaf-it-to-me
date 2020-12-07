@@ -5,8 +5,9 @@ import { connect } from 'react-redux'
 import { checkAuth } from "../actions/auth.js"
 import { fetchPlants } from "../actions/index.js"
 
-import Header from './Header.jsx'
+// import Header from './Header.jsx'
 import Home from './Home.jsx'
+import Nav from './Nav.jsx'
 import IndividualPlant from './IndividualPlant.jsx'
 import AddPlantForm from './AddPlantForm.jsx'
 import SignIn from './SignIn'
@@ -24,7 +25,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-      <Header />
+      <Nav />
 
       <Route exact path="/plants/saved" component={UserPlantList} />
       {/* <Route exact path="/userprofile" component={UserPlantList} /> */}

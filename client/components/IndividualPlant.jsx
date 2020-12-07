@@ -1,18 +1,25 @@
 import React from "react"
 import { connect } from 'react-redux'
 import { addPlantToReduxandDb } from '../actions/index'
+import { addPlantToUsersPlantsDB } from '../apis/plants'
 
 const IndividualPlant = (props) => {
   const name = props.match.params.name
+  const plant = props.plants.find((plant) => plant.common_name == name)
 
+  const handleClick = () => {
+    console.log('hi i am handleclick')
+    const plantObject = {
+        plant_id: plant.id,
+        name: 'emily'
+      }
+    props.dispatch(addPlantToReduxandDb(plantObject))
+    props.history.push('/plants/saved')
+  } 
 
   return (
-    <div>
-
-      {props.plants
-        .filter((plant) => plant.common_name == name)
-        .map((plant) => {
-          return (
+    // if plant exists render the plant, otherwise render null (see line 45)
+    plant ? <div>
             <div key={plant.id}>
               <div className="individ-plant-main">
                 <h2 className="commonName">{plant.common_name}</h2>
@@ -20,9 +27,9 @@ const IndividualPlant = (props) => {
 
                 <div className="careDetailWrapper"></div>
               
-              <div className="careDetail">                <img
-                  src={`https://www.amara.com/static/uploads/images-2/products/huge/156501/big-cactus-cushion-603972.jpg`}
-                />
+              <div className="careDetail"> 
+              <img src= {plant.img}/>
+                
                 <ul className="">
                   
                   <li>{plant.water}</li>
@@ -33,13 +40,12 @@ const IndividualPlant = (props) => {
                   <li>{plant.lvl}</li>
                   <li>{plant.more}</li>
                 </ul>              
-                <button onClick={() => {props.dispatch(addPlantToReduxandDb(props.currentPlant))}}>Add Plant to profile</button>
+                <button onClick={handleClick}>Add Plant to profile</button>
               </div>
             </div>
             </div>
-          );
-        })}
     </div>
+    : null
   );
 };
 
