@@ -24,7 +24,8 @@
   text-align: center;
 }
 
-.nav-link:hover {
+.nav-link:hover
+ {
     color: $btn-hover-color;
     //border: 3px solid $btn-hover-color;
   }
@@ -38,5 +39,6 @@
 #btn-sign-up{
   float:right;
 }
+
 
 

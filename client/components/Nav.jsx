@@ -38,6 +38,24 @@ const Nav = (props) => {
         </IfAuthenticated>
 
         <IfAuthenticated>
+<<<<<<< HEAD
+||||||| 2cff729
+          <NavLink
+            to="/#search"
+            activeClassName="active"
+            className="nav-link"
+            id="nav-btn-addNewPlant"
+          >
+            {/* Add New Plant */}
+=======
+          <NavLink
+            to="/#search"
+            activeClassName="active"
+            // className="nav-link"
+            // id="nav-btn-addNewPlant"
+          >
+            {/* Add New Plant */}
+>>>>>>> b9843b4238f65d94f7c4b1ff6b5cb72629719d5f
             <ModalPopUp/>
         </IfAuthenticated>
 
