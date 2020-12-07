@@ -24,6 +24,7 @@ const Plant = (props) => {
         </div>
         <div className='button-plate'>
           <Link to={`/plants/${plant.common_name}`}><a>Click me</a></Link>
+          <h4 className='name'>{plant.common_name}</h4>
           <a onClick={handleClick}>Add Me</a>
           <Link to={`/plants/${plant.common_name}`}>More info</Link>
         </div>
