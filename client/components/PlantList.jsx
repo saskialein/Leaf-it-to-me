@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Search from './Search'
 
 class PlantList extends React.Component {
-  
+
   render() {
     const filteredPlants = this.props.plants.filter((plant) =>
     plant.common_name.toLowerCase().includes(this.props.searchTerm.toLowerCase())
