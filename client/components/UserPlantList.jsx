@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Plant from "./Plant";
+import { removePlant } from '../actions/usersPlants'
 
 
 class UserPlantList extends React.Component {
