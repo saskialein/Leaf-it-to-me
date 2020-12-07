@@ -20,12 +20,7 @@ const customStyles = {
 };
 
 Modal.setAppElement('#app');
-<<<<<<< HEAD
 // test2
-||||||| 2cff729
-// test
-=======
->>>>>>> b9843b4238f65d94f7c4b1ff6b5cb72629719d5f
 class ModalPopUp extends React.Component {
 
   state = {
@@ -43,16 +38,10 @@ class ModalPopUp extends React.Component {
 	render() {
 		return (
     <>
-<<<<<<< HEAD
     <NavLink to= "/" activeClassName="active"
             className="nav-link"
             id="nav-btn-savedPlants"onClick={this.handleOpenModal}>Add Plant
       </NavLink>
-||||||| 2cff729
-    <button onClick={this.handleOpenModal}>Add Plant</button>
-=======
-    <button className="nav-link" id="nav-btn-addNewPlant" onClick={this.handleOpenModal}>Add Plant</button>
->>>>>>> b9843b4238f65d94f7c4b1ff6b5cb72629719d5f
     <Modal 
           isOpen={this.state.showModal}
           contentLabel="Option to add existing plant or create new plant"
