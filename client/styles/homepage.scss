@@ -1,31 +1,18 @@
 @import '_vars.scss';
 
-.home {
+$homepage-margin:100px;
+
+body{
   background-color: $background-color;
+}
+.home { 
   height: 100vw;
   display: block;
+  margin: $homepage-margin/2, $homepage-margin, 0px, $homepage-margin;
 }
 
 h2 {
-  color: $text-color;
-  // margin-top: 3vw;
-  // margin-left: 3vw;
-}
-
-//TO BE DEICIDED 
-// .hamburg {
-//   display: inline-block;
-//   position: relative;
-//   margin-right: 2vw;
-//   margin-top: 3vw;
-//   margin-left: 2vw;
-//   /* float: right; */
-//   /* position: relative; */
-//   /* justify-content: flex-end; */
-// }
-
-h2 {
-  color:$secondary-color;
+  color: $secondary-color;
   margin-left: 5vw;
   font-size: 10vw;
   width: 50vw;
@@ -41,14 +28,14 @@ h2 {
   margin-top: 4vw;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+//TO BE DEICIDED
+// .hamburg {
+//   display: inline-block;
+//   position: relative;
+//   margin-right: 2vw;
+//   margin-top: 3vw;
+//   margin-left: 2vw;
+//   /* float: right; */
+//   /* position: relative; */
+//   /* justify-content: flex-end; */
+// }

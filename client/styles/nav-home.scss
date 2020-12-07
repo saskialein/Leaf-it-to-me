@@ -1,29 +1,42 @@
 @import '_vars.scss';
 
-body {
+
+.nav {
   box-sizing: border-box;
-  margin: 0;
+  font-weight:bolder ;
+  background-color: $background-color;
 }
 .nav-link {
-  margin-top: 1vw;
-  margin-left: 65vw;
-  //display: inline-block;
+  margin-top: 1px;
+  margin-left: 5px;
   padding-left: 1vw;
   padding-right: 1vw;
-  border-radius: 20px;
+  //border-radius: 20px;
   color: $text-color;
   letter-spacing: 0.1em;
   //line-height: 30px;
   text-transform: uppercase;
   text-decoration: none;
-  border: 2.5px solid $text-color;
   padding: 0.5vh;
-  display: flex;
+  //display: block;
   //flex-direction: row;
   justify-content: space-between;
+  text-align: center;
 }
 
 .nav-link:hover {
-  color: $btn-hover-color;
-  border: 3px solid $btn-hover-color;
+    color: $btn-hover-color;
+    //border: 3px solid $btn-hover-color;
+  }
+
+// $btn-with-border:
+#btn-sign-up, #btn-sign-in, #btn-sign-out{
+  border-radius: 20px;
+  border: 2.5px solid $text-color;  
 }
+
+#btn-sign-up{
+  float:right;
+}
+
+

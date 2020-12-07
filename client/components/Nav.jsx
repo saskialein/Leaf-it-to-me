@@ -23,21 +23,20 @@ const Nav = (props) => {
           to="/plants/saved"
           activeClassName="active"
           className="nav-link"
-          id="nav-btn-savedPlants"
         >
           Saved Plants
         </NavLink>
 
-        <NavLink
-          to="/plants/new"
-          activeClassName="active"
-          className="nav-link"
-          id="nav-btn-addNewPlant"
-        >
+        <NavLink to="/plants/new" activeClassName="active" className="nav-link">
           New Plant Form
         </NavLink>
 
-        <NavLink to="/login" activeClassName="active" className="nav-link">
+        <NavLink
+          to="/login"
+          activeClassName="active"
+          className="nav-link"
+          id="btn-sign-in"
+        >
           Sign In
         </NavLink>
 
@@ -45,12 +44,18 @@ const Nav = (props) => {
           to="/home"
           activeClassName="active"
           className="nav-link"
+          id="btn-sign-out"
           onClick={() => logOutUser(props.dispatch)}
         >
           Sign Out
         </NavLink>
 
-        <NavLink to="/register" activeClassName="active" className="nav-link">
+        <NavLink
+          to="/register"
+          activeClassName="active"
+          className="nav-link"
+          id="btn-sign-up"
+        >
           Sign Up
         </NavLink>
       </div>
