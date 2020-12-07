@@ -50,7 +50,6 @@ export function addPlant (plantImage, plantData) {
       .then(fileUrl => {
         fileUrl = JSON.parse(fileUrl)
         plantData.img = fileUrl.imageUrl
-        console.log('here is the fileURL data:', fileUrl)
         return addPlantData(plantData)
           .then(plantId => {
             plantData.id = plantId
