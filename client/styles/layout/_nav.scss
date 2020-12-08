@@ -28,6 +28,12 @@
     //border: 3px solid $btn-hover-color;
   }
 
+.active {
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  line-height: 0.85;
+}
+
 // $btn-with-border:
 #btn-sign-up, #btn-sign-in, #btn-sign-out{
   border-radius: 20px;
