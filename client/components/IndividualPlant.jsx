@@ -34,19 +34,33 @@ const IndividualPlant = (props) => {
                 </div>
 
                 <div className="careDetailWrapper">
-                  <img src= {plant.img}/>
+                  <img className="individual-plant-image" src= {plant.img}/>
                   <div className="careDetail"> 
                     <ul className="individ-plant-details">         
-                      <li><i className="fas fa-tint style"/> {plant.water}</li>
-                      <li><i className="fas fa-sun style"/> {plant.light}</li>
-                      <li><i className="fas fa-temperature-low style"/> {plant.temp}</li>
-                      <li><i className="fas fa-tint"/><i className="fas fa-percent style-special"/> {plant.humidity}</li>
-                      <li><i className="fas fa-poop style"/> {plant.soil}</li>
-                      <li><i className="fas fa-user style"/> {plant.lvl}</li>
-                      <li><i className="far fa-comment-alt style"/> {plant.notes}</li>
+                    <li>
+                        <span className="tooltip-text">Water</span><i className="fas fa-tint style" /> {plant.water}
+                      </li>
+                      <li>
+                        <span className="tooltip-text">Light</span><i className="fas fa-sun style" /> {plant.light}
+                      </li>
+                      <li>
+                        <span className="tooltip-text">Temp</span><i className="fas fa-temperature-low style" /> {plant.temp}
+                      </li>
+                      <li>
+                        <span className="tooltip-text">Humidity</span><i className="fas fa-tint" /><i className="fas fa-percent style-special" /> {plant.humidity}
+                      </li>
+                      <li>
+                        <span className="tooltip-text">Soil</span><i className="fas fa-poop style" /> {plant.soil}
+                      </li>
+                      {plant.lvl && <li>
+                        <span className="tooltip-text">Level</span><i className="fas fa-user style" /> {plant.lvl}
+                      </li>}
+                      { plant.notes && <li>
+                        <span className="tooltip-text">Notes</span><i className="far fa-comment-alt style" /> {plant.notes}
+                      </li>}
                     </ul>   
                     <div className="navy">         
-                      <Link onClick={handleClick} className="navy-link">Add Plant to profile</Link>
+                      <Link onClick={handleClick} className="navy-link"><i className="fab fa-pagelines style-leaf"></i>Add Plant to profile</Link>
                     </div> 
                   </div> 
                 </div>
