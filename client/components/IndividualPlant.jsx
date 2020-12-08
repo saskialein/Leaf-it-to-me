@@ -20,9 +20,6 @@ const IndividualPlant = (props) => {
       }
     }
   
-
-  
-
   return (
     // if plant exists render the plant, otherwise render null (see line 45)
     plant ? <div>
@@ -36,14 +33,14 @@ const IndividualPlant = (props) => {
               <div className="careDetail"> 
               <img src= {plant.img}/>
                 
-                <ul className="">         
-                  <li>{plant.water}</li>
-                  <li>{plant.light}</li>
-                  <li>{plant.temp}</li>
-                  <li>{plant.humidity}</li>
-                  <li>{plant.soil}</li>
-                  <li>{plant.lvl}</li>
-                  <li>{plant.notes}</li>
+                <ul className="individ-plant-details">         
+                  <li><i className="fas fa-tint"/> {plant.water}</li>
+                  <li><i className="fas fa-sun"/> {plant.light}</li>
+                  <li><i className="fas fa-temperature-low"/> {plant.temp}</li>
+                  <li><i className="fas fa-tint"/><i className="fas fa-percent"/> {plant.humidity}</li>
+                  <li><i className="fas fa-poop"/> {plant.soil}</li>
+                  <li><i className="fas fa-user"/> {plant.lvl}</li>
+                  <li><i className="far fa-comment-alt"/> {plant.notes}</li>
                 </ul>              
                 <button onClick={handleClick}>Add Plant to profile</button>
               </div>
