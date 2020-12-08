@@ -11,19 +11,27 @@ const UserPlant = (props) => {
   return (
     <div>
       <div key={plant.id}>
-        <div className={`individ-plant-main ${rowClass}`}>
-          <h2 className="commonName">{plant.common_name}</h2>
-          <h3 className="commonName">{plant.species_name}</h3>
-          <div className="careDetail"> 
-            <img src= {plant.img}/>
-            <ul className="">
-              <li>{plant.water}</li>
-              <li>{plant.light}</li>
-              <li>{plant.temp}</li>
-              <li>{plant.humidity}</li>
-              <li>{plant.soil}</li>
-              <li>{plant.lvl}</li>
-              <li>{plant.more}</li>
+        <div className={`user-plant-main ${rowClass}`}>
+          <img className='user-plant-image' src={plant.img}/>
+          <div className="user-plant-details"> 
+            
+            <p className="user-common">{plant.common_name}</p>
+            <p className="user-offical-name">{plant.species_name}</p>
+            <ul className='plant-type'>
+              <li><p>Water</p><hr/></li>
+              <li><p>Light</p><hr/></li>
+              <li><p>Temp</p><hr/></li>
+              <li><p>Humidity</p><hr/></li>
+              <li><p>Soil</p><hr/></li>
+              <li><p>Level</p><hr/></li>
+            </ul>
+            <ul className="plant-deets">
+              <li><p>{plant.water}</p><hr/></li>
+              <li><p>{plant.light}</p><hr/></li>
+              <li><p>{plant.temp}</p><hr/></li>
+              <li><p>{plant.humidity}</p><hr/></li>
+              <li><p>{plant.soil}</p><hr/></li>
+              <li><p>{plant.lvl}</p><hr/></li>
             </ul> 
             <div className="Nav">
             <Link to={`/plants/${plant.common_name}`}className="nav-link">More info</Link>             
