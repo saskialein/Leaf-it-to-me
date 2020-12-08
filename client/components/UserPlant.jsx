@@ -9,14 +9,14 @@ const UserPlant = (props) => {
   const rowClass = props.isOdd ? 'odd' : 'even'
 
   return (
-    <div>
+    <>
       <div key={plant.id}>
-        <div className={`individ-plant-main ${rowClass}`}>
-          <h2 className="commonName">{plant.common_name}</h2>
-          <h3 className="commonName">{plant.species_name}</h3>
-          <div className="careDetail"> 
-            <img src= {plant.img}/>
-            <ul className="">
+        <div className={`user-plant-main ${rowClass}`}>
+          <p className="user-common">{plant.common_name}</p>
+          <p className="user-offical-name">{plant.species_name}</p>
+          <div className="user-plant-details"> 
+            <img className='user-plant-image' src= {plant.img}/>
+            <ul className="plant-deets">
               <li>{plant.water}</li>
               <li>{plant.light}</li>
               <li>{plant.temp}</li>
@@ -32,7 +32,7 @@ const UserPlant = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
