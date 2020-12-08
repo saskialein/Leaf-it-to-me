@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import UserPlant from "./UserPlant"
 import Search from "./Search"
-
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 class UserPlantList extends React.Component {
 
@@ -19,8 +19,9 @@ class UserPlantList extends React.Component {
 
     return (
       <div className= 'userPlantPage' >
-      
-      <h1>My happy plants</h1>
+      <IfAuthenticated>
+        {this.props.auth.user && <h3>Hey {this.props.auth.user.name}, you can find all of your saved plants below!</h3>}
+      </IfAuthenticated>
         <Search />
         <div className="plant-wrapper">
           {usersFilteredArray.map((userPlant, index) => <UserPlant key={userPlant.id} plant={userPlant} isOdd={index % 2 == 1} />)}
@@ -33,7 +34,8 @@ function mapStateToProps(globalState) {
   return {
     plants: globalState.plants,
     usersPlants: globalState.usersPlants,
-    searchTerm: globalState.search
+    searchTerm: globalState.search,
+    auth: globalState.auth
   };
 }
 export default connect(mapStateToProps)(UserPlantList);
