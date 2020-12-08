@@ -1,19 +1,29 @@
+//LEARNING SASS AS I GO, BARE WITH ME - JESS
 .home {
   height: 75vw;
   background-color: $background-color;
   display: block;
+  padding: 2.5vw 0px 0px 2.5vw;
+  font-weight: bold;
 
-  div h2 {
-    font-size: $font-large * 2;
-  }
+  .homeBanner {
+    //H2 AND H3 WILL BE TURNED INTO AN SVG
+    h2 {
+      font-size: $font-large * 2;
+      margin-left: 6vw; //120px
+    }
 
-  h3 {
-    font-weight: Normal;
-  }
-  P {
-    font-size: $font-medium *2;
-    font-weight: Normal;
-    margin-left:$temp-margin *3;
+    h3 {
+      font-weight: Normal;
+      font-size: $font-medium * 3;
+      padding-left: 4.5vw; //90px
+    }
+
+    P {
+      font-size: $font-medium * 2;
+      margin-left: $temp-margin * 3;
+      color: $text-color;
+    }
   }
 }
 
@@ -22,61 +32,3 @@
   float: right;
   height: 45vw;
 }
-
-.plant-div {
-  position: relative;
-  text-align: center;
-  color: white;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
-}
-
-// .plant-img {
-//   display: block;
-//   border: 3px solid #307256;
-//   border-radius: 35px;
-// }
-
-// .img-div {
-//   border: 3px solid #307256;
-//   border-radius: 35px;
-//   width: 30vw;
-//   height: 30vw;
-//   position: relative;
-// }
-
-// .pic {
-//   height: 30vw;
-//   width: 30vw;
-//   position: relative;
-//   border-radius: 35px;
-// }
-
-// .head {
-//   margin-top: -2vw;
-// }
-
-// span {
-//   display: block;
-//   width: 33px;
-//   height: 4px;
-//   margin-bottom: 5px;
-//   position: relative;
-//   background: #307256;
-//   border-radius: 3px;
-// }
-
-// CHANGE ME FROM TO CLASS NOW !!!!
-// div {
-//   display: block;
-//   width: 33px;
-//   height: 4px;
-//   margin-bottom: 5px;
-//   position: relative;
-//   background: #307256;
-//   border-radius: 3px;
-//   }
-  
-//   div{
-//     display: block;
-//   }
