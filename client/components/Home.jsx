@@ -12,8 +12,8 @@ const Home = () => {
           src="./images/potted-plant-transparent-background-5.png"
           alt=""
         />
-        <div>
-          <h2>LEAF IT TO ME</h2> 
+        <div className="homerBanner">
+          <h2>LEAF IT TO ME</h2>
           <h3>PLANT CARE MADE EASY</h3>
           <p>
             Helping house plant owners, make their plants feel like bliss. Leaf
