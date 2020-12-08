@@ -71,7 +71,7 @@ class AddPlantForm extends React.Component {
           <label>Light: </label> 
           <select onChange={this.handleChange} className='select' value={this.state.light} name="light" type="text">
             <option value="">Select</option>
-            <option value="full shade">Prefers shade</option>
+            <option value="Prefers shade">Prefers shade</option>
             <option value="Filtered medium">Filtered medium</option>
             <option value="Bright to medium">Bright to medium</option>
             <option value="Bright filtered">Bright filtered</option>
