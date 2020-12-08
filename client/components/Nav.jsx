@@ -62,7 +62,7 @@ const Nav = (props) => {
           </NavLink>
         </IfAuthenticated>
 
-        {/* <IfNotAuthenticated>
+        <IfNotAuthenticated>
           <NavLink
             to="/register"
             activeClassName="active"
@@ -71,7 +71,7 @@ const Nav = (props) => {
           >
             Sign Up
           </NavLink>
-        </IfNotAuthenticated> */}
+        </IfNotAuthenticated>
       </div>
     </>
   )
