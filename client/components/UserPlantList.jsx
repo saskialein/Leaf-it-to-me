@@ -18,13 +18,14 @@ class UserPlantList extends React.Component {
     let usersFilteredArray = this.props.plants.filter((plant) => nameMatchesSearch(plant.common_name) && userOwnsOne(plant))
 
     return (
-      <>
-        <h1>My happy plants</h1>
+      <div className= 'userPlantPage' >
+      
+      <h1>My happy plants</h1>
         <Search />
         <div className="plant-wrapper">
           {usersFilteredArray.map((userPlant, index) => <UserPlant key={userPlant.id} plant={userPlant} isOdd={index % 2 == 1} />)}
         </div>
-      </> 
+      </div> 
     )
   }
 }
