@@ -1,0 +1,36 @@
+
+#nav-btn-addNewPlant,
+.modal-button {
+    font-weight:bolder ;
+    background-color:transparent;
+    border-style: none;
+    margin-top: 1px;
+    margin-left: 5px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    // border-radius: 20px;
+    color: $text-color;
+    letter-spacing: 0.1em;
+    //line-height: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5vh;
+    //display: block;
+    //flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  #nav-btn-addNewPlant:hover,
+  .modal-button:hover
+ {
+    color: $btn-hover-color;
+    cursor: pointer;
+  }
+
+  .modal-button {
+    font-size: 1.3rem;
+    width: 30%;
+  }
+  
+  

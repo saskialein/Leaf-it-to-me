@@ -1,0 +1,69 @@
+$nav-margin: 7vw; //homepage
+$btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
+
+.nav {
+  box-sizing: border-box;
+  font-weight: bolder;
+  font-size: xx-large;
+  font-family: $font-stack;
+  background-color: $background-color;
+  margin: $nav-margin;
+}
+.nav-link {
+  margin-top: 1px;
+  margin-left: 5px;
+  color: $text-color;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.nav-link:hover {
+  color: $btn-hover-color;
+  //border: 3px solid $btn-hover-color;
+}
+
+.active {
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  line-height: 0.85;
+}
+
+// $btn-with-border:
+#btn-sign-up,
+#btn-sign-in,
+#btn-sign-out {
+  border-radius: 30px;
+  border: 2.5px solid $text-color;
+  padding: $btn-padding;
+}
+
+#btn-sign-in {
+  float: right;
+}
+
+// to jess love from hortense for the circles if you want them
+
+// a {
+//   margin-top: 2vw;
+//   /* margin-left: 65vw; */
+//   display: inline-block;
+//   padding-left: 2vw;
+//   padding-right: 2vw;
+//   border-radius: 35px;
+//   color: #307256;
+//   letter-spacing: 0.1em;
+//   line-height: 70px;
+//   text-transform: uppercase;
+//   text-decoration: none;
+//   right: 0;
+//   bottom: 0;
+//   border: 3px solid #307256;
+// }
+
+// a:hover {
+//   color: #faecc9;
+//   border: 3px solid #faecc9;
+// }

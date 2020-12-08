@@ -1,30 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { addPlantToUsersPlantsDB } from '../apis/plants'
-
 import { addPlantToReduxandDb, currentPlant } from '../actions/index'
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 const Plant = (props) => {
 
   const plant = props.plant 
   const handleClick = () => {
-    console.log('hi i am handleclick')
-    // props.dispatch(addPlantToReduxandDb(plant.id)
-  } 
+    const plantObject = {
+      plant_id: plant.id,
+      name: 'emily'
+    }
+  props.dispatch(addPlantToReduxandDb(plantObject))
+  props.history.push('/plants/saved')
+} 
+  
   return (
     <div>
-      <div className='each-smolPlant'>
-      <div className='smolPlant-picture'>
-          <img src= {plant.img}/>
-        <div className='smolPlant-name-plate'>
-          <p className='smolPlant-name'>{plant.common_name}</p>
+      <div className='each-smallPlant'>
+      <div className='smallPlant-picture'>
+          <img className='smallPlant-picture' src= {plant.img}/>
+        <div className='smallPlant-name-plate'>
+          <p className='name'>{plant.common_name}</p>
           <p className='species'>{plant.species_name}</p>
 
         </div>
         <div className='button-plate'>
-          <a onClick={handleClick}>Add Me</a>
           <Link to={`/plants/${plant.common_name}`}>More info</Link>
+
+          <IfAuthenticated>
+          <button onClick={handleClick}>Add to my profile</button>
+          </IfAuthenticated>
         </div>
         </div>
       
@@ -33,4 +40,9 @@ const Plant = (props) => {
   )
 }
 
-export default connect()(Plant)
+function mapStateToProps(globalState) {
+  return {
+    plants: globalState.plants,
+  }
+}
+export default connect(mapStateToProps)(Plant)

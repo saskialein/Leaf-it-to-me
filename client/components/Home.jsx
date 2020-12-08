@@ -1,27 +1,43 @@
 import React from 'react'
-
+import { Route } from 'react-router-dom'
 import PlantList from './PlantList.jsx'
+import { NavHashLink as NavLink } from 'react-router-hash-link'
+
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 const Home = () => {
   return (
-    <div>
+    <>
       <div className="home">
         <img
           className="main-img"
-          src="./potted-plant-transparent-background-5.png"
+          src="./images/potted-plant-transparent-background-5.png"
           alt=""
         />
-        <div>
-          <h2>This is plant care made easy</h2>
-          <h3>
-            We are Home Branch. Helping house plant owners, make their plants
-            feel like bliss. Leaf it to us.
-          </h3>
+        <div className="homeBanner">
+          <h2>LEAF IT TO ME</h2>
+          <h3>PLANT CARE MADE EASY</h3>
+          <p>
+            Helping house plant owners make their plants feel like bliss. Leaf
+            it to us.
+          </p>
+
+          <IfNotAuthenticated>
+            <NavLink
+              to="/register"
+              activeClassName="active"
+              className="nav-link"
+              id="btn-sign-up"
+            >
+              Sign Up
+            </NavLink>
+          </IfNotAuthenticated>
         </div>
       </div>
-
-      <PlantList />
-    </div>
+      <div>
+        <Route path="/" component={PlantList} />
+      </div>
+    </>
   )
 }
 

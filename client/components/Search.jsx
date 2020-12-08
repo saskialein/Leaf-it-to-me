@@ -8,14 +8,12 @@ class Search extends React.Component {
     searchTerm: ""
   }
 
-  handleChange = (e) => {
-    
+  handleChange = (e) => {  
     this.setState({ searchTerm: e.target.value })
     this.props.dispatch(setSearchTerm(e.target.value))
   }
 
   componentWillUnmount() {
-    this.setState({searchTerm:""})
     this.props.dispatch(clearSearch())
   }
 
@@ -23,7 +21,7 @@ class Search extends React.Component {
  
     return (
       <div className="">
-        <h2>Search</h2>
+        <h2 id='search'>Search</h2>
         <input
           onChange={this.handleChange}
           className="input"
