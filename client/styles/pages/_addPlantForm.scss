@@ -1,3 +1,44 @@
+.addPlantForm {
+  display: flex;
+  background: #f77;
+  justify-content: space-between;
+  .form-fields {
+    background-color: #77f;
+    width: 100%;
+    input {
+      padding-left: 20px;
+    }
+  }
+  
+  .form-field {
+    display: flex;
+    margin-bottom: 8px;
+    .form-Label {
+      width: 150px;
+      line-height: 40px
+    }
+    input, select {
+      width: 100%;
+    }
+  }
+}
+
+.image-upload {
+  width: 300px;
+  background-color: #7f7;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-radius: 250%;
+
+  .imgUpload-input {
+    border: 3px solid #307256;
+    border-radius: 35px;
+    margin: 10px;
+    width: 80%;
+  }
+}
+
+
 
 .form {
   margin: $temp-margin;
