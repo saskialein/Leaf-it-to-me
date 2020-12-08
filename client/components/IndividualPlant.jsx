@@ -1,5 +1,6 @@
 import React from "react"
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { addPlantToReduxandDb } from '../actions/index'
 import { isAuthenticated } from 'authenticare/client'
 
@@ -25,10 +26,11 @@ const IndividualPlant = (props) => {
     plant ? <div>
             <div key={plant.id}>
               <div className="individ-plant-main">
+                <h1>Plant Care Detail</h1>
                 <h2 className="commonName">{plant.common_name}</h2>
                 <h3 className="commonName">{plant.species_name}</h3>
 
-                <div className="careDetailWrapper"></div>
+                <div className="careDetailWrapper">
               
               <div className="careDetail"> 
               <img src= {plant.img}/>
@@ -41,8 +43,11 @@ const IndividualPlant = (props) => {
                   <li><i className="fas fa-poop"/> {plant.soil}</li>
                   <li><i className="fas fa-user"/> {plant.lvl}</li>
                   <li><i className="far fa-comment-alt"/> {plant.notes}</li>
-                </ul>              
-                <button onClick={handleClick}>Add Plant to profile</button>
+                </ul>   
+                <div className="nav">         
+                <Link to={'/'} onClick={handleClick} className="nav-link">Add Plant to profile</Link>
+                </div> 
+                </div> 
               </div>
             </div>
             </div>

@@ -19,34 +19,33 @@
         padding: $temp-padding;
       }
       img {
-        width: 50vh;
+        // width: 50vh;
         display: block;
         float: left;
+        border-radius: 50%;
       }
+    }
+  
 
-      .careDetailWrapper {
-        display: block;
-        float: left;
-        margin-left: $temp-margin;
+
+  .careDetailWrapper {
+    display: block;
+    float: left;
+    margin-left: $temp-margin;
 
         .careDetail {
           font-size: $font-body-paragraph; // DISPLAY PURPOSE ONLY
           background-color: $backgroundcolor02; // DISPLAY PURPOSE ONLY
           padding: $temp-padding;
-
+        }
           p {
             font-size: $font-body-paragraph;
             background-color: $backgroundcolor03; // DISPLAY PURPOSE ONLY
           }
-          ul {
+          .individ-plant-details {
+            list-style: none;
             background-color: $backgroundcolor04; // DISPLAY PURPOSE ONLY
             margin-left: $temp-margin;
-            list-style: none;
           }
-          li {
-            list-style: none;
-          }
-         
+        
         }
-      }
-    }
