@@ -48,18 +48,23 @@ class AddPlantForm extends React.Component {
   render() {
     return (
       <div>
+        <div>
+          <h1>Add your own plant to our database!</h1>
+        </div>
+          
+
         <form encType='multipart/form-data' className='addPlantForm' onSubmit={this.handleSubmit}>
           <div className="form-fields">
             <div className="form-field">
-              <label className='form-Label'>Common Name: </label>
-              <input onChange={this.handleChange} className='input' value={this.state.common_name} autoFocus={true} name="common_name" type="text" />
+              <label className='form-Label' htmlFor="common name">Common Name: </label>
+              <input onChange={this.handleChange} className='input' value={this.state.common_name} autoFocus={true} name="common_name" id="common name" type="text" />
               <br />
 
             </div>
             
               <div className="form-field">
-                <label className='form-Label'>Water: </label>
-                <select onChange={this.handleChange} className='select' value={this.state.water} name="water" type="text">
+                <label className='form-Label' htmlFor="water">Water: </label>
+                <select onChange={this.handleChange} className='select' value={this.state.water} name="water" id="water" type="text">
                   <option value="">Select</option>
                   <option value="once per week">once per week</option>
                   <option value="only when soil is completely dry">only when soil is completely dry</option>
@@ -71,8 +76,8 @@ class AddPlantForm extends React.Component {
               </div>
               <br />
               <div className="form-field">
-                <label className='form-Label'>Light: </label>
-                <select onChange={this.handleChange} className='select' value={this.state.light} name="light" type="text">
+                <label className='form-Label' htmlFor="light">Light: </label>
+                <select onChange={this.handleChange} className='select' value={this.state.light} name="light" id="light" type="text">
                   <option value="">Select</option>
                   <option value="bright-medium indirect">bright-medium indirect</option>
                   <option value="filtered indirect">filtered indirect</option>
@@ -87,8 +92,8 @@ class AddPlantForm extends React.Component {
               </div>
               <br />
               <div className="form-field">
-                <label className='form-Label'>Temp: </label>
-                <select onChange={this.handleChange} className='select' value={this.state.temp} name="temp" type="text">
+                <label className='form-Label' htmlFor="temperature">Temp: </label>
+                <select onChange={this.handleChange} className='select' value={this.state.temp} name="temp" id="temperature" type="text">
                   <option value="">Select</option>
                   <option value="cool">cool</option>
                   <option value="cool-warm">cool-warm</option>
@@ -100,8 +105,8 @@ class AddPlantForm extends React.Component {
                 <br />
               </div>
               <div className="form-field">
-                <label className='form-Label'>Humidity: </label>
-                <select onChange={this.handleChange} className='select' value={this.state.humidity} name="humidity" type="text">
+                <label className='form-Label' htmlFor="humidity">Humidity: </label>
+                <select onChange={this.handleChange} className='select' value={this.state.humidity} name="humidity" id="humidity" type="text">
                   <option value="">Select</option>
                   <option value="low">low</option>
                   <option value="low-moderate">low-moderate</option>
@@ -115,8 +120,8 @@ class AddPlantForm extends React.Component {
             <button className="submitButton">Add plant</button>
           </div>
           <div className="image-upload">
-            <label className="addImage">+ Add Image: </label>
-            <input onChange={this.onChangeFile} className='imgUpload-input' name="img" type="file" />
+            <label className="addImage" htmlFor="add an image">+ Add Image: </label>
+            <input onChange={this.onChangeFile} className='imgUpload-input' name="img" id="add an image" type="file" />
           </div>
           <br />
         </form>
