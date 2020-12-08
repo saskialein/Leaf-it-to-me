@@ -1,51 +1,104 @@
+// .main-individual-plant {
 
+//   background-color: #E5E5E5;
+// }
 
 .individ-plant-main {
   font-family: $font-stack;
   display: block;
+  box-sizing: border-box;
   align-content: center;
-  background-color: $backgroundcolor01; // DISPLAY PURPOSE ONLY
-  margin: $temp-margin; // DISPLAY PURPOSE ONLY
-  padding: $temp-padding; // DISPLAY PURPOSE ONLY
+  margin: $temp-margin;
+     
+     .individual-plant-header {
+      font-family: $font-stack;
+      color: $secondary-color;
+      font-size: $font-Xlarge;
+      margin: 0;
+     }
 
+      hr {
+        border: 1px solid #086972;
+      }
       .commonName {
         font-weight: bold;
         color: $commonNameFontColor;
-        background-color: $backgroundcolor02; // DISPLAY PURPOSE ONLY
-        padding: $temp-padding;
+        font-size: 3rem;
+        padding-bottom: 0;
       }
-      .spciesName {
-        background-color: $backgroundcolor03; // DISPLAY PURPOSE ONLY
-        padding: $temp-padding;
-      }
-      img {
-        // width: 50vh;
-        display: block;
-        float: left;
-        border-radius: 50%;
+      .speciesName {
+        padding-left: 3rem;
+        font-style: italic;
+        padding-top: 0;
       }
     }
   
 
 
-  .careDetailWrapper {
-    display: block;
-    float: left;
-    margin-left: $temp-margin;
+.careDetailWrapper {
+  display: flex;
+  float: left;
+  margin-left: $temp-margin;
+  margin-bottom: 2rem;
 
-        .careDetail {
-          font-size: $font-body-paragraph; // DISPLAY PURPOSE ONLY
-          background-color: $backgroundcolor02; // DISPLAY PURPOSE ONLY
-          padding: $temp-padding;
-        }
-          p {
-            font-size: $font-body-paragraph;
-            background-color: $backgroundcolor03; // DISPLAY PURPOSE ONLY
-          }
-          .individ-plant-details {
-            list-style: none;
-            background-color: $backgroundcolor04; // DISPLAY PURPOSE ONLY
-            margin-left: $temp-margin;
-          }
+    img {
+      width: 50vh;
+      display: block;
+      float: left;
+      border-radius: 50%;
+    }
+
+    .careDetail {
+      font-size: $font-body-paragraph; // DISPLAY PURPOSE ONLY
+      padding: $temp-padding;
+    }
+    .individ-plant-details {
+      list-style: none;
+      margin-left: $temp-margin;
+
+      li {
+        padding-bottom: .5rem;
         
-        }
+      }
+
+      .style {
+        width: 8px;
+        height: auto;
+        padding-right: 2rem;
+      }
+
+      .style-special {
+        padding-right: .6rem;
+      }
+    }
+}
+
+
+.navy {
+  box-sizing: border-box;
+  font-weight:bolder ;
+}
+
+.navy-link {
+  margin-top: 1px;
+  margin-left: 5px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  // border-radius: 20px;
+  color: $text-color;
+  letter-spacing: 0.1em;
+  //line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5vh;
+  //display: block;
+  //flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.navy-link:hover
+{
+    color: $btn-hover-color;
+    //border: 3px solid $btn-hover-color;
+  }

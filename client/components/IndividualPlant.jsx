@@ -26,32 +26,33 @@ const IndividualPlant = (props) => {
     plant ? <div>
             <div key={plant.id}>
               <div className="individ-plant-main">
-                <h1>Plant Care Detail</h1>
+                <h1 className='individual-plant-header'> Plant Care Details</h1>
+                <hr/>
+                <div>
                 <h2 className="commonName">{plant.common_name}</h2>
-                <h3 className="commonName">{plant.species_name}</h3>
+                <h3 className="speciesName">{plant.species_name}</h3>
+                </div>
 
                 <div className="careDetailWrapper">
-              
-              <div className="careDetail"> 
-              <img src= {plant.img}/>
-                
-                <ul className="individ-plant-details">         
-                  <li><i className="fas fa-tint"/> {plant.water}</li>
-                  <li><i className="fas fa-sun"/> {plant.light}</li>
-                  <li><i className="fas fa-temperature-low"/> {plant.temp}</li>
-                  <li><i className="fas fa-tint"/><i className="fas fa-percent"/> {plant.humidity}</li>
-                  <li><i className="fas fa-poop"/> {plant.soil}</li>
-                  <li><i className="fas fa-user"/> {plant.lvl}</li>
-                  <li><i className="far fa-comment-alt"/> {plant.notes}</li>
-                </ul>   
-                <div className="nav">         
-                <Link to={'/'} onClick={handleClick} className="nav-link">Add Plant to profile</Link>
-                </div> 
-                </div> 
-              </div>
+                  <img src= {plant.img}/>
+                  <div className="careDetail"> 
+                    <ul className="individ-plant-details">         
+                      <li><i className="fas fa-tint style"/> {plant.water}</li>
+                      <li><i className="fas fa-sun style"/> {plant.light}</li>
+                      <li><i className="fas fa-temperature-low style"/> {plant.temp}</li>
+                      <li><i className="fas fa-tint"/><i className="fas fa-percent style-special"/> {plant.humidity}</li>
+                      <li><i className="fas fa-poop style"/> {plant.soil}</li>
+                      <li><i className="fas fa-user style"/> {plant.lvl}</li>
+                      <li><i className="far fa-comment-alt style"/> {plant.notes}</li>
+                    </ul>   
+                    <div className="navy">         
+                      <Link to={'/'} onClick={handleClick} className="navy-link">Add Plant to profile</Link>
+                    </div> 
+                  </div> 
+                </div>
+                </div>
             </div>
             </div>
-    </div>
     : null
   );
 };
