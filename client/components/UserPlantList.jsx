@@ -20,7 +20,7 @@ class UserPlantList extends React.Component {
     return (
       <div className= 'userPlantPage' >
       <IfAuthenticated>
-        {this.props.auth.user && <h3>Hey {this.props.auth.user.name}, you can find all of your saved plants below!</h3>}
+        {this.props.auth.user && <h3>Hey {this.props.auth.user.name}, here's your saved plants</h3>}
       </IfAuthenticated>
         <Search />
       

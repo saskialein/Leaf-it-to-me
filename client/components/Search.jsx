@@ -26,6 +26,7 @@ class Search extends React.Component {
           value={this.state.searchTerm}
           name="searchTerm"
           type="text"
+          id="search"
           placeholder="Search for your plant..."
         />
     );
