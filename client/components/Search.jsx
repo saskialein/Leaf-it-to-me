@@ -21,7 +21,6 @@ class Search extends React.Component {
  
     return (
       <div className="">
-        <h2 id='search'>Search</h2>
         <input
           onChange={this.handleChange}
           className="input"
