@@ -12,11 +12,11 @@ const Home = () => {
           src="./images/potted-plant-transparent-background-5.png"
           alt=""
         />
-        <div className="homerBanner">
+        <div className="homeBanner">
           <h2>LEAF IT TO ME</h2>
           <h3>PLANT CARE MADE EASY</h3>
           <p>
-            Helping house plant owners, make their plants feel like bliss. Leaf
+            Helping house plant owners make their plants feel like bliss. Leaf
             it to us.
           </p>
         </div>
