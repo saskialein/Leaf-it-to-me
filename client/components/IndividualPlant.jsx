@@ -43,7 +43,7 @@ const IndividualPlant = (props) => {
                   <li>{plant.humidity}</li>
                   <li>{plant.soil}</li>
                   <li>{plant.lvl}</li>
-                  <li>{plant.more}</li>
+                  <li>{plant.notes}</li>
                 </ul>              
                 <button onClick={handleClick}>Add Plant to profile</button>
               </div>

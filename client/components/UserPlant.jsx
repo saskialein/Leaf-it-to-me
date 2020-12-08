@@ -25,8 +25,10 @@ const UserPlant = (props) => {
               <li>{plant.lvl}</li>
               <li>{plant.more}</li>
             </ul> 
-            <Link to={`/plants/${plant.common_name}`}><button>More info</button></Link>             
+            <div className="Nav">
+            <Link to={`/plants/${plant.common_name}`}className="nav-link">More info</Link>             
             <button onClick={() => props.dispatch(removePlant(plant.id))} >Delete</button>
+            </div>
           </div>
         </div>
       </div>

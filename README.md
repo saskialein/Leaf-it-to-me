@@ -1,21 +1,22 @@
 # Leaf it to me
 
+## FUNCTIONALITY CHECKLIST TO CHECK BEFORE YOU MERGE YOUR BRANCH: 
+
+- [ ] When I'm signed out I should be able to go to the homepage, search for a plant, and only see the 'more info' button and then sign in, sign up & home nav links
+- [ ] Once I click more info on a plant I should then see it's individual profile & the 'add plant to profile' button, which once clicked will take me to the sign up page
+- [ ] I should be able to sign up / sign in. Once signed in I should be able to go to the home page and see the 'more info' and 'add a plant' buttons, if I click to 'add a plant' I should be automatically taken to my saved plants profile page, and from here I should see the option to 'remove' any plants I've added and also the option to search for a plant within my plant list
+- [ ] Once signed in I should also be able to click the 'Add Plant' nav button and this will show me a pop up Modal, where I can choose from 3 options - all of these options should be working
+
 # UPDATED GIT PROTOCOL: 
 
-Each time we merge a new feature, we need to get back on the same page, I spoke to Ross and Kelly, best practice is to actually delete the local version of development that you have on your computer, and then bring it down again so you are sure you have the exact same.
-To do this, please do these commands:
-Firstly, you need to be in a different branch to development, so either move to a branch you have or make a new one.
-git checkout -b newbranch
-Now delete the local/your computers version of development
-git branch -D development
-Now let’s pull down the latest, start with Fetch to make sure you have all the branches
-git fetch
-Now move into development- it will be exactly the same as the remote
-git checkout development
-gst or git status, make sure your tree is clean and up to date!
-Now you can branch off from our shared/latest development, to a new branch
-git checkout -b myNewBranch
-Your old branch will be deleted! It’s merged in at this point so we should not confuse ourself by keeping it.
+Each time we merge a new feature, we need to get back on the same page, I spoke to Ross and Kelly, best practice is to actually delete the local version of development that you have on your computer, and then bring it down again so you are sure you have the exact same. To do this, please do these commands:
+
+- Firstly, you need to be in a different branch to development, so either move to a branch you have or make a new one. `git checkout -b newbranch`
+- Now delete the local/your computers version of development `git branch -D development`
+- Now let’s pull down the latest, start with Fetch to make sure you have all the branches `git fetch`
+- Now move into development- it will be exactly the same as the remote git checkout development gst or git status, make sure your tree is clean and up to date!
+- Now you can branch off from our shared/latest development, to a new branch `git checkout -b myNewBranch`
+- Your old branch will be deleted! It’s merged in at this point so we should not confuse ourself by keeping it.
 
 # MERGE TIME!! Git Protocol in a Team!
 * Feature is done, ready to create a pull request to Development?? 

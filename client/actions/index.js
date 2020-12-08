@@ -2,7 +2,6 @@ import { retrievePlants, addPlantToUsersPlantsDB, addPlantImage, addPlantData } 
 
 export const SET_PLANTS = 'SET_PLANTS'
 export const ADD_PLANT = 'ADD_PLANT'
-export const ADD_PLANT_2PROFILE = 'ADD_PLANT_2PROFILE'
 // export const CURRENT_PLANT = 'CURRENT_PLANT'
 export const ADD_USER_PLANT = 'ADD_USER_PLANT'
 //export const SET_USERS_PLANTS = 'SET_USERS_PLANTS'
@@ -20,13 +19,6 @@ export function pushPlant (plant) {
     plant: plant
   }
 }
-
-// export const addPlantToRedux = (plant) => {
-//   return {
-//     type: ADD_PLANT_2PROFILE,
-//     plant
-//   }
-// }
 
 export const currentPlant = (plant) => {
   return {
@@ -73,9 +65,6 @@ export const addPlantToReduxandDb = (plantObject) => {
   }
 }
 
-// export const addCurrentPlantToRedux = (plant) => {
-//   return dispatch(currentPlant(plant))
-// }
 
 
 
