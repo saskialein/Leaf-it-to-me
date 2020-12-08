@@ -56,7 +56,7 @@ class AddPlantForm extends React.Component {
               <label className='form-Label'>Common Name: </label>
               <input onChange={this.handleChange} className='input' value={this.state.common_name} autoFocus={true} name="common_name" type="text" />
             </div>
-          </div>
+          
           <div className="form-field">
             <label className='form-Label'>Water: </label>
             <select onChange={this.handleChange} className='select' value={this.state.water}  name="water" type="text">
@@ -116,10 +116,12 @@ class AddPlantForm extends React.Component {
             </select>
           </div>
           <button className="submitButton">Add plant</button>
+          </div>
           <div className="image-upload">
             <label className="addImage">+ Add Image: </label>
-            <input onChange={this.onChangeFile} className='imgUpload-input' name="img" type="file" />
+            <input onChange={this.onChangeFile} className="imgUpload-input" name="img" type="file" />
           </div>
+         
           {/* //Adding notes is a stretch */}
 
           {/* <label>Notes: </label>

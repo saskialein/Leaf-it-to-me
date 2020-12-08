@@ -2,26 +2,57 @@
   display: flex;
   background: #f77;
   justify-content: space-between;
+
   .form-fields {
     background-color: #77f;
     width: 100%;
+  }
     input {
+      .form-field {
+        display: flex;
+        margin-bottom: 8px;
       padding-left: 20px;
     }
   }
-  
-  .form-field {
-    display: flex;
-    margin-bottom: 8px;
-    .form-Label {
-      width: 150px;
-      line-height: 40px
+    label {
+      margin: $temp-margin, 0px, $temp-margin, 0px;
+      padding: $temp-padding, $temp-padding, $temp-padding, 0px;
+      font-size: x-large;
+      font-weight: bold;
     }
-    input, select {
-      width: 100%;
+    .input {
+      margin-top: $temp-margin/4;
+      display: block;
+      font-size: 0.025 rem;
     }
-  }
+    .submitButton {
+      margin-top: $temp-margin/2;
+      padding: $temp-padding/2.5;
+      font-weight: bold;
+      border: 1.5px solid;
+      border-radius: 15px 15px;
+    }
+    .form {
+  margin: $temp-margin;
+  padding: $temp-padding;
+  border: 0.5px, solid, $spaceGreyColor;
+  display: inline-block;
+  background-color: $backgroundcolor02;
+  color: $spaceGreyColor;
+  align-content: left;
+
 }
+
+
+  .form-Label {
+    width: 150px;
+    line-height: 40px
+  }
+  input, select {
+    width: 100%;
+  }}
+
+
 
 .image-upload {
   width: 300px;
@@ -40,35 +71,3 @@
 
 
 
-.form {
-  margin: $temp-margin;
-  padding: $temp-padding;
-  border: 0.5px, solid, $spaceGreyColor;
-  display: inline-block;
-  background-color: $backgroundcolor02;
-  color: $spaceGreyColor;
-  align-content: left;
-}
-
-
- label {
-  margin: $temp-margin, 0px, $temp-margin, 0px;
-  padding: $temp-padding, $temp-padding, $temp-padding, 0px;
-  font-size: x-large;
-  font-weight: bold;
-}
-
-.input {
-  margin-top: $temp-margin/4;
-  display: block;
-  font-size: 0.025 rem;
-}
-
-
-.submitButton {
-  margin-top: $temp-margin/2;
-  padding: $temp-padding/2.5;
-  font-weight: bold;
-  border: 1.5px solid;
-  border-radius: 15px 15px;
-}
