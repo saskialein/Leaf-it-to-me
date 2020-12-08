@@ -15,13 +15,12 @@ const Home = () => {
           alt=""
         />
         <div className="homeBanner">
-          <h2>LEAF IT TO ME</h2>
-          <h3>PLANT CARE MADE EASY</h3>
-          <p>
-            Helping house plant owners make their plants feel like bliss. Leaf
-            it to us.
-          </p>
-
+            <h2>LEAF IT TO ME</h2>
+            <h3>PLANT CARE MADE EASY</h3>
+            <p>
+              Helping house plant owners make their plants feel like bliss. Leaf
+              it to us.
+            </p>
           <IfNotAuthenticated>
             <NavLink
               to="/register"
