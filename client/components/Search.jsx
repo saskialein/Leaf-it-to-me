@@ -20,17 +20,14 @@ class Search extends React.Component {
   render() {
  
     return (
-      <div className="">
-        <h2 id='search'>Search</h2>
         <input
           onChange={this.handleChange}
           className="input"
           value={this.state.searchTerm}
           name="searchTerm"
           type="text"
+          placeholder="Search for your plant..."
         />
-     
-      </div>
     );
   }
 }
