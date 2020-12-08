@@ -41,7 +41,7 @@ const Nav = (props) => {
         </IfNotAuthenticated>
 
           <IfAuthenticated>
-          <a href='#'className="nav-link" id="btn-sign-Out" onClick={() => logOutUser(props.dispatch)}>
+          <a href='/'className="nav-link" id="btn-sign-Out" onClick={() => logOutUser(props.dispatch)}>
             Sign Out
           </a>
         </IfAuthenticated>
