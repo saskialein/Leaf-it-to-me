@@ -53,6 +53,7 @@ class AddPlantForm extends React.Component {
           <label className='label'>Common Name: </label>
           <input onChange={this.handleChange} className='input' value={this.state.common_name} autoFocus={true} name="common_name" type="text"/>
           <br/>
+
         </div>
         <div className="dropDown-wrapper">
           <label className='label'>Water: </label>
@@ -66,6 +67,7 @@ class AddPlantForm extends React.Component {
               <option value="soak every 1-2 weeks">soak every 1-2 weeks</option>
               </select>
               <br/>
+
           <label className='label'>Light: </label> 
           <select onChange={this.handleChange} className='select' value={this.state.light} name="light" type="text">
             <option value="">Select</option>
@@ -80,6 +82,7 @@ class AddPlantForm extends React.Component {
             <option value="direct">direct</option>
           </select>
           <br/>
+
           <label className='label'>Temp: </label>
             <select onChange={this.handleChange} className='select' value={this.state.temp} name="temp" type="text">
             <option value="">Select</option>
@@ -91,6 +94,7 @@ class AddPlantForm extends React.Component {
             <option value="hot">hot</option>
             </select>
             <br/>
+
           <label className='label'>Humidity: </label>
           <select onChange={this.handleChange} className='select' value={this.state.humidity} name="humidity" type="text">
             <option value="">Select</option>
@@ -102,6 +106,7 @@ class AddPlantForm extends React.Component {
             <option value="adaptable">adaptable</option>
             </select>
             <br/>
+            
           </div>
           <div className="addImage-Holder"> 
           <label className="addImage">+ Add Image: </label>

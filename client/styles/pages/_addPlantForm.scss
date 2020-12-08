@@ -3,12 +3,14 @@
   margin: $temp-margin;
   padding: $temp-padding;
   border: 0.5px, solid, $spaceGreyColor;
-  display: inline-block;
+  display: flex;
   background-color: $backgroundcolor02;
   color: $spaceGreyColor;
   align-content: left;
 
       .label-input-relations {
+        display: flex;
+        margin-bottom: 40px;
 
         .input {
         margin-top: $temp-margin/4;
@@ -16,22 +18,33 @@
         font-size: 0.025 rem;
         line-height: 50px;
         padding-left: 20px;
+        font-size: 18px;
       }
         .label {
+        margin-left: 20px;
+        margin-top: 10px;
         margin: $temp-margin, 0px, $temp-margin, 0px;
         padding: $temp-padding, $temp-padding, $temp-padding, 0px;
         font-size: x-large;
-        font-weight: bold;
       }
     }
       .dropDown-wrapper {
 
+
+        .label {
+          margin-left: 20px;
+          margin-top: 10px;
+          margin: $temp-margin, 0px, $temp-margin, 0px;
+          padding: $temp-padding, $temp-padding, $temp-padding, 0px;
+          font-size: x-large;
+        }
+        
         .select {
         margin: 10px;
         margin-right: 20vw;
+        margin-left: 250px;
         padding: 5px;
         font-size: x-large;
-        font-weight: bold;
        }
       }
       
@@ -47,17 +60,16 @@
     .addImage-Holder {
       // X: 960px;
       // Y: 425px;
-      // W: 357px;
-      // H: 357px;
+      // width: 357px;
+      // height: 357px;
       // X Constraint: Left;
       // Y Constraint: Top;
-    //   Stroke: Solid
-    //   #086972;
-    //   Align: Inside;
-    //   Width: 1px;
-    //   
+      // Stroke: Solid
+      // #086972;
+      // Align: Inside;
+      // Width: 1px;
+      
       .addImage {
-        position: absolute;
         width: 181px;
         height: 104px;
         left: 1056px;
