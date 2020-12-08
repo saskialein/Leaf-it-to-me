@@ -1,4 +1,4 @@
-$nav-margin: 7vw; //homepage
+$nav-margin: 2vw; //homepage
 $btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
 
 .nav {
@@ -7,11 +7,17 @@ $btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
   font-size: xx-large;
   font-family: $font-stack;
   background-color: $background-color;
-  margin: $nav-margin;
+  justify-content: space-between;
+
+  //STICKY NAV BAR ATTEMP
+  //position: fixed; /* Set the navbar to fixed position */
+  //top: 0; /* Position the navbar at the top of the page */
+  //width: 100%; /* Full width */
 }
 .nav-link {
-  margin-top: 1px;
-  margin-left: 5px;
+  // margin-top: 1px;
+  // margin-left: 5px;
+  margin: $nav-margin;
   color: $text-color;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -20,18 +26,21 @@ $btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
   text-align: center;
 }
 
+.L-Logo {
+  width: 2vw;
+}
 .nav-link:hover {
-  color: $btn-hover-color;
+  color: $btn-hover-color; // CHANGED FOR NOW DUE TO STICKY NAV BAR
+  color: $text-color;
   //border: 3px solid $btn-hover-color;
 }
 
 .active {
-  border-bottom: 2px solid currentColor;
   display: inline-block;
   line-height: 0.85;
 }
 
-// $btn-with-border:
+//btn-with-border
 #btn-sign-up,
 #btn-sign-in,
 #btn-sign-out {
@@ -40,8 +49,10 @@ $btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
   padding: $btn-padding;
 }
 
-#btn-sign-in {
+#btn-sign-in,
+#btn-sign-up {
   float: right;
+  justify-content: space-between;
 }
 
 // to jess love from hortense for the circles if you want them

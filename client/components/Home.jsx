@@ -21,18 +21,7 @@ const Home = () => {
             Helping house plant owners make their plants feel like bliss. Leaf
             it to us.
           </p>
-          <div className="btn-sign-up-on-home">
-            <IfNotAuthenticated>
-              <NavLink
-                to="/register"
-                activeClassName="active"
-                className="nav-link"
-                id="btn-sign-up"
-              >
-                Sign Up
-              </NavLink>
-            </IfNotAuthenticated>
-          </div>
+          <div className="btn-sign-up-on-home"></div>
         </div>
       </div>
       <div>
