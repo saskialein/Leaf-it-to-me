@@ -10,6 +10,7 @@ class AddPlantForm extends React.Component {
     light: '',
     temp: '',
     humidity: '',
+    soil: '',
     img: '',
   }
 
@@ -38,6 +39,7 @@ class AddPlantForm extends React.Component {
       light: this.state.light,
       temp: this.state.temp,
       humidity: this.state.humidity,
+      soil: this.state.soil,
       notes: this.state.notes
     }
 
@@ -48,77 +50,82 @@ class AddPlantForm extends React.Component {
   render() {
     return (
       <div>
-        <form encType='multipart/form-data' className='addPlantForm' onSubmit={this.handleSubmit}>
+       <form encType='multipart/form-data' className='addPlantForm' onSubmit={this.handleSubmit}>
           <div className="form-fields">
             <div className="form-field">
               <label className='form-Label'>Common Name: </label>
               <input onChange={this.handleChange} className='input' value={this.state.common_name} autoFocus={true} name="common_name" type="text" />
-              <br />
-
             </div>
-            
-              <div className="form-field">
-                <label className='form-Label'>Water: </label>
-                <select onChange={this.handleChange} className='select' value={this.state.water} name="water" type="text">
-                  <option value="">Select</option>
-                  <option value="once per week">once per week</option>
-                  <option value="only when soil is completely dry">only when soil is completely dry</option>
-                  <option value="keep moist but not wet">keep moist but not wet</option>
-                  <option value="one to two weeks">one to two weeks</option>
-                  <option value="once every 2 weeks">once every 2 weeks</option>
-                  <option value="soak every 1-2 weeks">soak every 1-2 weeks</option>
-                </select>
-              </div>
-              <br />
-              <div className="form-field">
-                <label className='form-Label'>Light: </label>
-                <select onChange={this.handleChange} className='select' value={this.state.light} name="light" type="text">
-                  <option value="">Select</option>
-                  <option value="bright-medium indirect">bright-medium indirect</option>
-                  <option value="filtered indirect">filtered indirect</option>
-                  <option value="bright indirect">bright indirect</option>
-                  <option value="full shade">full shade</option>
-                  <option value="bright filtered-full shade">bright filtered-full shade</option>
-                  <option value="bright filtered-can tolerate direct">bright filtered-can tolerate direct</option>
-                  <option value="filtered medium">filtered medium</option>
-                  <option value="low">low</option>
-                  <option value="direct">direct</option>
-                </select>
-              </div>
-              <br />
-              <div className="form-field">
-                <label className='form-Label'>Temp: </label>
-                <select onChange={this.handleChange} className='select' value={this.state.temp} name="temp" type="text">
-                  <option value="">Select</option>
-                  <option value="cool">cool</option>
-                  <option value="cool-warm">cool-warm</option>
-                  <option value="cool-hot">cool-hot</option>
-                  <option value="warm">warm</option>
-                  <option value="warm-hot">warm-hot</option>
-                  <option value="hot">hot</option>
-                </select>
-                <br />
-              </div>
-              <div className="form-field">
-                <label className='form-Label'>Humidity: </label>
-                <select onChange={this.handleChange} className='select' value={this.state.humidity} name="humidity" type="text">
-                  <option value="">Select</option>
-                  <option value="low">low</option>
-                  <option value="low-moderate">low-moderate</option>
-                  <option value="moderate">moderate</option>
-                  <option value="moderate-high">moderate-high</option>
-                  <option value="high">high</option>
-                  <option value="adaptable">adaptable</option>
-                </select>
-                <br />
-              </div>
-            <button className="submitButton">Add plant</button>
           </div>
+          <div className="form-field">
+            <label className='form-Label'>Water: </label>
+            <select onChange={this.handleChange} className='select' value={this.state.water}  name="water" type="text">
+              <option value="">Select</option>
+              <option value="Daily">Daily</option>
+              <option value="Once per week">Once per week</option>
+              <option value="Once every 1 to 2 weeks">Once every 1 to 2 weeks</option>
+              <option value="Once every 2 weeks">Once every 2 weeks</option>
+              <option value="Keep moist but not wet">Keep moist but not wet</option>
+              <option value="Only when soil is completely dry">Only when soil is completely dry</option>
+              <option value="Soak every 1 to 2 weeks">Soak every 1 to 2 weeks</option>
+            </select>
+          </div>
+          <div className="form-field">
+            <label className='form-Label'>Light: </label>
+            <select onChange={this.handleChange} className='select' value={this.state.light} name="light" type="text">
+              <option value="">Select</option>
+              <option value="Prefers shade">Prefers shade</option>
+              <option value="Filtered medium">Filtered medium</option>
+              <option value="Bright to medium">Bright to medium</option>
+              <option value="Bright filtered">Bright filtered</option>
+              <option value="Bright direct">Bright direct</option>
+              <option value="Adaptable">Adaptable</option>
+            </select>
+          </div>
+          <div className="form-field">
+            <label className='form-Label'>Temp: </label>
+            <select onChange={this.handleChange} className='select' value={this.state.temp} name="temp" type="text">
+              <option value="">Select</option>
+              <option value="Cool to warm">Cool to warm</option>
+              <option value="Warm">Warm</option>
+              <option value="Warm to hot">Warm to hot</option>
+              <option value="Hot">Hot</option>
+              <option value="Adaptable">Adaptable</option>
+            </select>
+          </div>
+          <div className="form-field">
+            <label className='form-Label'>Humidity: </label>
+            <select onChange={this.handleChange} className='select' value={this.state.humidity} name="humidity" type="text">
+              <option value="">Select</option>
+              <option value="Low">Low</option>
+              <option value="Low to moderate">Low to moderate</option>
+              <option value="Moderate">Moderate</option>
+              <option value="Moderate to high">Moderate to high</option>
+              <option value="High">High</option>
+              <option value="Adaptable">Adaptable</option>
+            </select>
+          </div>
+          <div className="form-field">
+            <label className='form-Label'>Soil: </label>
+            <select onChange={this.handleChange} className='select' value={this.state.soil} name="soil" type="text">
+              <option value="">Select</option>
+              <option value="Holds moisture/dense">Holds moisture/dense</option>
+              <option value="Well draining">Well draining</option>
+              <option value="Soilless potting mix">Soilless potting mix</option>
+              <option value="None">None</option>
+            </select>
+          </div>
+          <button className="submitButton">Add plant</button>
           <div className="image-upload">
             <label className="addImage">+ Add Image: </label>
             <input onChange={this.onChangeFile} className='imgUpload-input' name="img" type="file" />
           </div>
-          <br />
+          {/* //Adding notes is a stretch */}
+
+          {/* <label>Notes: </label>
+            <textarea onChange={this.handleChange} className='select' value={this.state.notes} name="notes" type="text">
+            
+            </textarea> */}
         </form>
       </div>
     )

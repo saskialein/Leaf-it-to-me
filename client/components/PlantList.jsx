@@ -13,7 +13,9 @@ class PlantList extends React.Component {
 
     return (
       <div>
-        <Search />
+        <div className='plantListSearch'>
+          <Search />
+        </div>
         <div className="smallPlant-wrapper">
           {filteredPlants.map((plant) => (
             <Plant key={plant.id} plant={plant} history={this.props.history} />
