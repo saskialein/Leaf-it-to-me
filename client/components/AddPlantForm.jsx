@@ -48,7 +48,7 @@ class AddPlantForm extends React.Component {
   render() {
     return (
       <div>
-        <form encType='multipart/form-data' className='form' onSubmit={this.handleSubmit}>
+        <form encType='multipart/form-data' className='addPlantForm' onSubmit={this.handleSubmit}>
           <div className="form-fields">
             <div className="form-field">
               <label className='form-Label'>Common Name: </label>
