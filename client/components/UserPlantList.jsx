@@ -21,7 +21,9 @@ class UserPlantList extends React.Component {
       <div className= 'userPlantPage' >
       
       <h1>My happy plants</h1>
-        <Search />
+        <div className="userPlantSearch">
+          <Search />
+        </div>
         <div className="plant-wrapper">
           {usersFilteredArray.map((userPlant, index) => <UserPlant key={userPlant.id} plant={userPlant} isOdd={index % 2 == 1} />)}
         </div>
