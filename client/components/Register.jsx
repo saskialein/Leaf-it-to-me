@@ -63,48 +63,54 @@ class Register extends React.Component {
             value={this.state.name}
             autoFocus={true}
             name="name"
+            id="name"
             label="Name"
             type="text"
             placeholder="Let's get to know each other"
           />
           <br />
-          <label htmlFor="name">Email: </label>
+          <label htmlFor="email">Email: </label>
           <input
             onChange={this.handleChange}
             className="input"
             value={this.state.email}
             name="email"
+            id="email"
             label="Name"
             type="text"
             // placeholder="So we can keep in touch"
           />
           <br />
-          <label htmlFor="name">Username: </label>
+          <label htmlFor="username">Username: </label>
           <input
             onChange={this.handleChange}
             className="input"
             value={this.state.username}
             name="username"
+            id="username"
             label="Name"
             type="text"
             placeholder="We hear DeathEagle is popular ;)"
             alt="Please enter your username here"
           />
           <br />
-          <label htmlFor="name">Password: </label>
+          <label htmlFor="password">Password: </label>
           <input
             onChange={this.handleChange}
             className="input"
             value={this.state.password}
             name="password"
+            id="password"
             label="Name"
             type="password"
             // placeholder="No judgement here"
           />
           <br />
-          <button className="text-btn" type="submit">
-            Sign Me Up
-          </button>
+          <label htmlFor="sign me up button">
+            <button className="text-btn" type="submit" id="sign me up button">
+              Sign Me Up
+            </button>
+          </label>
         </form>
       </div>
     )
