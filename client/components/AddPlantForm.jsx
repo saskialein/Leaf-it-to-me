@@ -15,7 +15,7 @@ class AddPlantForm extends React.Component {
   }
 
   onChangeFile = (e) => {
-    this.setState({[e.target.name]: e.target.files[0]})
+    this.setState({ [e.target.name]: e.target.files[0] })
   }
 
 
@@ -135,3 +135,7 @@ class AddPlantForm extends React.Component {
 export default connect()(AddPlantForm)
 
 
+{/* <label>Notes: </label>
+            <textarea onChange={this.handleChange} className='select' value={this.state.notes} name="notes" type="text">
+            
+            </textarea> */}

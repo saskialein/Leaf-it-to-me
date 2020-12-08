@@ -7,6 +7,9 @@
   font-weight: bold;
 
   .homeBanner {
+    font-family: $font-stack;
+    font-weight: Normal;
+
     //H2 AND H3 WILL BE TURNED INTO AN SVG
     h2 {
       font-size: $font-large * 2;
@@ -14,15 +17,22 @@
     }
 
     h3 {
-      font-weight: Normal;
-      font-size: $font-medium * 3;
-      padding-left: 4.5vw; //90px
+      font-size: $font-medium * 2;
+      margin-left: 6vw; //120px
     }
 
     P {
       font-size: $font-medium * 2;
       margin-left: $temp-margin * 3;
       color: $text-color;
+    }
+    #btn-sign-up {
+      text-align: center;
+      font-weight: bolder;
+      font-size: xx-large;
+      font-family: $font-stack;
+      background-color: $background-color;
+      margin: $nav-margin;
     }
   }
 }
