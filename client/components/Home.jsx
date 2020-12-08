@@ -1,7 +1,9 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-
 import PlantList from './PlantList.jsx'
+import { NavHashLink as NavLink } from 'react-router-hash-link'
+
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 const Home = () => {
   return (
@@ -19,6 +21,17 @@ const Home = () => {
             Helping house plant owners make their plants feel like bliss. Leaf
             it to us.
           </p>
+
+          <IfNotAuthenticated>
+            <NavLink
+              to="/register"
+              activeClassName="active"
+              className="nav-link"
+              id="btn-sign-up"
+            >
+              Sign Up
+            </NavLink>
+          </IfNotAuthenticated>
         </div>
       </div>
       <div>

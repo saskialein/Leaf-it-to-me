@@ -1,41 +1,41 @@
+$nav-margin: 7vw; //homepage
+$btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
 
 .nav {
   box-sizing: border-box;
-  font-weight:bolder ;
+  font-weight: bolder;
+  font-size: xx-large;
+  font-family: $font-stack;
   background-color: $background-color;
+  margin: $nav-margin;
 }
 .nav-link {
   margin-top: 1px;
   margin-left: 5px;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  //border-radius: 20px;
   color: $text-color;
   letter-spacing: 0.1em;
-  //line-height: 30px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.5vh;
-  //display: block;
-  //flex-direction: row;
   justify-content: space-between;
   text-align: center;
 }
 
-.nav-link:hover
- {
-    color: $btn-hover-color;
-    //border: 3px solid $btn-hover-color;
-  }
-
-// $btn-with-border:
-#btn-sign-up, #btn-sign-in, #btn-sign-out{
-  border-radius: 20px;
-  border: 2.5px solid $text-color;  
+.nav-link:hover {
+  color: $btn-hover-color;
+  //border: 3px solid $btn-hover-color;
 }
 
-#btn-sign-up{
-  float:right;
+// $btn-with-border:
+#btn-sign-up,
+#btn-sign-in,
+#btn-sign-out {
+  border-radius: 30px;
+  border: 2.5px solid $text-color;
+  padding: $btn-padding;
+}
+
+#btn-sign-in {
+  float: right;
 }
 
 // to jess love from hortense for the circles if you want them
