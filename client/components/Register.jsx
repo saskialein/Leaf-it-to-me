@@ -53,9 +53,10 @@ class Register extends React.Component {
   render() {
     return (
       <div>
-        <h2>Register</h2>
+        <h2>Sign Up</h2>
+        <p>Sign up to add plants to your very own personalised profile where you can keep track of all of your plant needs in one handy location and leaf the rest to us.</p>
         <form className="form" onSubmit={this.handleClick}>
-          <label htmlFor="name">Your Name: </label>
+          <label htmlFor="name">Name: </label>
           <input
             onChange={this.handleChange}
             className="input"
@@ -64,9 +65,10 @@ class Register extends React.Component {
             name="name"
             label="Name"
             type="text"
+            placeholder="Let's get to know each other"
           />
           <br />
-          <label htmlFor="name">Your Email Address: </label>
+          <label htmlFor="name">Email: </label>
           <input
             onChange={this.handleChange}
             className="input"
@@ -75,6 +77,7 @@ class Register extends React.Component {
             name="email"
             label="Name"
             type="text"
+            placeholder="Enter your email & we can keep in touch"
           />
           <br />
           <label htmlFor="name">Username: </label>
@@ -86,6 +89,8 @@ class Register extends React.Component {
             name="username"
             label="Name"
             type="text"
+            placeholder="We hear DeathEagle is popular ;)"
+            alt="Please enter your username here"
           />
           <br />
           <label htmlFor="name">Password: </label>
@@ -97,10 +102,11 @@ class Register extends React.Component {
             name="password"
             label="Name"
             type="password"
+            placeholder="Your secret's safe with us"
           />
           <br />
           <button className="text-btn" type="submit">
-            Submit
+            Sign Me Up
           </button>
         </form>
       </div>

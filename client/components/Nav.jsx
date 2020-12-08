@@ -48,7 +48,7 @@ const Nav = (props) => {
 
         <IfNotAuthenticated>
         
-          <NavLink to="/register" activeClassName="active" className="nav-link">
+          <NavLink to="/sign-up" activeClassName="active" className="nav-link">
             Sign Up
           </NavLink>
         </IfNotAuthenticated>
