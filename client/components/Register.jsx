@@ -73,11 +73,10 @@ class Register extends React.Component {
             onChange={this.handleChange}
             className="input"
             value={this.state.email}
-            autoFocus={true}
             name="email"
             label="Name"
             type="text"
-            placeholder="Enter your email & we can keep in touch"
+            // placeholder="So we can keep in touch"
           />
           <br />
           <label htmlFor="name">Username: </label>
@@ -85,7 +84,6 @@ class Register extends React.Component {
             onChange={this.handleChange}
             className="input"
             value={this.state.username}
-            autoFocus={true}
             name="username"
             label="Name"
             type="text"
@@ -98,11 +96,10 @@ class Register extends React.Component {
             onChange={this.handleChange}
             className="input"
             value={this.state.password}
-            autoFocus={true}
             name="password"
             label="Name"
             type="password"
-            placeholder="Your secret's safe with us"
+            // placeholder="No judgement here"
           />
           <br />
           <button className="text-btn" type="submit">

@@ -41,7 +41,7 @@ const Nav = (props) => {
           </IfNotAuthenticated>
 
           <IfAuthenticated>
-          <NavLink to="/home" activeClassName="active" className="nav-link" onClick={() => logOutUser(props.dispatch)}>
+          <NavLink to="/" activeClassName="active" className="nav-link" onClick={() => logOutUser(props.dispatch)}>
             Sign Out
           </NavLink>
         </IfAuthenticated>
