@@ -17,7 +17,7 @@ const IndividualPlant = (props) => {
         props.dispatch(addPlantToReduxandDb(plantObject))
         props.history.push("/plants/saved") 
       } else {
-          props.history.push("/register")
+          props.history.push("/sign-up")
       }
     }
   

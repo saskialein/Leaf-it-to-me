@@ -54,7 +54,7 @@ class Register extends React.Component {
     return (
       <div>
         <h2>Sign Up</h2>
-        <p>Sign up to add plants to your very own personalised profile where you can keep track of all of your plant needs in one handy location and leaf the rest to us</p>
+        <p>Sign up to add plants to your very own personalised profile where you can keep track of all of your plant needs in one handy location and leaf the rest to us.</p>
         <form className="form" onSubmit={this.handleClick}>
           <label htmlFor="name">Name: </label>
           <input
@@ -66,7 +66,6 @@ class Register extends React.Component {
             label="Name"
             type="text"
             placeholder="Let's get to know each other"
-            alt="Please enter your name here"
           />
           <br />
           <label htmlFor="name">Email: </label>
@@ -74,11 +73,10 @@ class Register extends React.Component {
             onChange={this.handleChange}
             className="input"
             value={this.state.email}
-            autoFocus={true}
             name="email"
             label="Name"
             type="text"
-            placeholder="So we can keep in touch"
+            // placeholder="So we can keep in touch"
           />
           <br />
           <label htmlFor="name">Username: </label>
@@ -86,7 +84,6 @@ class Register extends React.Component {
             onChange={this.handleChange}
             className="input"
             value={this.state.username}
-            autoFocus={true}
             name="username"
             label="Name"
             type="text"
@@ -99,15 +96,14 @@ class Register extends React.Component {
             onChange={this.handleChange}
             className="input"
             value={this.state.password}
-            autoFocus={true}
             name="password"
             label="Name"
             type="password"
-            placeholder=""
+            // placeholder="No judgement here"
           />
           <br />
           <button className="text-btn" type="submit">
-            Submit
+            Sign Me Up
           </button>
         </form>
       </div>

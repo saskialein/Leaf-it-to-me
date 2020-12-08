@@ -1,6 +1,6 @@
 import React from 'react'
-// import { NavLink } from 'react-router-dom'
-import { NavHashLink as NavLink } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom'
+// import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { logOff } from 'authenticare/client'
 import { connect } from 'react-redux'
 
@@ -27,12 +27,7 @@ const Nav = (props) => {
         </NavLink>
 
         <IfAuthenticated>
-          <NavLink
-            to="/plants/saved"
-            activeClassName="active"
-            className="nav-link"
-            id="nav-btn-savedPlants"
-          >
+          <NavLink to="/plants/saved" exact activeClassName="active" className="nav-link" id="nav-btn-savedPlants">
             Saved Plants
           </NavLink>
 
@@ -40,35 +35,20 @@ const Nav = (props) => {
         </IfAuthenticated>
 
         <IfNotAuthenticated>
-          <NavLink
-            to="/login"
-            activeClassName="active"
-            className="nav-link"
-            id="btn-sign-in"
-          >
+          <NavLink to="/login" exact activeClassName="active" className="nav-link" id="btn-sign-in">
             Sign In
           </NavLink>
         </IfNotAuthenticated>
 
-        <IfAuthenticated>
-          <NavLink
-            to="/"
-            activeClassName="active"
-            className="nav-link"
-            id="btn-sign-Out"
-            onClick={() => logOutUser(props.dispatch)}
-          >
+          <IfAuthenticated>
+          <a href='#'className="nav-link" id="btn-sign-Out" onClick={() => logOutUser(props.dispatch)}>
             Sign Out
-          </NavLink>
+          </a>
         </IfAuthenticated>
 
         <IfNotAuthenticated>
-          <NavLink
-            to="/register"
-            activeClassName="active"
-            className="nav-link"
-            id="btn-sign-up"
-          >
+        
+          <NavLink to="/sign-up" exact activeClassName="active" className="nav-link" id="btn-sign-up">
             Sign Up
           </NavLink>
         </IfNotAuthenticated>

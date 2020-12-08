@@ -25,6 +25,12 @@ $btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
   //border: 3px solid $btn-hover-color;
 }
 
+.active {
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  line-height: 0.85;
+}
+
 // $btn-with-border:
 #btn-sign-up,
 #btn-sign-in,
