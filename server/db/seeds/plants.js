@@ -14,7 +14,7 @@ exports.seed = function(knex) {
           soil: 'Holds moisture/dense', 
           lvl: 'beginner', 
           notes: 'adaptable but prefers humid, Nutrient rich dense soil that holds moisture', 
-          img: 'https://htense.github.io/images/image1.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/monstera.png'
         },
         {
           id: 2, 
@@ -27,7 +27,7 @@ exports.seed = function(knex) {
           soil: 'Moist, well-draining', 
           lvl: 'intermediate', 
           notes: 'mist regularly', 
-          img: 'https://htense.github.io/images/image2.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/fittonia.png'
         },
         {
           id: 3,
@@ -40,7 +40,7 @@ exports.seed = function(knex) {
           soil: 'Sandy', 
           lvl: 'Beginner', 
           notes: 'light infrequent misting', 
-          img: 'https://htense.github.io/images/image3.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/yucca.png'
         },
         {
           id: 4,
@@ -53,7 +53,7 @@ exports.seed = function(knex) {
           soil: 'Moist, well-draining', 
           lvl: 'Beginner', 
           notes: 'mist frequently, repot annually', 
-          img: 'https://htense.github.io/images/image4.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/peace_lilly.png'
         },
         {
           id: 5,
@@ -66,7 +66,7 @@ exports.seed = function(knex) {
           soil: 'Well-draining', 
           lvl: 'beginner', 
           notes: '', 
-          img: 'https://htense.github.io/images/image5.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/aloe_vera.png'
         },
         {
           id: 6,
@@ -79,7 +79,7 @@ exports.seed = function(knex) {
           soil: 'Well-draining', 
           lvl: 'beginner', 
           notes: 'if in dry environment mist regularly', 
-          img: 'https://htense.github.io/images/image7.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/rubber_plant.png'
         },
         {
           id: 7,
@@ -92,7 +92,7 @@ exports.seed = function(knex) {
           soil: 'Soilless potting mixture', 
           lvl: 'beginner', 
           notes: 'A soilless potting mixture containing organic and inorganic materials instead of soil does wonders for snake plants because they can be prone to rotting. A regular soil mixture will work well too as long as you make sure the mixture is well-drained, free draining soil', 
-          img: 'https://htense.github.io/images/image8.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/snake_plant.png'
         },
         {
           id: 8,
@@ -105,7 +105,7 @@ exports.seed = function(knex) {
           soil: 'Moist, well-draining', 
           lvl: 'Intermediate', 
           notes: 'Like moist environments but not direct misting. Try adding pebbles to a saucer, then add water. Set your ivy on the pebbles and the water will evaporate, raising the humidity around the plant', 
-          img: 'https://htense.github.io/images/image9.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/english_ivy.png'
         },
         {
           id: 9,
@@ -118,7 +118,7 @@ exports.seed = function(knex) {
           soil: 'Moist, well-draining', 
           lvl: 'Intermediate - advanced', 
           notes: 'mist frequently and set on a water-filled pebble tray',
-          img: 'https://htense.github.io/images/image10.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/maidenhair_fern.png'
         },
         {
           id: 10,
@@ -131,7 +131,7 @@ exports.seed = function(knex) {
           soil: 'Well-draining', 
           lvl: 'Beginner', 
           notes: '', 
-          img: 'https://htense.github.io/images/image11.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/string_of_pearls.png'
         },
         {
           id: 11,
@@ -144,7 +144,7 @@ exports.seed = function(knex) {
           soil: 'Well-draining', 
           lvl: 'Beginner', 
           notes: 'to keep moist set pot onto a tray filled with pebbles', 
-          img: 'https://htense.github.io/images/image12.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/madagascar_dragon.png'
         },
         {
           id: 12,
@@ -157,7 +157,7 @@ exports.seed = function(knex) {
           soil: 'none' , 
           lvl: 'Intermediate', 
           notes: 'soak in room temp tap water for 10mins, then gently shake excess water from your plant. Turn it upside down and place it on a towel to dry in a bright space. This is very important! Air plants will quickly rot if they are allowed to stand in excess water for too long without drying. Regular misting is also encouraged', 
-          img: 'https://htense.github.io/images/image13.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/air_plant.png'
         },
         {
           id: 13,
@@ -170,7 +170,7 @@ exports.seed = function(knex) {
           soil: 'Well-draining', 
           lvl: '', 
           notes: '', 
-          img: 'https://htense.github.io/images/image14.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/devils_ivy.png'
         },
         {
           id: 14,
@@ -183,7 +183,7 @@ exports.seed = function(knex) {
           soil: 'Well-draining', 
           lvl: 'Intermediate - Advanced', 
           notes: '', 
-          img: 'https://htense.github.io/images/image15.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/fiddle_leaf.png'
         },
         {
           id: 15,
@@ -196,7 +196,7 @@ exports.seed = function(knex) {
           soil: 'Well-draining', 
           lvl: '', 
           notes: '', 
-          img: 'https://htense.github.io/images/image16.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/zanzibar_gem.png'
         },
         {
           id: 16,
@@ -209,7 +209,7 @@ exports.seed = function(knex) {
           soil: 'well-draining', 
           lvl: 'Beginner', 
           notes: '', 
-          img: 'https://htense.github.io/images/image1.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/succulent.png'
         },
         {
           id: 17,
@@ -222,7 +222,7 @@ exports.seed = function(knex) {
           soil: 'Well-draining', 
           lvl: '', 
           notes: '', 
-          img: 'https://htense.github.io/images/image2.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/sweetheart.png'
         },
         {
           id: 18,
@@ -235,7 +235,7 @@ exports.seed = function(knex) {
           soil: 'Well-draining', 
           lvl: 'Beginner', 
           notes: '', 
-          img: 'https://htense.github.io/images/image3.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/spider_plant.png'
         },
         {
           id: 19,
@@ -248,7 +248,7 @@ exports.seed = function(knex) {
           soil: 'Well-draining', 
           lvl: '', 
           notes: '', 
-          img: 'https://htense.github.io/images/image4.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/pink_bubbles.png'
         },
         {
           id: 20,
@@ -261,7 +261,7 @@ exports.seed = function(knex) {
           soil: 'Moist, well-draining', 
           lvl: '', 
           notes: 'The Silver Lady Fern is an air purifier! She requires high humidity during her growth period', 
-          img: 'https://htense.github.io/images/image5.jpeg'
+          img: 'https://ian-montgomery.github.io/images/Plant-images/silver_lady_fern.png'
         },
       ]);
     });
