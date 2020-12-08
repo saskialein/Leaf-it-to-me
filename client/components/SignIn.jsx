@@ -37,29 +37,33 @@ class SignIn extends React.Component {
       <div>
         <h2>Sign in</h2>
         <form className="form" onSubmit={this.handleSubmit}>
-          <label className="btn" htmlFor="name">
+          <label className="btn" htmlFor="username">
             Username:{" "}
           </label>
           <input
             onChange={this.handleChange}
             name="username"
+            id="username"
             value={this.state.username}
             type="text"
           ></input>
           <br />
-          <label className="btn" htmlFor="name">
+          <label className="btn" htmlFor="password">
             Password:{" "}
           </label>
           <input
             onChange={this.handleChange}
             name="password"
+            id="password"
             value={this.state.password}
             type="password"
           ></input>
           <br />
-          <button className="text-btn" type="submit">
-            Sign in
-          </button>
+          <label htmlFor="sign in button">
+            <button className="text-btn" id="sign in button" type="submit">
+              Sign in
+            </button>
+          </label>
         </form>
       </div>
     );
