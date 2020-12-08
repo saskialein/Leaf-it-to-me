@@ -1,33 +1,161 @@
-
 .form {
-  margin: $temp-margin;
-  padding: $temp-padding;
-  border: 0.5px, solid, $spaceGreyColor;
-  display: inline-block;
-  background-color: $backgroundcolor02;
-  color: $spaceGreyColor;
-  align-content: left;
+  display: flex;
+  background: #f77;
+  justify-content: space-between;
+  .form-fields {
+    background-color: #77f;
+    width: 100%;
+    input {
+      padding-left: 20px;
+    }
+  }
+  
+  .form-field {
+    display: flex;
+    margin-bottom: 8px;
+    .form-Label {
+      width: 150px;
+      line-height: 40px
+    }
+    input, select {
+      width: 100%;
+    }
+  }
 }
 
+.image-upload {
+  width: 300px;
+  background-color: #7f7;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-radius: 250%;
 
- label {
-  margin: $temp-margin, 0px, $temp-margin, 0px;
-  padding: $temp-padding, $temp-padding, $temp-padding, 0px;
-  font-size: x-large;
-  font-weight: bold;
+  .imgUpload-input {
+    border: 3px solid #307256;
+    border-radius: 35px;
+    margin: 10px;
+    width: 80%;
+  }
 }
 
-.input {
-  margin-top: $temp-margin/4;
-  display: block;
-  font-size: 0.025 rem;
-}
+// .form {
+//   margin: $temp-margin;
+//   padding: $temp-padding;
+//   border: 0.5px, solid, $spaceGreyColor;
+//   display: flex;
+//   flex-wrap: wrap;
+//   background-color: $backgroundcolor02;
+//   color: $spaceGreyColor;
+//   align-content: left;
 
+//       .form-fields {
+//       }
+//       .form-field {
+//         display: flex;
+//         margin-bottom: 8px;
+//         label {
+//           width: 150px;
+//           line-height: 40px
+//         }
+//         input, select {
+//           width: 100%;
+//         }
+//       }
+//       .label-input-relations {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: flex-start;
+//         margin-bottom: 40px;
 
-.submitButton {
-  margin-top: $temp-margin/2;
-  padding: $temp-padding/2.5;
-  font-weight: bold;
-  border: 1.5px solid;
-  border-radius: 15px 15px;
-}
+//         .input {
+//         margin-top: $temp-margin/4;
+//         display: block;
+//         font-size: 0.025 rem;
+//         line-height: 50px;
+//         padding-left: 20px;
+//         font-size: 18px;
+//       }
+//         .label {
+//         margin-left: 20px;
+//         margin-top: 10px;
+//         margin: $temp-margin, 0px, $temp-margin, 0px;
+//         padding: $temp-padding, $temp-padding, $temp-padding, 0px;
+//         font-size: x-large;
+//       }
+//     }
+//       .dropDown-wrapper {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: flex-start;
+
+//           .label-input-water{
+            
+//           }
+//           .label-input-light {
+
+//           }
+//           .label-input-temp {
+
+//           }
+//           .label-input-humidity {
+
+//           }
+
+//         .label {
+//           margin-left: 20px;
+//           margin-top: 10px;
+//           margin: $temp-margin, 0px, $temp-margin, 0px;
+//           padding: $temp-padding, $temp-padding, $temp-padding, 0px;
+//           font-size: x-large;
+//         }
+        
+//         .select {
+//         margin: 10px;
+//         margin-right: 20vw;
+//         margin-left: 250px;
+//         padding: 5px;
+//         font-size: x-large;
+//        }
+//       }
+      
+//       .submitButton {
+//        margin-top: $temp-margin/2;
+//        margin-left: 550px;
+//        padding: $temp-padding/2.5;
+//        font-weight: bold;
+//        border: 1.5px solid;
+//        border-radius: 15px 15px;
+//       }
+//     }
+// //     .image-upload {
+// //       display: flex;
+// //       justify-content: flex-end;
+// //       flex-wrap: wrap-reverse;
+// //       // X: 960px;
+// //       // Y: 425px;
+// //       // width: 357px;
+// //       // height: 357px;
+// //       // X Constraint: Left;
+// //       // Y Constraint: Top;
+// //       // Stroke: Solid
+// //       // #086972;
+// //       // Align: Inside;
+// //       // Width: 1px;
+      
+// //       .addImage {
+// //         width: 181px;
+// //         height: 104px;
+// //         left: 1056px;
+// //         top: 543px;
+      
+// //         font-family: Lora;
+// //         font-style: normal;
+// //         font-weight: bold;
+// //         font-size: 48px;
+// //         line-height: 61px;
+// //         text-align: center;
+      
+// //         color: #086972;
+// //       }
+// // }
+// im
