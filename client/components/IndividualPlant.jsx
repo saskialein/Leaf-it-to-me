@@ -46,7 +46,7 @@ const IndividualPlant = (props) => {
                       <li><i className="far fa-comment-alt style"/> {plant.notes}</li>
                     </ul>   
                     <div className="navy">         
-                      <Link to={'/'} onClick={handleClick} className="navy-link">Add Plant to profile</Link>
+                      <Link onClick={handleClick} className="navy-link">Add Plant to profile</Link>
                     </div> 
                   </div> 
                 </div>
