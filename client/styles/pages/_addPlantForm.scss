@@ -7,27 +7,69 @@
   background-color: $backgroundcolor02;
   color: $spaceGreyColor;
   align-content: left;
-}
 
+      .label-input-relations {
 
- label {
-  margin: $temp-margin, 0px, $temp-margin, 0px;
-  padding: $temp-padding, $temp-padding, $temp-padding, 0px;
-  font-size: x-large;
-  font-weight: bold;
-}
+        .input {
+        margin-top: $temp-margin/4;
+        display: block;
+        font-size: 0.025 rem;
+        line-height: 50px;
+        padding-left: 20px;
+      }
+        .label {
+        margin: $temp-margin, 0px, $temp-margin, 0px;
+        padding: $temp-padding, $temp-padding, $temp-padding, 0px;
+        font-size: x-large;
+        font-weight: bold;
+      }
+    }
+      .dropDown-wrapper {
 
-.input {
-  margin-top: $temp-margin/4;
-  display: block;
-  font-size: 0.025 rem;
-}
-
-
-.submitButton {
-  margin-top: $temp-margin/2;
-  padding: $temp-padding/2.5;
-  font-weight: bold;
-  border: 1.5px solid;
-  border-radius: 15px 15px;
+        .select {
+        margin: 10px;
+        margin-right: 20vw;
+        padding: 5px;
+        font-size: x-large;
+        font-weight: bold;
+       }
+      }
+      
+      .submitButton {
+       margin-top: $temp-margin/2;
+       margin-left: 550px;
+       padding: $temp-padding/2.5;
+       font-weight: bold;
+       border: 1.5px solid;
+       border-radius: 15px 15px;
+      }
+    }
+    .addImage-Holder {
+      // X: 960px;
+      // Y: 425px;
+      // W: 357px;
+      // H: 357px;
+      // X Constraint: Left;
+      // Y Constraint: Top;
+    //   Stroke: Solid
+    //   #086972;
+    //   Align: Inside;
+    //   Width: 1px;
+    //   
+      .addImage {
+        position: absolute;
+        width: 181px;
+        height: 104px;
+        left: 1056px;
+        top: 543px;
+      
+        font-family: Lora;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 61px;
+        text-align: center;
+      
+        color: #086972;
+      }
 }
