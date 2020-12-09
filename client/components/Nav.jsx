@@ -27,15 +27,6 @@ const Nav = (props) => {
         </NavLink>
 
         <IfAuthenticated>
-          <NavLink
-            to="/plants/saved"
-            exact
-            activeClassName="active"
-            className="nav-link"
-            id="nav-btn-savedPlants"
-          >
-            Saved Plants
-          </NavLink>
           <a
           //make sure this href is a slash!
             href="/"
@@ -45,6 +36,15 @@ const Nav = (props) => {
           >
             Sign Out
           </a>
+          <NavLink
+            to="/plants/saved"
+            exact
+            activeClassName="active"
+            className="nav-link"
+            id="nav-btn-savedPlants"
+          >
+            Saved Plants
+          </NavLink>
           <ModalPopUp />
         </IfAuthenticated>
 
