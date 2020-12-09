@@ -20,15 +20,18 @@ class Search extends React.Component {
   render() {
  
     return (
-        <input
-          onChange={this.handleChange}
-          className="input"
-          value={this.state.searchTerm}
-          name="searchTerm"
-          type="text"
-          id="search"
-          placeholder="Search for your plant..."
-        />
+      <div>
+        <label htmlFor="search-bar" className="hidden">Search</label>
+          <input
+            onChange={this.handleChange}
+            className="input"
+            value={this.state.searchTerm}
+            name="searchTerm"
+            type="text"
+            id="search-bar"
+            placeholder="Search for your plant..."
+          />
+        </div>
     );
   }
 }

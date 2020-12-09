@@ -13,7 +13,7 @@ const Home = (props) => {
     <>
                 <div className="home">
 				<div className="logo-wrapper">
-					<img className="logo-leaf-it-to-me" src="./images/LeafItToMe_Logo.svg" />
+					<img className="logo-leaf-it-to-me" src="./images/LeafItToMe_Logo.svg" alt="leaf it to me logo"/>
 					<IfNotAuthenticated>
           <div className="p-wrapper">
 						<p>Helping house plant owners make their plants feel like bliss. Leaf it to us.</p>
@@ -33,7 +33,7 @@ const Home = (props) => {
 
 
 				<div className="main-img">
-					<img className='main-image'src="./images/potted-plant.svg" alt="" id="registerWelcomePage" />
+					<img className='main-image'src="./images/potted-plant.svg"alt="image of a tall, potted plant"id="registerWelcomePage" />
 				</div>
 				</div>
 

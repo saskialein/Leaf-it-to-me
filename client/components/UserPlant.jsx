@@ -14,7 +14,7 @@ const UserPlant = (props) => {
         <div className={`user-plant-main ${rowClass}`}>
 
           <div className='plant-div'>
-            <img className='user-plant-image' src={plant.img}/>
+            <img className='user-plant-image' src={plant.img} alt={`image of a ${plant.common_name}`}/>
           </div>
 
             <div className='plant-deets-block'>
@@ -30,7 +30,7 @@ const UserPlant = (props) => {
                 </ul>
               </div>
                 <div className='delete-div'>
-                  <a className='user-delete' onClick={() => props.dispatch(removePlant(plant.id))} ><span className="tooltip-text-trash">Remove</span><i className="fas fa-trash"></i></a>
+                  <a className='user-delete' onClick={() => props.dispatch(removePlant(plant.id))} id="delete" ><span className="tooltip-text-trash">Remove</span><i className="fas fa-trash"></i></a>
                 </div>   
             </div>
         </div>

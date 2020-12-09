@@ -59,25 +59,27 @@ class AddPlantForm extends React.Component {
 							<div className="dropdown-wrapper">
 								<div className="form-fields">
 									<div className="form-field">
-										<label className="label">Common Name</label>
+										<label className="label" htmlFor="common-name">Common Name</label>
 										<input
 											onChange={this.handleChange}
 											className="input-text"
 											value={this.state.common_name}
 											name="common_name"
 											type="text"
-											placeholder="Enter common name"
+                      placeholder="Enter common name"
+                      id="common-name"
 										/>
 									</div>
 
 									<div className="form-field">
-										<label className="label">Water</label>
+										<label className="label" htmlFor="water">Water</label>
 										<select
 											onChange={this.handleChange}
 											className="select"
 											value={this.state.water}
 											name="water"
-											type="text"
+                      type="text"
+                      id="water"
 										>
 											<option value="">Select watering option</option>
 											<option value="Daily">Daily</option>
@@ -92,13 +94,14 @@ class AddPlantForm extends React.Component {
 										</select>
 									</div>
 									<div className="form-field">
-										<label className="label">Light</label>
+										<label className="label" htmlFor="light">Light</label>
 										<select
 											onChange={this.handleChange}
 											className="select"
 											value={this.state.light}
 											name="light"
-											type="text"
+                      type="text"
+                      id="light"
 										>
 											<option value="">Select light option</option>
 											<option value="Prefers shade">Prefers shade</option>
@@ -110,13 +113,14 @@ class AddPlantForm extends React.Component {
 										</select>
 									</div>
 									<div className="form-field">
-										<label className="label">Temperature</label>
+										<label className="label" htmlFor="temperature">Temperature</label>
 										<select
 											onChange={this.handleChange}
 											className="select"
 											value={this.state.temp}
 											name="temp"
-											type="text"
+                      type="text"
+                      id="temperature"
 										>
 											<option value="">Select temp option</option>
 											<option value="Cool to warm">Cool to warm</option>
@@ -127,13 +131,14 @@ class AddPlantForm extends React.Component {
 										</select>
 									</div>
 									<div className="form-field">
-										<label className="label">Humidity</label>
+										<label className="label" htmlFor="humidity">Humidity</label>
 										<select
 											onChange={this.handleChange}
 											className="select"
 											value={this.state.humidity}
 											name="humidity"
-											type="text"
+                      type="text"
+                      id="humidity"
 										>
 											<option value="">Select humidity option</option>
 											<option value="Low">Low</option>
@@ -145,13 +150,14 @@ class AddPlantForm extends React.Component {
 										</select>
 									</div>
 									<div className="form-field">
-										<label className="label">Soil</label>
+										<label className="label" htmlFor="soil">Soil</label>
 										<select
 											onChange={this.handleChange}
 											className="select"
 											value={this.state.soil}
 											name="soil"
-											type="text"
+                      type="text"
+                      id="soil"
 										>
 											<option value="">Select soil option</option>
 											<option value="Holds moisture/dense">Holds moisture/dense</option>
@@ -169,21 +175,22 @@ class AddPlantForm extends React.Component {
             
           </textarea> */}
 
-
-								<button className="add-plant-link" type="submit"><i className="fab fa-pagelines style-leaf"></i>
-									Add plant
-								</button>
-
+                <label htmlFor="add-plant-button">
+                  <button className="add-plant-link" type="submit" id="add-plant-button"><i className="fab fa-pagelines style-leaf"></i>
+                    Add plant
+                  </button>
+                </label>
 							</div>
 						</form>
 						<div className="uploadWrapper">
 							<div className="image-upload">
-								<label className="addImage">+ Add Image</label>
+								<label className="addImage" htmlFor="add-image">+ Add Image</label>
 								<input
 									onChange={this.onChangeFile}
 									className="imgUpload-input"
 									name="img"
-									type="file"
+                  type="file"
+                  id="add-image"
 								/>
 							</div>
 						</div>

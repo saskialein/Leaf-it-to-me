@@ -55,11 +55,12 @@ class Register extends React.Component {
               name="name"
               label="Name"
               type="text"
+              id="name"
               />
           </div>
           <br />
           <div className="section">
-            <label htmlFor="name">
+            <label htmlFor="email">
               Email:
             </label>
             <br/>
@@ -70,11 +71,12 @@ class Register extends React.Component {
               name="email"
               label="Name"
               type="text"
+              id="email"
               />
           </div>
           <br />
           <div className="section">
-            <label htmlFor="name">
+            <label htmlFor="username">
                 Username:
             </label>
             <br/>
@@ -86,11 +88,12 @@ class Register extends React.Component {
               label="Name"
               type="text"
               alt="Please enter your username here"
+              id="username"
               />
           </div>
           <br />
           <div className="section">
-            <label htmlFor="name">
+            <label htmlFor="password">
               Password:
             </label>
             <br/>
@@ -101,10 +104,12 @@ class Register extends React.Component {
               name="password"
               label="Name"
               type="password"
+              id="password"
               />
           </div>
           <br />
-          <button className="navy-link submit-button" type="submit">
+          <label htmlFor="sign-up-button"></label>
+          <button id="sign-up-button" className="navy-link submit-button" type="submit">
             Sign Me Up
           </button>
         </form>
