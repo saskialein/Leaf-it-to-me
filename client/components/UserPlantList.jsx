@@ -22,13 +22,9 @@ class UserPlantList extends React.Component {
       <IfAuthenticated>
         {this.props.auth.user && <h3>Hey {this.props.auth.user.name}, here's your saved plants</h3>}
       </IfAuthenticated>
-        <Search />
-      
-      
-      {/* <h1>My happy plants</h1>
         <div className="userPlantSearch">
           <Search />
-        </div> */}
+        </div>
         <div className="plant-wrapper">
           {usersFilteredArray.map((userPlant, index) => <UserPlant key={userPlant.id} plant={userPlant} isOdd={index % 2 == 1} />)}
         </div>

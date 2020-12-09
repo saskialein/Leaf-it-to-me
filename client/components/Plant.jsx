@@ -16,7 +16,7 @@ const Plant = (props) => {
   props.dispatch(addPlantToReduxandDb(plantObject))
   props.history.push('/plants/saved')
 } 
-
+// Emily's button disappearing functionality:
 // const userPlants = props.usersPlants
 // const found = userPlants.find(userPlant =>  userPlant.plant_id == plant.id)
   
