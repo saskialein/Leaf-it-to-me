@@ -6,6 +6,23 @@ import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 Modal.setAppElement('#app');
 
+const customStyles = {
+  content: {
+    top: '30%',
+    left: '25%',
+    right: 'auto',
+    bottom : 'auto',
+    marginRight : '-50%',
+    transform: 'translate(-50%; -50%)',
+    backgroundColor: '#51c08f',
+    borderColor: '#307256',
+    borderWidth: '2px',
+    borderRadius: '20px',
+    padding: '60px 40px',
+    fontWeight: 'bolder',
+  }
+}
+
 class ModalPopUp extends React.Component {
 
   state = {
@@ -29,12 +46,12 @@ class ModalPopUp extends React.Component {
     <Modal 
           isOpen={this.state.showModal}
           contentLabel="Option to add existing plant or create new plant"
-          className="modal-button-extra"
+          style={customStyles}
         >
         
-          <NavLink to={'/#search'} className="nav-link" onClick={this.handleCloseModal}>Add existing</NavLink>
-          <NavLink to={'/plants/new'} className="nav-link" onClick={this.handleCloseModal}>Add new</NavLink>
-          <NavLink to={'/plants/saved'} className="nav-link" onClick={this.handleCloseModal}>Back to profile</NavLink>
+          <NavLink to={'/#search'} className="navy-link" onClick={this.handleCloseModal}>Add existing</NavLink>
+          <NavLink to={'/plants/new'} className="navy-link" onClick={this.handleCloseModal}>Add new</NavLink>
+          <NavLink to={'/plants/saved'} className="navy-link" onClick={this.handleCloseModal}>Back to profile</NavLink>
     </Modal>
     </>
     )
