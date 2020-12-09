@@ -8,7 +8,8 @@ $btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
   font-family: $font-stack;
   background-color: $background-color;
   justify-content: space-between;
-
+   height: 11.5vh;
+   
   //STICKY NAV BAR ATTEMP
   //position: fixed; /* Set the navbar to fixed position */
   //top: 0; /* Position the navbar at the top of the page */
@@ -24,11 +25,21 @@ $btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
   text-decoration: none;
   justify-content: space-between;
   text-align: center;
+
+  //SIGN IN/ SIGN OUT **** COME BACK TO TRIPLE CHECK !!!
+  border-radius: 100px;
+  border: 2.5px solid $text-color;
+  padding: $btn-padding;
+  float: right;
+  justify-content: space-between;
 }
 
 .L-Logo {
-  width: 2vw;
+  margin: $nav-margin;
+  width: 2.5vh;
+  float: left;
 }
+
 .nav-link:hover {
   color: $btn-hover-color; // CHANGED FOR NOW DUE TO STICKY NAV BAR
   color: $text-color;
@@ -37,22 +48,7 @@ $btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
 
 .active {
   display: inline-block;
-  line-height: 0.85;
-}
-
-//btn-with-border
-#btn-sign-up,
-#btn-sign-in,
-#btn-sign-out {
-  border-radius: 100px;
-  border: 2.5px solid $text-color;
-  padding: $btn-padding;
-}
-
-#btn-sign-in,
-#btn-sign-up {
-  float: right;
-  justify-content: space-between;
+  //line-height: 0.85;
 }
 
 // to jess love from hortense for the circles if you want them

@@ -1,9 +1,9 @@
 //LEARNING SASS AS I GO, BARE WITH ME - JESS
 .home {
-  height: 75vw;
+  height: 100vh;
   background-color: $background-color;
   display: block;
-  padding: 2.5vw 0px 0px 2.5vw;
+  padding: 5vh 0px 0px 2.5vh;
   font-weight: bold;
 
   .homeBanner {
@@ -13,12 +13,12 @@
     //H2 AND H3 WILL BE TURNED INTO AN SVG
     h2 {
       font-size: $font-large * 2;
-      margin-left: 6vw; //120px
+      margin-left: 6vh; //120px
     }
 
     h3 {
       font-size: $font-medium * 2;
-      margin-left: 6vw; //120px
+      margin-left: 6vh; //120px
     }
 
     P {
@@ -26,21 +26,17 @@
       margin-left: $temp-margin * 3;
       color: $text-color;
     }
-   .btn-sign-up-on-home{
-      #btn-sign-up {
-      text-align: center;
-      font-weight: bolder;
-      font-size: xx-large;
-      font-family: $font-stack;
-      background-color: $background-color;
-      margin: $nav-margin;
+
+    .logo-leaf-it-to-me {
+      width: 70vh;
+      margin-left: $temp-margin * 3;
     }
-   }
   }
 }
 
+//JESSE PLANT IMAGE ON THE HOME PAGE
 .main-img {
   //margin-top: 4vw;
   float: right;
-  height: 45vw;
+  height: 40vw;
 }

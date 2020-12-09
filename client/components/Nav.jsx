@@ -22,8 +22,8 @@ const Nav = (props) => {
     <>
       <div className="nav">
         {/* <h1 className="">Leaf it to me</h1> */}
-        <NavLink to="/" exact activeClassName="active" className="nav-link">
-          <img className="L-Logo" src="./images/LeafItToMe_L_Logo.svg" />
+        <NavLink to="/" exact activeClassName="active" className="L-Logo">
+          <img src="./images/LeafItToMe_L_Logo.svg" />
         </NavLink>
 
         <IfAuthenticated>
