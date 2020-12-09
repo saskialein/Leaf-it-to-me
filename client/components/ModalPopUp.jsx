@@ -39,7 +39,7 @@ class ModalPopUp extends React.Component {
 	render() {
 		return (
     <>
-    <a href='#'className="nav-link" exact activeClassName="active"
+    <a href='#'className="nav-link" exact="true" activeclassname="active"
             onClick={this.handleOpenModal}>Add Plant
      </a>
     <Modal 

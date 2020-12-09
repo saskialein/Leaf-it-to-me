@@ -12,9 +12,21 @@ const Plant = (props) => {
       plant_id: plant.id,
       name: 'emily'
     }
+
   props.dispatch(addPlantToReduxandDb(plantObject))
-  props.history.push('/plants/saved')
+  // props.history.push('/plants/saved')
 } 
+
+//  console.log(plantObject)
+const userPlants = props.usersPlants
+// console.log(plant)
+const found = userPlants.find(userPlant =>  userPlant.plant_id == plant.id)
+console.log(plant.common_name, found)
+  // console.log('this is the plants', props.plants)
+  // console.log('this is the userPlants', userPlants)
+  // // const usersPlants = props.userPlants 
+  // console.log(usersPlants)
+
   
   return (
     <div>
@@ -30,7 +42,10 @@ const Plant = (props) => {
           <Link to={`/plants/${plant.common_name}`}>More info</Link>
 
           <IfAuthenticated>
-          <button onClick={handleClick}>Add to my profile</button>
+
+          {!found && <button onClick={handleClick}>Add to my profile</button>}
+
+          {!found ? 'button' : 'tick'}
           </IfAuthenticated>
         </div>
         </div>
@@ -43,6 +58,7 @@ const Plant = (props) => {
 function mapStateToProps(globalState) {
   return {
     plants: globalState.plants,
+    usersPlants: globalState.usersPlants
   }
 }
 export default connect(mapStateToProps)(Plant)
