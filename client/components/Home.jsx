@@ -6,13 +6,15 @@ const Home = () => {
   return (
     <>
       <div className="home">
-        <img className="main-img" src="./images/potted-plant.svg" />
-        <div className="homeBanner">
+        <div className="logo-wrapper">
           <img
             className="logo-leaf-it-to-me"
             src="./images/LeafItToMe_Logo.svg"
           />
           <p>Leaf it to us</p>
+        </div>
+        <div className="main-img">
+          <img src="./images/potted-plant.svg" />
         </div>
       </div>
       <div>
