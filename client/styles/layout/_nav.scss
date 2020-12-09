@@ -1,15 +1,16 @@
-$nav-margin: 2vw; //homepage
-$btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
+$nav-margin: 1.5vw; //homepage
+$btn-padding: 1vw ; //universal buttons?
 
 .nav {
   box-sizing: border-box;
   font-weight: bolder;
-  font-size: xx-large;
+  font-size: x-large;
   font-family: $font-stack;
   background-color: $background-color;
   justify-content: space-between;
-   height: 11.5vh;
-   
+  height: 14vh;
+  width: 100%;
+
   //STICKY NAV BAR ATTEMP
   //position: fixed; /* Set the navbar to fixed position */
   //top: 0; /* Position the navbar at the top of the page */
@@ -19,6 +20,8 @@ $btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
   // margin-top: 1px;
   // margin-left: 5px;
   margin: $nav-margin;
+  padding: $btn-padding;
+
   color: $text-color;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -29,9 +32,7 @@ $btn-padding: 1vw 1.3vw 1vw 1.3vw; //universal buttons?
   //SIGN IN/ SIGN OUT **** COME BACK TO TRIPLE CHECK !!!
   border-radius: 100px;
   border: 2.5px solid $text-color;
-  padding: $btn-padding;
   float: right;
-  justify-content: space-between;
 }
 
 .L-Logo {

@@ -15,7 +15,6 @@
     text-transform: uppercase;
     text-decoration: none;
     padding: 0.5vh;
-    //display: block;
     //flex-direction: row;
     justify-content: space-between;
     text-align: center;
@@ -41,7 +40,7 @@
     margin-right : '-50%';
     transform: 'translate(-50%; -50%)';
     background-color: '#51c08f';
-    border-color: '#307256';
+    border-color: $text-color;
     border-width: '2px';
     border-radius: '20px';
     padding: '60px 40px';

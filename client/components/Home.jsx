@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import PlantList from './PlantList.jsx'
 import { connect } from 'react-redux'
-import { NavHashLink as NavLink } from 'react-router-hash-link'
+
 
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
@@ -14,13 +14,7 @@ const Home = (props) => {
   return (
     <>
       <div className="home">
-        <img
-          className="main-img"
-          src="./images/potted-plant-transparent-background-5.png"
-          alt=""
-          id ="registerWelcomePage"
-        />
-        <div className="homeBanner">
+        <div className="logo-wrapper">
           <img
             className="logo-leaf-it-to-me"
             src="./images/LeafItToMe_Logo.svg"
@@ -38,6 +32,11 @@ const Home = (props) => {
         {props.auth.user && <h3>Kia ora {props.auth.user.name}, to add new plants to your profile browse through our jungle database below or hit the searchbar!</h3>}
 
           </IfAuthenticated>
+        </div>
+        <div className="main-img">
+          <img src="./images/potted-plant-transparent-background-5.png"
+          alt=""
+          id ="registerWelcomePage" />
         </div>
       </div>
       <div>
