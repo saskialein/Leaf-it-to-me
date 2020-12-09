@@ -35,7 +35,7 @@ class SignIn extends React.Component {
   render() {
     return (
       <div className="form-wrapper">
-        <h2 >Sign in</h2>
+        <h2 >Sign In</h2>
         <hr/>
         <div className="">
           <form className="signin-form" onSubmit={this.handleSubmit}>
@@ -47,10 +47,11 @@ class SignIn extends React.Component {
           <input
             onChange={this.handleChange}
             name="username"
-            value={this.state.username}
+                value={this.state.username}
+                autoFocus={true}
               type="text"
               placeholder="Enter username here..."
-              ></input>
+              />
             </div>
             <br />
             <div className="section">
@@ -64,11 +65,11 @@ class SignIn extends React.Component {
             value={this.state.password}
             type="password"
             placeholder="Enter password here..."
-              ></input>
+              />
             </div>
            
-          <Link className="navy-link" id="submit-button" type="submit">
-            Sign in
+          <Link className="navy-link submit-button" type="submit">
+            Sign me in
           </Link>
           
           </form>
