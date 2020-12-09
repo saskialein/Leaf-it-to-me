@@ -17,16 +17,8 @@ const Plant = (props) => {
   // props.history.push('/plants/saved')
 } 
 
-//  console.log(plantObject)
 const userPlants = props.usersPlants
-// console.log(plant)
 const found = userPlants.find(userPlant =>  userPlant.plant_id == plant.id)
-console.log(plant.common_name, found)
-  // console.log('this is the plants', props.plants)
-  // console.log('this is the userPlants', userPlants)
-  // // const usersPlants = props.userPlants 
-  // console.log(usersPlants)
-
   
   return (
     <div>
@@ -45,7 +37,7 @@ console.log(plant.common_name, found)
 
           {!found && <button onClick={handleClick}>Add to my profile</button>}
 
-          {!found ? 'button' : 'tick'}
+          {/* {!found ? 'button' : 'tick'} */}
           </IfAuthenticated>
         </div>
         </div>
