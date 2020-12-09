@@ -106,8 +106,8 @@ class Register extends React.Component {
             // placeholder="No judgement here"
           />
           <br />
-          <label htmlFor="sign me up button">
-            <button className="text-btn" type="submit" id="sign me up button">
+          <label htmlFor="sign-me-up-button">
+            <button className="text-btn" type="submit" id="sign-me-up-button">
               Sign Me Up
             </button>
           </label>

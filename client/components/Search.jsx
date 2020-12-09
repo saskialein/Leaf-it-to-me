@@ -21,13 +21,13 @@ class Search extends React.Component {
  
     return (
       <div>
-        <label htmlFor="search bar"></label>
+        <label htmlFor="search-bar" className="hidden">Search</label>
         <input
           onChange={this.handleChange}
           className="input"
           value={this.state.searchTerm}
           name="searchTerm"
-          id="search bar"
+          id="search-bar"
           type="text"
           placeholder="Search for your plant..."
         />

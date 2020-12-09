@@ -59,8 +59,8 @@ class SignIn extends React.Component {
             type="password"
           ></input>
           <br />
-          <label htmlFor="sign in button">
-            <button className="text-btn" id="sign in button" type="submit">
+          <label htmlFor="sign-in-button">
+            <button className="text-btn" id="sign-in-button" type="submit">
               Sign in
             </button>
           </label>
