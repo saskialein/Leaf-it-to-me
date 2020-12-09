@@ -14,11 +14,11 @@ const Plant = (props) => {
     }
 
   props.dispatch(addPlantToReduxandDb(plantObject))
-  // props.history.push('/plants/saved')
+  props.history.push('/plants/saved')
 } 
 
-const userPlants = props.usersPlants
-const found = userPlants.find(userPlant =>  userPlant.plant_id == plant.id)
+// const userPlants = props.usersPlants
+// const found = userPlants.find(userPlant =>  userPlant.plant_id == plant.id)
   
   return (
     <div>
@@ -35,7 +35,9 @@ const found = userPlants.find(userPlant =>  userPlant.plant_id == plant.id)
 
           <IfAuthenticated>
 
-          {!found && <button onClick={handleClick}>Add to my profile</button>}
+          <button onClick={handleClick}>Add to my profile</button>
+
+          {/* {!found && <button onClick={handleClick}>Add to my profile</button>} */}
 
           {/* {!found ? 'button' : 'tick'} */}
           </IfAuthenticated>
