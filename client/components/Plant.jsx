@@ -31,11 +31,11 @@ const Plant = (props) => {
 
         </div>
         <div className='button-plate'>
-          <Link to={`/plants/${plant.common_name}`} className="navy-link" id="button-more-info">More info</Link>
+          <Link to={`/plants/${plant.common_name}`} className="butties" id="button-more-info">More info</Link>
 
           <IfAuthenticated>
 
-          <Link to={'/plants/saved'} onClick={handleClick} className="navy-link"><i className="fab fa-pagelines style-leaf"></i>Add to my profile</Link>
+          <Link to={'/plants/saved'} onClick={handleClick} className="butties"><i className="fab fa-pagelines style-leaf"></i>Add to my profile</Link>
 
           {/* {!found && <button onClick={handleClick}>Add to my profile</button>} */}
 
