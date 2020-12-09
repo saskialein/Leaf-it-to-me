@@ -18,14 +18,15 @@ const Home = (props) => {
           <img
             className="logo-leaf-it-to-me"
             src="./images/LeafItToMe_Logo.svg"
+            alt="leaf it to me logo"
           />
 
           <IfNotAuthenticated>
 
           <p>
-            Helping house plant owners make their plants feel like bliss. Leaf
-            it to us.
-          </p>
+              Helping house plant owners make their plants feel like bliss. Leaf
+              it to us.
+            </p>
           </IfNotAuthenticated>
          
           <IfAuthenticated>
@@ -35,7 +36,7 @@ const Home = (props) => {
         </div>
         <div className="main-img">
           <img src="./images/potted-plant-transparent-background-5.png"
-          alt=""
+          alt="image of a tall, potted plant"
           id ="registerWelcomePage" />
         </div>
       </div>

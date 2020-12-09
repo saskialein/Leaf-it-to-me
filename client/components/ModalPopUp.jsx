@@ -49,9 +49,9 @@ class ModalPopUp extends React.Component {
           style={customStyles}
         >
         
-          <NavLink to={'/#search'} className="navy-link" onClick={this.handleCloseModal}>Add existing</NavLink>
-          <NavLink to={'/plants/new'} className="navy-link" onClick={this.handleCloseModal}>Add new</NavLink>
-          <NavLink to={'/plants/saved'} className="navy-link" onClick={this.handleCloseModal}>Back to profile</NavLink>
+          <NavLink to={'/#search'} className="navy-link" onClick={this.handleCloseModal} id="link-to-add-existing-plant" >Add existing</NavLink>
+          <NavLink to={'/plants/new'} className="navy-link" onClick={this.handleCloseModal} id="link-to-add-new-plant" >Add new</NavLink>
+          <NavLink to={'/plants/saved'} className="navy-link" onClick={this.handleCloseModal} id="link-back-to-profile" >Back to profile</NavLink>
     </Modal>
     </>
     )

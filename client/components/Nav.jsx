@@ -23,7 +23,7 @@ const Nav = (props) => {
       <div className="nav">
         {/* <h1 className="">Leaf it to me</h1> */}
         <NavLink to="/" exact activeClassName="active" className="L-Logo">
-          <img src="./images/LeafItToMe_L_Logo.svg" />
+          <img src="./images/LeafItToMe_L_Logo.svg" alt="leaf it to me logo, link to home" id="home-link"/>
         </NavLink>
 
         <IfAuthenticated>
@@ -32,7 +32,7 @@ const Nav = (props) => {
             exact
             activeClassName="active"
             className="nav-link"
-            id="nav-btn-savedPlants"
+            id="saved-plants"
           >
             Saved Plants
           </NavLink>
@@ -40,7 +40,7 @@ const Nav = (props) => {
           //make sure this href is a slash!
             href="/"
             className="nav-link"
-            id="btn-sign-Out"
+            id="sign-out"
             onClick={() => logOutUser(props.dispatch)}
           >
             Sign Out
@@ -54,7 +54,7 @@ const Nav = (props) => {
             exact
             activeClassName="active"
             className="nav-link"
-            id="btn-sign-in"
+            id="sign-in"
           >
             Sign In
           </NavLink>
@@ -63,7 +63,7 @@ const Nav = (props) => {
             exact
             activeClassName="active"
             className="nav-link"
-            id="btn-sign-up"
+            id="sign-up"
           >
             Sign Up
           </NavLink>

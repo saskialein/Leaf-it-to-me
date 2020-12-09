@@ -24,18 +24,19 @@ const Plant = (props) => {
     <div>
       <div className='each-smallPlant'>
       <div className='smallPlant-picture'>
-          <img className='smallPlant-picture' src= {plant.img}/>
+          <img className='smallPlant-picture' src= {plant.img} alt={`image of a ${plant.common_name}`}/>
         <div className='smallPlant-name-plate'>
           <p className='name'>{plant.common_name}</p>
           <p className='species'>{plant.species_name}</p>
 
         </div>
         <div className='button-plate'>
-          <Link to={`/plants/${plant.common_name}`} className="navy-link" id="button-more-info">More info</Link>
+          <Link to={`/plants/${plant.common_name}`} className="navy-link" id={`more-info-${plant.common_name}`}>More info</Link>
 
           <IfAuthenticated>
 
-          <Link to={'/plants/saved'} onClick={handleClick} className="navy-link"><i className="fab fa-pagelines style-leaf"></i>Add to my profile</Link>
+          <Link to={'/plants/saved'} onClick={handleClick}  id="add-plant-to-profile"
+          className="navy-link"><i className="fab fa-pagelines style-leaf"></i>Add to my profile</Link>
 
           {/* {!found && <button onClick={handleClick}>Add to my profile</button>} */}
 

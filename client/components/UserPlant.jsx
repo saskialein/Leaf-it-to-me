@@ -12,7 +12,7 @@ const UserPlant = (props) => {
     <>
       <div key={plant.id}>
         <div className={`user-plant-main ${rowClass}`}>
-          <img className='user-plant-image' src={plant.img}/>
+          <img className='user-plant-image' src={plant.img} alt={`image of a ${plant.common_name}`}/>
             <div className='plant-deets-block'>
               <div className='deets-second-block'>
                 <p className="user-offical-name">{plant.species_name}</p>
@@ -27,7 +27,8 @@ const UserPlant = (props) => {
                 </ul>
                 </div>
                 <div className='delete-div'>
-              <a className='user-delete' onClick={() => props.dispatch(removePlant(plant.id))} ><i className="fas fa-trash"></i></a>
+                  <label htmlFor="delete"></label>
+              <a id="delete" className='user-delete' onClick={() => props.dispatch(removePlant(plant.id))} ><i className="fas fa-trash"></i></a>
               </div>   
             </div>
 

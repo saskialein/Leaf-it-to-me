@@ -39,7 +39,7 @@ const IndividualPlant = (props) => {
                 </div>
 
                 <div className="careDetailWrapper">
-                  <img className="individual-plant-image" src= {plant.img}/>
+                  <img className="individual-plant-image" src= {plant.img} alt={`image of a ${plant.common_name}`}/>
                   <div className="careDetail"> 
                     <ul className="individ-plant-details">         
                     <li>

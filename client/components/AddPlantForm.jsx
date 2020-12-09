@@ -54,13 +54,13 @@ class AddPlantForm extends React.Component {
           <div className="dropdown-wrapper">
             <div className="form-fields">
               <div className="form-field">
-                <label className='label'>Common Name</label>
-                <input onChange={this.handleChange} className='input' value={this.state.common_name} name="common_name" type="text" placeholder="Enter common name" />
+                <label className='label' htmlFor="common-name">Common Name</label>
+                <input onChange={this.handleChange} className='input' id="common-name" value={this.state.common_name} name="common_name" type="text" placeholder="Enter common name" />
               </div>
           
               <div className="form-field">
-                <label className='label'>Water</label>
-                <select onChange={this.handleChange} className='select' value={this.state.water}  name="water" type="text">
+                <label className='label' htmlFor="water">Water</label>
+                <select id="water" onChange={this.handleChange} className='select' value={this.state.water}  name="water" type="text">
                   <option value="">Select watering option</option>
                   <option value="Daily">Daily</option>
                   <option value="Once per week">Once per week</option>
@@ -72,8 +72,8 @@ class AddPlantForm extends React.Component {
                 </select>
               </div>
               <div className="form-field">
-                <label className='label'>Light</label>
-                  <select onChange={this.handleChange} className='select' value={this.state.light} name="light" type="text">
+                <label className='label' htmlFor="light">Light</label>
+                  <select id="light" onChange={this.handleChange} className='select' value={this.state.light} name="light" type="text">
                     <option value="">Select light option</option>
                     <option value="Prefers shade">Prefers shade</option>
                     <option value="Filtered medium">Filtered medium</option>
@@ -84,8 +84,8 @@ class AddPlantForm extends React.Component {
                   </select>
               </div>
               <div className="form-field">
-                <label className='label'>Temperature</label>
-                  <select onChange={this.handleChange} className='select' value={this.state.temp} name="temp" type="text">
+                <label className='label' htmlFor="temperature">Temperature</label>
+                  <select id="temperature" onChange={this.handleChange} className='select' value={this.state.temp} name="temp" type="text">
                     <option value="">Select temp option</option>
                     <option value="Cool to warm">Cool to warm</option>
                     <option value="Warm">Warm</option>
@@ -95,8 +95,8 @@ class AddPlantForm extends React.Component {
                   </select>
               </div>
               <div className="form-field">
-                <label className='label'>Humidity</label>
-                  <select onChange={this.handleChange} className='select' value={this.state.humidity} name="humidity" type="text">
+                <label className='label' htmlFor="humidity" >Humidity</label>
+                  <select id="humidity" onChange={this.handleChange} className='select' value={this.state.humidity} name="humidity" type="text">
                     <option value="">Select humidity option</option>
                     <option value="Low">Low</option>
                     <option value="Low to moderate">Low to moderate</option>
@@ -107,8 +107,8 @@ class AddPlantForm extends React.Component {
                   </select>
               </div>
               <div className="form-field">
-                <label className='label'>Soil</label>
-                <select onChange={this.handleChange} className='select' value={this.state.soil} name="soil" type="text">
+                <label className='label' htmlFor="soil" >Soil</label>
+                <select id="soil" onChange={this.handleChange} className='select' value={this.state.soil} name="soil" type="text">
                   <option value="">Select soil option</option>
                   <option value="Holds moisture/dense">Holds moisture/dense</option>
                   <option value="Well draining">Well draining</option>
@@ -124,13 +124,14 @@ class AddPlantForm extends React.Component {
             <textarea onChange={this.handleChange} className='select' value={this.state.notes} name="notes" type="text">
             
           </textarea> */}
-            <button className="submitButton" type="submit">Add plant</button>
+          <label htmlFor="add-plant-button"></label>
+            <button id="add-plant-button" className="submitButton" type="submit">Add plant</button>
           </div>
         </form>
         <div className="uploadWrapper">
         <div className="image-upload">
-          <label className="addImage">+ Add Image</label>
-          <input onChange={this.onChangeFile} className="imgUpload-input" name="img" type="file" />
+          <label htmlFor="add-an-image" className="addImage">+ Add Image</label>
+          <input id="add-an-image" onChange={this.onChangeFile} className="imgUpload-input" name="img" type="file" />
         </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ class SignIn extends React.Component {
         <div className="">
           <form className="signin-form" onSubmit={this.handleSubmit}>
             <div className="section">
-          <label htmlFor="name">
+          <label htmlFor="username">
               Username:
           </label>
             <br/>
@@ -49,12 +49,13 @@ class SignIn extends React.Component {
                 value={this.state.username}
                 autoFocus={true}
               type="text"
+              id="username"
               placeholder="Enter username here..."
               />
             </div>
             <br />
             <div className="section">
-          <label htmlFor="name">
+          <label htmlFor="password">
               Password:
           </label>
             <br/>
@@ -63,11 +64,12 @@ class SignIn extends React.Component {
             name="password"
             value={this.state.password}
             type="password"
+            id="password"
             placeholder="Enter password here..."
               />
             </div>
-           
-          <button className="navy-link submit-button" type="submit">
+          <label htmlFor="sign-me-in-button"></label>
+          <button id="sign-me-in-button" className="navy-link submit-button" type="submit">
             Sign me in
           </button>
           
