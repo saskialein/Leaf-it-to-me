@@ -68,9 +68,9 @@ class SignIn extends React.Component {
               />
             </div>
            
-          <Link className="navy-link submit-button" type="submit">
+          <button className="navy-link submit-button" type="submit">
             Sign me in
-          </Link>
+          </button>
           
           </form>
           </div>
