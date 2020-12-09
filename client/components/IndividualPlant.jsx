@@ -1,4 +1,4 @@
-import React from "react"
+import React,{ useEffect } from "react" 
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { addPlantToReduxandDb } from '../actions/index'
@@ -8,18 +8,23 @@ const IndividualPlant = (props) => {
   const name = props.match.params.name
   const plant = props.plants.find((plant) => plant.common_name == name)
 
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [])
+
   const handleClick = () => {
     const plantObject = {
-        plant_id: plant.id,
-        name: ''
-      }
-      if (isAuthenticated()) {
-        props.dispatch(addPlantToReduxandDb(plantObject))
-        props.history.push("/plants/saved") 
-      } else {
-          props.history.push("/sign-up")
-      }
+      plant_id: plant.id,
+      name: ''
     }
+    if (isAuthenticated()) {
+      props.dispatch(addPlantToReduxandDb(plantObject))
+      props.history.push("/plants/saved") 
+    } else {
+        props.history.push("/sign-up")
+    }
+  }
+  
   
   return (
     // if plant exists render the plant, otherwise render null (see line 45)
@@ -60,7 +65,7 @@ const IndividualPlant = (props) => {
                       </li>}
                     </ul>   
                     <div className="navy">         
-                      <Link onClick={handleClick} className="navy-link"><i className="fab fa-pagelines style-leaf"></i>Add Plant to profile</Link>
+                      <a onClick={handleClick} className="navy-link"><i className="fab fa-pagelines style-leaf"></i>Add Plant to profile</a>
                     </div> 
                   </div> 
                 </div>

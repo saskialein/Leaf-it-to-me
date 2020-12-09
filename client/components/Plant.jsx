@@ -12,9 +12,13 @@ const Plant = (props) => {
       plant_id: plant.id,
       name: ''
     }
+
   props.dispatch(addPlantToReduxandDb(plantObject))
-  props.history.push('/plants/saved')
+ 
 } 
+// Emily's button disappearing functionality:
+// const userPlants = props.usersPlants
+// const found = userPlants.find(userPlant =>  userPlant.plant_id == plant.id)
   
   return (
     <div>
@@ -30,7 +34,12 @@ const Plant = (props) => {
           <Link to={`/plants/${plant.common_name}`} className="navy-link" id="button-more-info">More info</Link>
 
           <IfAuthenticated>
-            <Link to={'/plants/saved'} onClick={handleClick} className="navy-link"><i className="fab fa-pagelines style-leaf"></i>Add to my profile</Link>
+
+          <Link to={'/plants/saved'} onClick={handleClick} className="navy-link"><i className="fab fa-pagelines style-leaf"></i>Add to my profile</Link>
+
+          {/* {!found && <button onClick={handleClick}>Add to my profile</button>} */}
+
+          {/* {!found ? 'button' : 'tick'} */}
           </IfAuthenticated>
         </div>
         </div>
@@ -43,6 +52,7 @@ const Plant = (props) => {
 function mapStateToProps(globalState) {
   return {
     plants: globalState.plants,
+    usersPlants: globalState.usersPlants
   }
 }
 export default connect(mapStateToProps)(Plant)

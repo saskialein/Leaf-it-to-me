@@ -37,7 +37,8 @@ const Nav = (props) => {
             Saved Plants
           </NavLink>
           <a
-            href="#"
+          //make sure this href is a slash!
+            href="/"
             className="nav-link"
             id="btn-sign-Out"
             onClick={() => logOutUser(props.dispatch)}
