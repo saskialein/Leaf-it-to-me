@@ -10,7 +10,7 @@ const Plant = (props) => {
   const handleClick = () => {
     const plantObject = {
       plant_id: plant.id,
-      name: 'emily'
+      name: ''
     }
   props.dispatch(addPlantToReduxandDb(plantObject))
   props.history.push('/plants/saved')
@@ -27,11 +27,11 @@ const Plant = (props) => {
 
         </div>
         <div className='button-plate'>
-          <Link to={`/plants/${plant.common_name}`}>More info</Link>
+          <Link to={`/plants/${plant.common_name}`} className="navy-link" id="button-more-info">More info</Link>
 
           <IfAuthenticated>
             <label htmlFor="button to add plant to profile"></label>
-          <button onClick={handleClick} id="button to add plant to profile">Add to my profile</button>
+            <Link to={'/plants/saved'} onClick={handleClick} className="navy-link"><i className="fab fa-pagelines style-leaf" id="button to add plant to profile"></i>Add to my profile</Link>
           </IfAuthenticated>
         </div>
         </div>

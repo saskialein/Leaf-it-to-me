@@ -33,15 +33,13 @@
       }
     }
   
-
-
 .careDetailWrapper {
   display: flex;
   float: left;
   margin-left: $temp-margin;
   margin-bottom: 2rem;
 
-    img {
+  .individual-plant-image {
       width: 50vh;
       display: block;
       float: left;
@@ -58,13 +56,39 @@
 
       li {
         padding-bottom: .5rem;
+        font-size: 30px;
+        position: relative;
+        color: $text-color;
         
+        .tooltip-text {
+          visibility: hidden;
+          width: 120px;
+          // bottom: 25%;
+          // left: 50%;
+          margin-left: -45px;
+          background-color: rgb(8, 105, 114, 0.5);
+          color: $secondary-color;
+          text-align: center;
+          padding: 5px 0;
+          border-radius: 10px;
+          position: absolute;
+          z-index: 1;
+        }
+      }
+
+      li:hover .tooltip-text {
+        visibility: visible;
+        cursor: none;
+      }
+
+      i {
+        font-size: 2.5rem;
       }
 
       .style {
         width: 8px;
         height: auto;
-        padding-right: 2rem;
+        padding-right: 4rem;
       }
 
       .style-special {
@@ -77,24 +101,29 @@
 .navy {
   box-sizing: border-box;
   font-weight:bolder ;
+  font-size: $font-medium;
+  font-family: $font-stack;
+  margin: $nav-margin;
+
+  .style-leaf {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-right: 10px;
+  }
 }
 
 .navy-link {
   margin-top: 1px;
   margin-left: 5px;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  // border-radius: 20px;
   color: $text-color;
   letter-spacing: 0.1em;
-  //line-height: 30px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.5vh;
-  //display: block;
-  //flex-direction: row;
   justify-content: space-between;
   text-align: center;
+  border-radius: 30px;
+  border: 2.5px solid $text-color;
+  padding: $btn-padding;
 }
 
 .navy-link:hover

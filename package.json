@@ -59,6 +59,7 @@
     "react-modal": "^3.12.1",
     "react-router-hash-link": "^2.2.2",
     "superagent": "^6.1.0"
+    
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",

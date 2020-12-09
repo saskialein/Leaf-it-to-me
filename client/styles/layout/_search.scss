@@ -1,6 +1,69 @@
-input{
-  margin-left: 20vw;
-  width: 60vw;
-  border: 3px solid #307256;
-  border-radius: 35px;
+.plantListSearch {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0em 2em 0em;
+  
+  input {
+    align-self: center;
+    width: 30vw;
+    height: 5vh;
+    border: 2px solid #307256;
+    // border-radius: 10px;
+    font-size: 2.5vw;
+    color: #307256;
+    padding-left: 1.5%;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #D3D3D3;
+    background: transparent;
+  }
+  input:focus {
+    border-color: #307256;
+  }
+
+  input:focus::-webkit-input-placeholder { color:transparent; }
+  input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+  input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+  input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
+
+  ::placeholder {
+    color: #D3D3D3;
+  }
+}
+
+.userPlantSearch {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0em 2em 0em;
+  
+  input {
+    align-self: center;
+    width: 30vw;
+    height: 5vh;
+    border: 2px solid #307256;
+    // border-radius: 10px;
+    font-size: 2.5vw;
+    color: #307256;
+    padding-left: 1.5%;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #D3D3D3;
+    background: transparent;
+  }
+  input:focus {
+    border-color: #307256;
+  }
+
+  input:focus::-webkit-input-placeholder { color:transparent; }
+  input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+  input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+  input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
+
+  ::placeholder {
+    color: #D3D3D3;
+  }
 }

@@ -20,8 +20,7 @@ class Search extends React.Component {
   render() {
  
     return (
-      <div className="">
-        <h2 id='search'>Search</h2>
+      <div>
         <label htmlFor="search bar"></label>
         <input
           onChange={this.handleChange}
@@ -30,9 +29,8 @@ class Search extends React.Component {
           name="searchTerm"
           id="search bar"
           type="text"
-          />
-          
-     
+          placeholder="Search for your plant..."
+        />
       </div>
     );
   }
