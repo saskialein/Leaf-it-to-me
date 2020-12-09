@@ -1,0 +1,72 @@
+.form-wrapper {
+    margin: 0;
+    font-family: $font-stack;
+
+    p {
+        margin-left: 9rem;
+        margin-top: 1.5rem;
+        font-size: $font-medium;
+        font-style: italic;
+        width: 75%;
+    }
+    
+    h2 {
+        margin: 0 9rem;
+        font-size: $font-large *2;
+        padding-bottom: 1.2rem;
+    }    
+    
+    hr {
+        border: 1px solid #086972;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .signin-form {
+        margin-left: 9rem;
+        margin-top: 3rem;
+        color: $text-color;
+    
+        label {
+            font-size: $font-medium *1.2;
+            margin-bottom: 1.8rem;
+        }
+
+        input {
+            width: 30vw;
+            height: 5vh;
+            font-size: 1.2rem;
+            color: #307256;
+            border-width: 0 0 2px;
+            border-color: #D3D3D3;
+            background: transparent;
+            outline: none; 
+            
+        }
+        
+        ::placeholder {
+        color: #D3D3D3;
+        }
+
+        input:focus {
+            border-color: #307256;
+        }
+        input:focus::-webkit-input-placeholder { color:transparent; }
+        input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+        input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+        input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
+        
+    } 
+
+    .section {
+        margin-bottom: 2rem;
+    }
+
+    .submit-button{
+        position: relative;
+        left: 22%;
+        outline: none; 
+    }
+
+    margin-bottom: 3rem;
+}

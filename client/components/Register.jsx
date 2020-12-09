@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getDecodedToken, isAuthenticated, register } from 'authenticare/client'
-
 import { logIn } from '../actions/auth'
 
 import { baseApiUrl as baseUrl } from '../config'
@@ -38,57 +37,74 @@ class Register extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="form-wrapper">
         <h2>Sign Up</h2>
-        <p>Sign up to add plants to your very own personalised profile where you can keep track of all of your plant needs in one handy location and leaf the rest to us.</p>
-        <form className="form" onSubmit={this.handleClick}>
-          <label htmlFor="name">Name: </label>
-          <input
-            onChange={this.handleChange}
-            className="input"
-            value={this.state.name}
-            autoFocus={true}
-            name="name"
-            label="Name"
-            type="text"
-            placeholder="Let's get to know each other"
-          />
+        <hr/>
+        <p>Sign up to add plants to your very own personalised profile where you can keep track of all of your plant needs in one handy location and leaf the rest to your app.</p>
+        <form className="signin-form" onSubmit={this.handleClick}>
+          <div className="section">
+            <label htmlFor="name">
+              Name:
+            </label>
+            <br/>
+            <input
+              onChange={this.handleChange}
+              className="input"
+              value={this.state.name}
+              autoFocus={true}
+              name="name"
+              label="Name"
+              type="text"
+              />
+          </div>
           <br />
-          <label htmlFor="name">Email: </label>
-          <input
-            onChange={this.handleChange}
-            className="input"
-            value={this.state.email}
-            name="email"
-            label="Name"
-            type="text"
-            // placeholder="So we can keep in touch"
-          />
+          <div className="section">
+            <label htmlFor="name">
+              Email:
+            </label>
+            <br/>
+            <input
+              onChange={this.handleChange}
+              className="input"
+              value={this.state.email}
+              name="email"
+              label="Name"
+              type="text"
+              />
+          </div>
           <br />
-          <label htmlFor="name">Username: </label>
-          <input
-            onChange={this.handleChange}
-            className="input"
-            value={this.state.username}
-            name="username"
-            label="Name"
-            type="text"
-            placeholder="We hear DeathEagle is popular ;)"
-            alt="Please enter your username here"
-          />
+          <div className="section">
+            <label htmlFor="name">
+                Username:
+            </label>
+            <br/>
+            <input
+              onChange={this.handleChange}
+              className="input"
+              value={this.state.username}
+              name="username"
+              label="Name"
+              type="text"
+              alt="Please enter your username here"
+              />
+          </div>
           <br />
-          <label htmlFor="name">Password: </label>
-          <input
-            onChange={this.handleChange}
-            className="input"
-            value={this.state.password}
-            name="password"
-            label="Name"
-            type="password"
-            // placeholder="No judgement here"
-          />
+          <div className="section">
+            <label htmlFor="name">
+              Password:
+            </label>
+            <br/>
+            <input
+              onChange={this.handleChange}
+              className="input"
+              value={this.state.password}
+              name="password"
+              label="Name"
+              type="password"
+              />
+          </div>
           <br />
-          <button className="text-btn" type="submit">
+          <button className="navy-link submit-button" type="submit">
             Sign Me Up
           </button>
         </form>
