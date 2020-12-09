@@ -49,6 +49,19 @@ $btn-padding: 1vw ; //universal buttons?
   margin: 24px;
   width: 30px;
   float: left;
+
+  i {
+    color: $text-color;
+    font-size: 44px;
+    font-weight: bold;
+    margin-top: 1px;
+    margin-left: 25px;
+ 
+  }
+  i:hover{
+    color: $btn-hover-color;
+     
+  }
   }
 
 

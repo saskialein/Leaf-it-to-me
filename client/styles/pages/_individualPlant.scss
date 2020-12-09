@@ -12,8 +12,8 @@
      
      .individual-plant-header {
       font-family: $font-stack;
-      color: $secondary-color;
-      font-size: $font-Xlarge;
+      color: $text-color;
+      font-size: $font-larger;
       margin: 0;
      }
 
@@ -23,11 +23,14 @@
       .commonName {
         font-weight: bold;
         color: $commonNameFontColor;
+        color: #dc9108;
+
         font-size: 3rem;
         padding-bottom: 0;
       }
       .speciesName {
         padding-left: 3rem;
+        color: $text-color;
         font-style: italic;
         padding-top: 0;
       }
