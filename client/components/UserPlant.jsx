@@ -13,32 +13,29 @@ const UserPlant = (props) => {
       <div key={plant.id}>
         <div className={`user-plant-main ${rowClass}`}>
           <img className='user-plant-image' src={plant.img}/>
-          <div className="user-plant-details"> 
-            
-            <p className="user-common">{plant.common_name}</p>
-            <p className="user-offical-name">{plant.species_name}</p>
-            <ul className='plant-type'>
-              <li><p>Water</p><hr/></li>
-              <li><p>Light</p><hr/></li>
-              <li><p>Temp</p><hr/></li>
-              <li><p>Humidity</p><hr/></li>
-              <li><p>Soil</p><hr/></li>
-              <li><p>Level</p><hr/></li>
-            </ul>
-            <ul className="plant-deets">
-              <li><p>{plant.water}</p><hr/></li>
-              <li><p>{plant.light}</p><hr/></li>
-              <li><p>{plant.temp}</p><hr/></li>
-              <li><p>{plant.humidity}</p><hr/></li>
-              <li><p>{plant.soil}</p><hr/></li>
-              <li><p>{plant.lvl}</p><hr/></li>
-            </ul> 
-            <div className="nav">
-            <Link to={`/plants/${plant.common_name}`}className="nav-link">More info</Link>             
-            <button onClick={() => props.dispatch(removePlant(plant.id))} >Delete</button>
+            <div className='plant-deets-block'>
+              <div className='deets-second-block'>
+                <p className="user-offical-name">{plant.species_name}</p>
+                <ul className="plant-deets">         
+                  <li><i className="fas fa-tint style"/> {plant.water}</li>
+                  <li><i className="fas fa-sun style"/> {plant.light}</li>
+                  <li><i className="fas fa-temperature-low style"/> {plant.temp}</li>
+                  <li><i className="fas fa-tint"/><i className="fas fa-percent style-special"/> {plant.humidity}</li>
+                  <li><i className="fas fa-poop style"/> {plant.soil}</li>
+                  <li><i className="fas fa-user style"/> {plant.lvl}</li>
+                  <li><i className="far fa-comment-alt style"/> {plant.notes}</li>
+                </ul>
+                </div>
+                <div className='delete-div'>
+              <a className='user-delete' onClick={() => props.dispatch(removePlant(plant.id))} ><i className="fas fa-trash"></i></a>
+              </div>   
             </div>
+
+            {/* <div className="nav">
+              <Link to={`/plants/${plant.common_name}`}className="nav-link">More info</Link>             
+              
+              </div> */}
           </div>
-        </div>
       </div>
     </>
   );
