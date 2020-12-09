@@ -22,33 +22,48 @@ const Nav = (props) => {
     <>
       <div className="nav">
         {/* <h1 className="">Leaf it to me</h1> */}
-        <NavLink to="/" exact activeClassName="active" className="nav-link">
-          Home
+        <NavLink to="/" exact activeClassName="active" className="L-Logo">
+          <img src="./images/LeafItToMe_L_Logo.svg" />
         </NavLink>
 
         <IfAuthenticated>
-          <NavLink to="/plants/saved" exact activeClassName="active" className="nav-link" id="nav-btn-savedPlants">
+          <NavLink
+            to="/plants/saved"
+            exact
+            activeClassName="active"
+            className="nav-link"
+            id="nav-btn-savedPlants"
+          >
             Saved Plants
           </NavLink>
-
+          <a
+            href="#"
+            className="nav-link"
+            id="btn-sign-Out"
+            onClick={() => logOutUser(props.dispatch)}
+          >
+            Sign Out
+          </a>
           <ModalPopUp />
         </IfAuthenticated>
 
         <IfNotAuthenticated>
-          <NavLink to="/login" exact activeClassName="active" className="nav-link" id="btn-sign-in">
+          <NavLink
+            to="/login"
+            exact
+            activeClassName="active"
+            className="nav-link"
+            id="btn-sign-in"
+          >
             Sign In
           </NavLink>
-        </IfNotAuthenticated>
-
-          <IfAuthenticated>
-          <a href='/'className="nav-link" id="btn-sign-Out" onClick={() => logOutUser(props.dispatch)}>
-            Sign Out
-          </a>
-        </IfAuthenticated>
-
-        <IfNotAuthenticated>
-        
-          <NavLink to="/sign-up" exact activeClassName="active" className="nav-link" id="btn-sign-up">
+          <NavLink
+            to="/sign-up"
+            exact
+            activeClassName="active"
+            className="nav-link"
+            id="btn-sign-up"
+          >
             Sign Up
           </NavLink>
         </IfNotAuthenticated>
