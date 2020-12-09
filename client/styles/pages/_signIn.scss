@@ -1,0 +1,59 @@
+.form-wrapper {
+    margin: 0;
+    
+    h2 {
+        margin: 0 9rem;
+        font-size: $font-large *2;
+        padding-bottom: 1.2rem;
+    }    
+    
+    hr {
+        border: 1px solid #086972;
+        width: 80%;
+    }
+
+    .signin-form {
+        margin-left: 9rem;
+        margin-top: 3rem;
+        color: $text-color;
+    
+        label {
+            font-family: $font-stack;
+            font-size: $font-medium *1.2;
+            margin-bottom: 1.8rem;
+        }
+
+        input {
+            width: 30vw;
+            height: 5vh;
+            font-size: 1.2rem;
+            color: #307256;
+            border-width: 0 0 2px;
+            border-color: #D3D3D3;
+            background: transparent;
+            outline: none; 
+        }
+
+        input:focus {
+            border-color: #307256;
+        }
+        
+        input:focus::-webkit-input-placeholder { color:transparent; }
+        input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+        input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+        input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
+        
+        &::placeholder {
+            color: #D3D3D3;
+        }
+    } 
+
+    .section {
+        margin-bottom: 2rem;
+    }
+
+    #submit-button{
+        position: relative;
+        left: 25%
+    }
+}
