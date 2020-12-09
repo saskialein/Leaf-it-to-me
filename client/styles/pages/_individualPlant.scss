@@ -40,7 +40,8 @@
   margin-bottom: 2rem;
 
   .individual-plant-image {
-      width: 50vh;
+      max-width: 40vw;
+      max-height: 40vw;
       display: block;
       float: left;
       border-radius: 50%;
