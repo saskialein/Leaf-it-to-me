@@ -1,7 +1,5 @@
-
-
 .plant-wrapper{
-  max-height: 25vh;
+  // max-height: 25vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -37,6 +35,10 @@
     .user-offical-name{
       color: $text-color;
     }
+
+    .deets-second-block{
+      padding-left: 10vw;
+    }
   }
 
   &.even{
@@ -46,10 +48,22 @@
   }
 }
 
+.plant-div{
+  width: 50vw;
+  position: relative;
+}
+
 .user-plant-image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3vw;
   border-radius: 200px;
-  max-height: 25vw;
-  vertical-align: middle;
+  height: 25vw;
+  width: 25vw;
+  margin: auto;
+  // vertical-align: middle;
 }
 
 .user-offical-name{
@@ -67,7 +81,7 @@
 
 .plant-deets-block{
   display: flex;
-  max-width: 50vw;
+  width: 50vw;
 }
 
 .plant-deets{
@@ -95,22 +109,30 @@
   border: 1px solid $text-color;
 }
 
-// .fas .fa-trash{
-//   text-align: end;
-// }
 
 .user-delete{
   display: flex;
   justify-content: flex-end;
   color: $text-color;
+  font-size: 1.5vw;
 }
-
-// @media (min-width: 768px){
-//   .user-plant-main{
-//     flex-direction: column;
-//   }
-// }
 
 .user-delete:hover {
   cursor: pointer;
 }
+
+.userPlantPage{
+  background-color: $background-color;
+}
+
+.plant-list-title{
+  font-size: 7vw;
+  color: $secondary-color;
+  font-weight: 700;
+}
+
+.plant-title-div{
+  width: 60vw;
+  padding-left: 5vw;
+}
+
