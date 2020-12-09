@@ -30,7 +30,7 @@ const UserPlant = (props) => {
                 </ul>
               </div>
                 <div className='delete-div'>
-                  <a className='user-delete' onClick={() => props.dispatch(removePlant(plant.id))} ><i className="fas fa-trash"></i></a>
+                  <a className='user-delete' onClick={() => props.dispatch(removePlant(plant.id))} ><span className="tooltip-text-trash">Remove</span><i className="fas fa-trash"></i></a>
                 </div>   
             </div>
         </div>

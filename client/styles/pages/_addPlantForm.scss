@@ -108,6 +108,7 @@
     // padding-top: 10px;
     margin-left: 70px;
     margin-right: auto;
+    margin-bottom: 98px;
     align-self: flex-end;
   }
   
@@ -134,3 +135,27 @@
 
 
 
+.add-plant-link {
+  display: flex;
+  align-self: right;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 13px;
+  margin-left: auto;
+  color: $text-color;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 30px;
+  border: 2.5px solid $text-color;
+  padding: $btn-padding;
+  font-family: $font-stack;
+}
+
+.add-plant-link:hover
+{
+    color: $btn-hover-color;
+    //border: 3px solid $btn-hover-color;
+  }
