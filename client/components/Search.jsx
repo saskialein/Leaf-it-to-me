@@ -22,13 +22,16 @@ class Search extends React.Component {
     return (
       <div className="">
         <h2 id='search'>Search</h2>
+        <label htmlFor="search bar"></label>
         <input
           onChange={this.handleChange}
           className="input"
           value={this.state.searchTerm}
           name="searchTerm"
+          id="search bar"
           type="text"
-        />
+          />
+          
      
       </div>
     );

@@ -12,7 +12,7 @@ const Home = () => {
         <img
           className="main-img"
           src="./images/potted-plant-transparent-background-5.png"
-          alt=""
+          alt="image of a tall, potted plant"
         />
         <div className="homeBanner">
             <h2>LEAF IT TO ME</h2>

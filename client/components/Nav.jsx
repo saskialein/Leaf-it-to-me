@@ -22,12 +22,12 @@ const Nav = (props) => {
     <>
       <div className="nav">
         {/* <h1 className="">Leaf it to me</h1> */}
-        <NavLink to="/" exact activeClassName="active" className="nav-link">
+        <NavLink to="/" exact activeClassName="active" className="nav-link" id="home">
           Home
         </NavLink>
 
         <IfAuthenticated>
-          <NavLink to="/plants/saved" exact activeClassName="active" className="nav-link" id="nav-btn-savedPlants">
+          <NavLink to="/plants/saved" exact activeClassName="active" className="nav-link" id="saved plants">
             Saved Plants
           </NavLink>
 
@@ -35,20 +35,20 @@ const Nav = (props) => {
         </IfAuthenticated>
 
         <IfNotAuthenticated>
-          <NavLink to="/login" exact activeClassName="active" className="nav-link" id="btn-sign-in">
+          <NavLink to="/login" exact activeClassName="active" className="nav-link" id="sign in">
             Sign In
           </NavLink>
         </IfNotAuthenticated>
 
           <IfAuthenticated>
-          <a href='/'className="nav-link" id="btn-sign-Out" onClick={() => logOutUser(props.dispatch)}>
+          <a href='/'className="nav-link" id="sign out" onClick={() => logOutUser(props.dispatch)}>
             Sign Out
           </a>
         </IfAuthenticated>
 
         <IfNotAuthenticated>
         
-          <NavLink to="/sign-up" exact activeClassName="active" className="nav-link" id="btn-sign-up">
+          <NavLink to="/sign-up" exact activeClassName="active" className="nav-link" id="sign up">
             Sign Up
           </NavLink>
         </IfNotAuthenticated>

@@ -20,7 +20,7 @@ const Plant = (props) => {
     <div>
       <div className='each-smallPlant'>
       <div className='smallPlant-picture'>
-          <img className='smallPlant-picture' src= {plant.img}/>
+          <img className='smallPlant-picture' src= {plant.img} alt={`image of a ${plant.common_name}`}/>
         <div className='smallPlant-name-plate'>
           <p className='name'>{plant.common_name}</p>
           <p className='species'>{plant.species_name}</p>
@@ -30,7 +30,8 @@ const Plant = (props) => {
           <Link to={`/plants/${plant.common_name}`}>More info</Link>
 
           <IfAuthenticated>
-          <button onClick={handleClick}>Add to my profile</button>
+            <label htmlFor="button to add plant to profile"></label>
+          <button onClick={handleClick} id="button to add plant to profile">Add to my profile</button>
           </IfAuthenticated>
         </div>
         </div>
