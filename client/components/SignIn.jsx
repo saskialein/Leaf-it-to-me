@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { isAuthenticated, signIn } from "authenticare/client";
-import { Link } from 'react-router-dom'
 import { baseApiUrl as baseUrl } from "../config";
 import { checkAuth } from "../actions/auth";
 

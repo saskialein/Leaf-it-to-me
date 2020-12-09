@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getDecodedToken, isAuthenticated, register } from 'authenticare/client'
-import { Link } from 'react-router-dom'
 import { logIn } from '../actions/auth'
 
 import { baseApiUrl as baseUrl } from '../config'
