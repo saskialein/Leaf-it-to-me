@@ -35,16 +35,9 @@ $btn-padding: 1vw ; //universal buttons?
   float: right;
 }
 
-.L-Logo {
-  margin: $nav-margin;
-  width: 2.5vh;
-  float: left;
-}
-
 .nav-link:hover {
   color: $btn-hover-color; // CHANGED FOR NOW DUE TO STICKY NAV BAR
-  color: $text-color;
-  //border: 3px solid $btn-hover-color;
+
 }
 
 .active {
@@ -52,24 +45,14 @@ $btn-padding: 1vw ; //universal buttons?
   //line-height: 0.85;
 }
 
-// to jess love from hortense for the circles if you want them
+.L-Logo {
+  margin: 24px;
+  width: 30px;
+  float: left;
+  }
 
-// a {
-//   margin-top: 2vw;
-//   /* margin-left: 65vw; */
-//   display: inline-block;
-//   padding-left: 2vw;
-//   padding-right: 2vw;
-//   border-radius: 35px;
-//   color: #307256;
-//   letter-spacing: 0.1em;
-//   line-height: 70px;
-//   text-transform: uppercase;
-//   text-decoration: none;
-//   right: 0;
-//   bottom: 0;
-//   border: 3px solid #307256;
-// }
+
+
 
 // a:hover {
 //   color: #faecc9;
