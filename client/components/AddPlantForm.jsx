@@ -49,13 +49,19 @@ class AddPlantForm extends React.Component {
 
   render() {
     return (
+      <>
+      <div className="addPlantWrapper">
+      <div className="addPlantTitle">
+        <h2>Add a new plant</h2>
+        <p>Use the form below to add a plant to our database!</p>
+      </div>
       <div className="addPlantForm">
        <form encType='multipart/form-data' onSubmit={this.handleSubmit}>
           <div className="dropdown-wrapper">
             <div className="form-fields">
               <div className="form-field">
                 <label className='label'>Common Name</label>
-                <input onChange={this.handleChange} className='input' value={this.state.common_name} name="common_name" type="text" placeholder="Enter common name" />
+                <input onChange={this.handleChange} className='input-text' value={this.state.common_name} name="common_name" type="text" placeholder="Enter common name" />
               </div>
           
               <div className="form-field">
@@ -134,6 +140,8 @@ class AddPlantForm extends React.Component {
         </div>
         </div>
       </div>
+      </div>
+      </>
     )
   }
 }

@@ -51,7 +51,7 @@
     padding-bottom: .2em;
     outline: 0;
     border-width: 0 0 2px;
-    border-color: #D3D3D3;
+    border-color: $text-color;
     background: transparent;
   }
   input:focus {
@@ -64,6 +64,6 @@
   input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
 
   ::placeholder {
-    color: #D3D3D3;
+    color: $text-color;
   }
 }

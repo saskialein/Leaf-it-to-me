@@ -20,8 +20,12 @@ class UserPlantList extends React.Component {
     return (
       <IfAuthenticated>
       <div className= 'userPlantPage' >
-        {this.props.auth.user && <h3>Hey {this.props.auth.user.name}, here's your saved plants</h3>}
-      
+
+        <div className='plant-title-div'>
+          {this.props.auth.user && <p className='plant-list-title'>Hi {this.props.auth.user.name},</p>}
+          <p className='plant-list-title'>here's your saved plants...</p>
+        </div>
+
         <div className="userPlantSearch">
           <Search />
         </div>
