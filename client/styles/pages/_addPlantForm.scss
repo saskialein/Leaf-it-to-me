@@ -1,69 +1,55 @@
 .addPlantForm {
   display: flex;
-  background: #f77;
+  flex-direction: row;
   justify-content: space-between;
+  background: transparent;
+  margin: 0;
+  padding: 1em;
 
   .form-fields {
-    background-color: #77f;
+    order: 1; 
+    background: transparent;
     width: 100%;
   }
-    input {
-      .form-field {
-        display: flex;
-        margin-bottom: 8px;
-      padding-left: 20px;
-    }
-  }
+  
+  .form-field {
+    display: flex;
+    margin-bottom: 8px;
+    width: 70vw;
     label {
-      margin: $temp-margin, 0px, $temp-margin, 0px;
-      padding: $temp-padding, $temp-padding, $temp-padding, 0px;
-      font-size: x-large;
-      font-weight: bold;
+      width: 150px;
+      line-height: 40px
     }
-    .input {
-      margin-top: $temp-margin/4;
-      display: block;
-      font-size: 0.025 rem;
+    input, select {
+      width: 60vw;
+      height: 5vh;
+      border: 2px solid #307256;
+      // border-radius: 10px;
+      font-size: 1.5vw;
+      color: #D3D3D3;
+      padding-left: 1.5%;
+      padding-top: .2em;
+      padding-bottom: .2em;
+      outline: 0;
+      border-width: 0 0 2px;
+      border-color: #D3D3D3;
+      background: transparent;
     }
-    .submitButton {
-      margin-top: $temp-margin/2;
-      padding: $temp-padding/2.5;
-      font-weight: bold;
-      border: 1.5px solid;
-      border-radius: 15px 15px;
-    }
-    .form {
-  margin: $temp-margin;
-  padding: $temp-padding;
-  border: 0.5px, solid, $spaceGreyColor;
-  display: inline-block;
-  background-color: $backgroundcolor02;
-  color: $spaceGreyColor;
-  align-content: left;
-
-}
-
-
-  .form-Label {
-    width: 150px;
-    line-height: 40px
   }
-  input, select {
-    width: 100%;
-  }}
-
-
-
-.image-upload {
-  width: 300px;
-  background-color: #7f7;
-  flex-grow: 0;
-  flex-shrink: 0;
-  border-radius: 250%;
+  
+  .image-upload {
+    order: 2;
+    align-self: flex-end;
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background-color: #7f7;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
 
   .imgUpload-input {
-    border: 3px solid #307256;
-    border-radius: 35px;
     margin: 10px;
     width: 80%;
   }
