@@ -14,21 +14,22 @@ const Home = (props) => {
   return (
     <>
       <div className="home">
-        <img
-          className="main-img"
-          src="./images/potted-plant-transparent-background-5.png"
-          alt=""
-          id ="registerWelcomePage"
-        />
-        <div className="homeBanner">
+        <div className="logo-wrapper">
           <img
             className="logo-leaf-it-to-me"
-            src="./images/LeafItToMe_Logo.svg"
-          />
+            src="./images/LeafItToMe_Logo.svg"/>
+        </div>
 
-          <IfNotAuthenticated>
+        <div className="main-img">
+        <img src="./images/potted-plant-transparent-background-5.png"
+          alt=""
+          id ="registerWelcomePage"/>
+          </div>
 
-          <p>
+
+         <IfNotAuthenticated>
+
+          <p className='myh2'>
             Helping house plant owners make their plants feel like bliss. Leaf
             it to us.
           </p>
@@ -38,11 +39,10 @@ const Home = (props) => {
         {props.auth.user && <h3>Kia ora {props.auth.user.name}, to add new plants to your profile browse through our jungle database below or hit the searchbar!</h3>}
 
           </IfAuthenticated>
+    </div>
+        <div>
+          <Route path="/" component={PlantList} />
         </div>
-      </div>
-      <div>
-        <Route path="/" component={PlantList} />
-      </div>
     </>
   )
 }

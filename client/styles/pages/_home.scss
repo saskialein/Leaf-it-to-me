@@ -6,15 +6,12 @@
   padding: 5vh 0px 0px 2.5vh;
   font-weight: bold;
 
-  .homeBanner {
+  .logo-wrapper {
     font-family: $font-stack;
     font-weight: Normal;
 
     //H2 AND H3 WILL BE TURNED INTO AN SVG
-    h2 {
-      font-size: $font-large * 2;
-      margin-left: 6vh; //120px
-    }
+
 
     h3 {
       font-size: $font-medium * 2;
@@ -40,3 +37,8 @@
   float: right;
   height: 40vw;
 }
+
+  .myh2 {
+    font-size: $font-large ;
+    margin-left: 6vh; //120px
+  }
