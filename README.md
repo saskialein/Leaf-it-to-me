@@ -11,7 +11,7 @@ Apart from being the product owner of this project, I have worked on the functio
 * SCSS
 
 
-## WIREFRAMES & components
+## Wireframes & components
 Components showing on all pages - Header.jsx, Nav.jsx
 
 ### Page 1
