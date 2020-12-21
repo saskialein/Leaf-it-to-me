@@ -1,5 +1,5 @@
 # Leaf it to me - A plant care App
-This project was created in 7 days in a group of 7 coders as part of our web development bootcamp at [Enspiral Dev Academy](https://devacademy.co.nz/).
+This project was created in 7 days in a group of 7 people as part of our web development bootcamp at [Enspiral Dev Academy](https://devacademy.co.nz/).
 Apart from being the product owner of this project, I have worked on the functionality, API calls, image uploads to AWS S3 and a little bit of CSS.
 
 ## Technologies
@@ -8,6 +8,7 @@ Apart from being the product owner of this project, I have worked on the functio
 * SQLite3
 * AWS S3
 * Authentication
+* SCSS
 
 
 ## WIREFRAMES & components
