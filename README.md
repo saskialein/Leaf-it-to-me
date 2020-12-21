@@ -30,14 +30,14 @@ Components showing on all pages - Header.jsx, Nav.jsx
 ![Login\Register\User](wireframes/SignUp.png)
 
 ### Page 4
-#### Components - SavedPlants.jsx, PlantList.jsx Plant.jsx
+#### Components - UserPlantList.jsx, UserPlant.jsx
 #### Wireframe:
 ![SavedPlants](wireframes/UserProfileWithPlants.png) 
 
 
 ### page 5 
 #### Components - AddPlantForm.jsx
-####   wireframe:
+####   Wireframe:
 ![AddNewPlantToDataBase](wireframes/NewPlantProfile.png)
 
 
